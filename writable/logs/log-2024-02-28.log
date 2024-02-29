@@ -1,0 +1,74 @@
+INFO - 2024-02-28 03:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 03:44:12 --> ErrorException: Undefined property: stdClass::$id_rm
+in APPPATH\Controllers\RecordMedical.php on line 34.
+ 1 APPPATH\Controllers\RecordMedical.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_rm', 'E:\\RSGM\\app\\Controllers\\RecordMedical.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->show('14')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-02-28 03:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 03:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:17:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 04:17:35 --> Picqer\Barcode\Exceptions\InvalidCharacterException: Char j is unsupported
+in VENDORPATH\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 171.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGenerator.php(108): Picqer\Barcode\Types\TypeCode128->getBarcodeData('jljdasljdljalfsa')
+ 2 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorHTML.php(20): Picqer\Barcode\BarcodeGenerator->getBarcodeData('jljdasljdljalfsa', 'C128A')
+ 3 APPPATH\Controllers\RecordMedical.php(34): Picqer\Barcode\BarcodeGeneratorHTML->getBarcode('jljdasljdljalfsa', 'C128A', 1)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->show('jljdasljdljalfsa')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-02-28 04:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 04:18:24 --> Picqer\Barcode\Exceptions\InvalidCharacterException: Char j is unsupported
+in VENDORPATH\picqer\php-barcode-generator\src\Types\TypeCode128.php on line 171.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGenerator.php(108): Picqer\Barcode\Types\TypeCode128->getBarcodeData('jljdasljdljalfsa')
+ 2 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorHTML.php(20): Picqer\Barcode\BarcodeGenerator->getBarcodeData('jljdasljdljalfsa', 'C128A')
+ 3 APPPATH\Controllers\RecordMedical.php(34): Picqer\Barcode\BarcodeGeneratorHTML->getBarcode('jljdasljdljalfsa', 'C128A', 1)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->show('jljdasljdljalfsa')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-02-28 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-28 04:18:51 --> Picqer\Barcode\Exceptions\InvalidCharacterException: Char j is unsupported
+in VENDORPATH\picqer\php-barcode-generator\src\Types\TypeCode39.php on line 91.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGenerator.php(108): Picqer\Barcode\Types\TypeCode39->getBarcodeData('*jljdasljdljalfsa*')
+ 2 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorHTML.php(20): Picqer\Barcode\BarcodeGenerator->getBarcodeData('jljdasljdljalfsa', 'C39')
+ 3 APPPATH\Controllers\RecordMedical.php(34): Picqer\Barcode\BarcodeGeneratorHTML->getBarcode('jljdasljdljalfsa', 'C39', 1)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->show('jljdasljdljalfsa')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-02-28 04:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 04:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 05:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 05:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 05:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 05:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 05:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 05:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 05:22:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-28 05:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
