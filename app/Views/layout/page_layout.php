@@ -7,12 +7,14 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/bootstrap/css/bootstrap.min.css') ?>">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?php echo base_url('/css/style.css') ?>">
-
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('/select2/dist/css/select2.min.css') ?>" defer>
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <title>Document</title>
+
+    <title><?= esc($title) ?> - RSGM UNEJ</title>
 </head>
 
 <body>
@@ -145,7 +147,7 @@
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0167B7;">
                 <div class="container-fluid">
                     <a class="navbar-brand text-white" href="#">
-                        <img src="/img/logo.png" alt="" width="auto" height="72" class="d-inline-block align-text-top">
+                        <img src="/img/logo.png" alt="" width="auto" height="32" class="d-inline-block align-text-top">
                         RSGM Universitas Jember
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -207,9 +209,6 @@
     </div>
 
     <script src="<?php echo base_url('/js/script.js') ?>"></script>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php echo base_url('bootstrap/js/bootstrap.bundle.min.js') ?>">
     </script>

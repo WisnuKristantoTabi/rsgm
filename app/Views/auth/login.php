@@ -19,7 +19,7 @@
         <?php endif; ?>
         <div class="card-header">
             <a class="navbar-brand text-dark" href="#">
-                <img src="/img/logo.png" alt="" width="auto" height="86">
+                <img src="/img/logo.png" alt="" width="auto" height="43">
                 Login
             </a>
         </div>

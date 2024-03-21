@@ -18,7 +18,9 @@ class RecordMedical extends BaseController
     public function index()
     {
         $recordmedicalModel = new RecordMedicalModel();
-        $data['recordmedicals'] = $recordmedicalModel->orderBy('rm_id', 'desc')->findAll();
+        $data['recordmedicals'] = $recordmedicalModel->orderBy('rm_id', 'desc')->paginate(20, 'recordmedicals');
+        $data['pager'] = $recordmedicalModel->pager;
+        $data['nomor'] = nomor($this->request->getVar('page_recordmedicals'), 20);
         $data['title'] = 'Rekam Medis';
         $data['username'] = session()->get('username');
         return view('recordmedical/index', $data);
@@ -135,5 +137,46 @@ class RecordMedical extends BaseController
 
     public function test()
     {
+    }
+
+    public function searchData()
+    {
+
+        $postData = $this->request->getVar('searchTerm');
+
+        $response = array();
+
+        // Read new token and assign in $response['token']
+        // $response['token'] = csrf_hash();
+
+        if (!isset($postData)) {
+            // Fetch record
+            $recordmedicalModel = new RecordMedicalModel();
+
+            $recordmedicals = $recordmedicalModel->select('rm_id,fullname')
+                ->orderBy('rm_id')
+                ->findAll(5);
+        } else {
+            $searchTerm = $postData;
+
+            // Fetch record
+            $recordmedicalModel = new RecordMedicalModel();
+            $recordmedicals = $recordmedicalModel->select('rm_id ,fullname')
+                ->like('rm_id', $searchTerm)
+                ->orderBy('rm_id')
+                ->findAll(5);
+        }
+
+        $data = array();
+        foreach ($recordmedicals as $record) {
+            $data[] = array(
+                "id" => $record['rm_id'],
+                "text" => $record['fullname'] . " - " . $record['rm_id'],
+            );
+        }
+
+        $response['data'] = $data;
+
+        return $this->response->setJSON($response);
     }
 }

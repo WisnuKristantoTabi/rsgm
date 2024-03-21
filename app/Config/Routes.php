@@ -10,6 +10,8 @@ $routes->post('/auth', 'Login::auth');
 $routes->get('/logout', 'Login::logout');
 
 $routes->get('/f', 'Find::find');
+$routes->get('/recordmedical/searchdata', 'RecordMedical::searchData');
+
 
 $routes->group('', ['filter' => 'auth'], static function ($routes) {
     // $routes->group('', ['filter' => ''], static function ($routes) {
@@ -38,4 +40,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/serviceunit/edit/(:any)', 'ServiceUnit::edit/$1');
     $routes->post('/serviceunit/update', 'ServiceUnit::update');
     $routes->get('/serviceunit/delete/(:any)', 'ServiceUnit::delete/$1');
+
+    $routes->get('/loancoass', 'LoanCoass::index');
+    $routes->get('/loancoass/add', 'LoanCoass::add');
 });

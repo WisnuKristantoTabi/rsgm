@@ -19,7 +19,7 @@
   <tbody>
     <?php foreach ($recordmedicals as $recordmedical) : ?>
       <tr>
-        <th scope="row">-</th>
+        <th scope="row"><?= $nomor++; ?></th>
         <td><?= $recordmedical['rm_id'] ?></td>
         <td><?= $recordmedical['fullname'] ?></td>
         <td><?= ($recordmedical['gender'] == 1) ? "Pria" : "Wanita" ?></td>
@@ -35,5 +35,8 @@
     <?php endforeach ?>
   </tbody>
 </table>
+
+
+<?= $pager->links('recordmedicals', 'bootstrap_pagination') ?>
 
 <?= $this->endSection() ?>
