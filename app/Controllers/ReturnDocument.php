@@ -2,7 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\ReturnDocumentModel;
+use App\Models\TransactionModel;
+use App\Models\RecordMedicalModel;
 
 class ReturnDocument extends BaseController
 {
@@ -15,11 +16,20 @@ class ReturnDocument extends BaseController
 
     public function index()
     {
-        $returndocumentModel = new ReturnDocumentModel();
-        $data['recordmedicals'] = $returndocumentModel->orderBy('id', 'desc')->findAll();
-        $data['title'] = 'Rekam Medis';
+        $trasactionModels = new TransactionModel();
+        $data['trasactions'] = $trasactionModels
+            ->select('transaction.id as tid,transaction.rm_id as idrm, medical_records.fullname, service_unit.service_name, transaction.loan_date, transaction.return_date ')
+            ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
+            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->orderBy('loan_date', 'asc')
+            ->paginate(20, 'returndoc');
+        $data['title'] = 'Pengembalian Rekam Medis';
+        $data['pager'] = $trasactionModels->pager;
+        $data['nomor'] = nomor($this->request->getVar('page_returndoc'), 20);
+        $data['pagesidebar'] = 3;
+        $data['subsidebar'] = 5;
         $data['username'] = session()->get('username');
-        return view('recordmedical/index', $data);
+        return view('returndocument/index', $data);
     }
 
     // public function show($id)
@@ -128,4 +138,41 @@ class ReturnDocument extends BaseController
     //         return redirect()->to('recordmedical/');
     //     }
     // }
+    public function searchData()
+    {
+
+        $postData = $this->request->getVar('searchTerm');
+
+        $response = array();
+
+        if (!isset($postData)) {
+            // Fetch record
+            $transactionModel = new TransactionModel();
+
+            $transactions = $transactionModel->select('rm_id,fullname')
+                ->orderBy('rm_id')
+                ->findAll(5);
+        } else {
+            $searchTerm = $postData;
+
+            // Fetch record
+            $transactionModel = new TransactionModel();
+            $transactions = $transactionModel->select('rm_id ,fullname')
+                ->like('rm_id', $searchTerm)
+                ->orderBy('rm_id')
+                ->findAll(5);
+        }
+
+        $data = array();
+        foreach ($transactions as $transaction) {
+            $data[] = array(
+                "id" => $transaction['rm_id'],
+                "text" => $transaction['fullname'] . " - " . $transaction['rm_id'],
+            );
+        }
+
+        $response['data'] = $data;
+
+        return $this->response->setJSON($response);
+    }
 }

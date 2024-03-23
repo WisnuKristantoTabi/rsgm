@@ -8,35 +8,28 @@
     </div>
 <?php endif; ?>
 
-<form action="<?php echo base_url('/recordmedical/store'); ?>" method="post">
-    <input type="hidden" class="txt_csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
+<form action="<?php echo base_url('/loancoass/store'); ?>" method="post">
+    <!-- <input type="hidden" class="txt_csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" /> -->
     <!-- <div class="form-floating mb-3"> -->
     <!-- <input type="text" name="rmid" id="rmid" placeholder="RM.NO" value="" class="form-control"> -->
 
     <div class="mb-5">
         <label class="mb-3" for="searchrm">Cari Nomor Rekam Medik</label>
-        <select id="searchrm" class="form-select">
+        <select id="searchrm" name="rmid" class="form-select">
             <option value=""></option>
         </select>
-
-    </div>
-    <!-- <label for="rmid">Nomor RM</label> -->
-    <!-- </div> -->
-    <div class="form-floating mt-3 mb-3">
-        <input type="text" name="fullname" id="fullname" placeholder="Nama Klinik" value="" class="form-control">
-        <label for="fullname">Nama Klinik</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="fullname" id="fullname" placeholder="Nama Koass" value="" class="form-control">
+        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap Koass" value="" class="form-control">
         <label for="fullname">Nama Koass</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="address" id="address" placeholder="NIM" value="" class="form-control">
-        <label for="adress">NIM</label>
+        <input type="text" name="coassnumber" id="coassnumber" placeholder="NIM" value="" class="form-control">
+        <label for="coassnumber">NIM</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="tel" name="address" id="address" placeholder="Nomor Telpon Coass" value="" class="form-control">
-        <label for="adress">Nomor Telpon Coass</label>
+        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="" class="form-control">
+        <label for="phone">Nomor Telpon Coass</label>
     </div>
     <!-- <div class="form-group mb-5">
         <label for="inputPassword5" class="form-label">Jenis Kelamin</label>
@@ -47,32 +40,42 @@
         <label class="btn btn-outline-primary btn-sm" for="option2">Perempuan</label>
     </div> -->
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="birthday" id="birthday" placeholder="Tanggal Onsite" class="form-control">
-        <label for="adress">Tanggal Onsite</label>
+        <input type="date" name="onsitedate" id="onsitedate" placeholder="Tanggal Onsite" class="inputdate form-control">
+        <label for="onsitedate">Tanggal Onsite</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="tel" name="address" id="address" placeholder="Klinik" value="" class="form-control">
-        <label for="adress">Klinik</label>
+        <input type="text" name="clinic" id="clinic" placeholder="Nama Klinik" value="" class="form-control">
+        <label for="clinic">Klinik</label>
+    </div>
+    <div class="form-floating mb-3 dateformat">
+        <input type="date" name="loandate" id="loandate" placeholder="Tanggal Peminjaman" class="inputdate form-control">
+        <label for="loandate">Tanggal Peminjaman</label>
     </div>
     <div class="mb-3">
         <label>Keperluan</label>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
+            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Kerja," id="loandesc[]">
+            <label class="form-check-label" for="loandesc[]">
                 Kerja
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-            <label class="form-check-label" for="flexCheckChecked">
+            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Nilai," id="loandesc[]">
+            <label class="form-check-label" for="loandesc[]">
                 Nilai
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-            <label class="form-check-label" for="flexCheckChecked">
+            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Diskusi/Up," id="loandesc[]">
+            <label class="form-check-label" for="loandesc[]">
                 Diskusi/Up
             </label>
+        </div>
+        <div class="form-check mb-5">
+            <label class="form-check-label" for="loandesc[]">
+                Lainnya
+            </label>
+            <input name="loandesc[]" class="form-control" type="text" value="" id="loandesc[]">
         </div>
     </div>
 
@@ -82,15 +85,15 @@
 </form>
 
 <script src="<?php echo base_url('/select2/dist/js/select2.min.js') ?>" type='text/javascript' defer></script>
-<!-- <script>
-    $("input").on("change", function() {
+<script>
+    $(".inputdate").on("change", function() {
         this.setAttribute(
             "data-date",
             moment(this.value, "YYYY-MM-DD")
             .format(this.getAttribute("data-date-format"))
         )
     }).trigger("change")
-</script> -->
+</script>
 <!-- <script type='text/javascript'>
     $(document).ready(function() {
         $('#search').select2({

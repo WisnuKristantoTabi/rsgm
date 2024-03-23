@@ -18,6 +18,8 @@ class Officer extends BaseController
         $UserModel = new UserModel();
         $data['officers'] = $UserModel->findAll();
         $data['title'] = 'Petugas';
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 2;
         $data['username'] = session()->get('username');
         return view('officer/index', $data);
     }
@@ -76,6 +78,7 @@ class Officer extends BaseController
     public function edit($id)
     {
         $data['username'] = session()->get('username');
+        $data['pagesidebar'] = 2;
         $UserModel = new UserModel();
         $recordmedicals = $UserModel->getWhere(['id' => $id])->getRow();
         if (isset($recordmedicals)) {

@@ -11,23 +11,29 @@
         <tr>
             <th scope="col">No</th>
             <th scope="col">No.RM</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Gender</th>
+            <th scope="col">Nama Pasien</th>
+            <th scope="col">Unit Pelayanan</th>
+            <th scope="col">Tanggal Pinjam</th>
+            <th scope="col">Tanggal Kembali</th>
+            <th scope="col">Keterangan</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($recordmedicals as $recordmedical) : ?>
+        <?php foreach ($trasactions as $trasaction) : ?>
             <tr>
-                <th scope="row">-</th>
-                <td><?= $recordmedical['rm_id'] ?></td>
-                <td><?= $recordmedical['fullname'] ?></td>
-                <td><?= ($recordmedical['gender'] == 1) ? "Pria" : "Wanita" ?></td>
+                <th scope="row"><?= $nomor++; ?></th>
+                <td><?= $trasaction['idrm'] ?></td>
+                <td><?= $trasaction['fullname'] ?></td>
+                <td><?= $trasaction['service_name'] ?></td>
+                <td><?= $trasaction['loan_date'] ?></td>
+                <td><?= $trasaction['return_date'] ?></td>
+                <td>-</td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a role="button" href="<?php echo base_url("recordmedical/show/") . $recordmedical['id'] ?>" class="btn btn-outline-primary btn-sm me-md-2">Lihat</a>
-                        <a role="button" href="<?php echo base_url("recordmedical/edit/") . $recordmedical['id'] ?>" class="btn btn-outline-warning btn-sm">Edit</a>
-                        <a class="btn btn-outline-danger btn-sm" href="<?= base_url('recordmedical/delete/' . $recordmedical['id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
+                        <a role="button" href="<?php echo base_url("recordmedical/show/") . $trasaction['tid'] ?>" class="btn btn-outline-primary btn-sm me-md-2">Lihat</a>
+                        <a role="button" href="<?php echo base_url("recordmedical/edit/") . $trasaction['tid'] ?>" class="btn btn-outline-warning btn-sm">Edit</a>
+                        <a class="btn btn-outline-danger btn-sm" href="<?= base_url('recordmedical/delete/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             Hapus</a>
                     </div>
                 </td>
@@ -35,5 +41,7 @@
         <?php endforeach ?>
     </tbody>
 </table>
+
+<?= $pager->links('returndoc', 'bootstrap_pagination') ?>
 
 <?= $this->endSection() ?>

@@ -16,6 +16,8 @@ class ServiceUnit extends BaseController
     public function index()
     {
         $serviceunitModel = new ServiceUnitModel();
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 3;
         $data['serviceunits'] = $serviceunitModel
             ->select('(SELECT COALESCE(COUNT(medical_records.service_unit),0) FROM medical_records 
             WHERE medical_records.service_unit = service_unit.id ) AS amount, 
@@ -31,6 +33,8 @@ class ServiceUnit extends BaseController
     public function add()
     {
         $data['title'] = 'Tambah Unit Pelayanan';
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 3;
         $data['username'] = session()->get('username');
 
         return view('serviceunit/add', $data);
@@ -63,6 +67,8 @@ class ServiceUnit extends BaseController
     public function edit($id)
     {
         $data['username'] = session()->get('username');
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 3;
         $serviceunitModel = new ServiceUnitModel();
         $serviceunits = $serviceunitModel->getWhere(['id' => $id])->getRow();
         if (isset($serviceunits)) {

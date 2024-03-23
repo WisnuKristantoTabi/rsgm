@@ -140,3 +140,18 @@ a.sidebar-link:hover {
     transform: rotate(45deg);
     transition: all .2s ease-out;
 }
+
+.sidebar-link.active {
+    background-color: #152894;
+}
+
+.sidebar-link.active i {
+    color: #fff;
+}
+
+
+.sidebar-item.active {
+    background-color: #152894;
+}
+
+

@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 // use App\Models\RecordMedicalModel;
 use App\Models\CoassModel;
-use App\Models\ServiceUnitModel;
+use App\Models\TransactionModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
 
 class LoanCoass extends BaseController
@@ -20,8 +20,13 @@ class LoanCoass extends BaseController
     {
         // $recordmedicalModel = new RecordMedicalModel();
         $coassmodels = new CoassModel();
-        $data['coassmodels'] = $coassmodels->orderBy('rm_id', 'desc')->findAll();
+        $data['pagesidebar'] = 3;
+        $data['subsidebar'] = 4;
+        $data['coassmodels'] = $coassmodels->orderBy('coass_date', 'desc')->paginate(20, 'loancoass');
+        $data['pager'] = $coassmodels->pager;
+        $data['nomor'] = nomor($this->request->getVar('page_loancoass'), 20);
         $data['title'] = 'Peminjaman Coass';
+        $data['type'] = 2;
         $data['username'] = session()->get('username');
         return view('coassloan/index', $data);
     }
@@ -42,6 +47,8 @@ class LoanCoass extends BaseController
     {
         // $serviceunitmodel = new ServiceUnitModel();
         $coassmodels = new CoassModel();
+        $data['pagesidebar'] = 3;
+        $data['subsidebar'] = 4;
         $data['title'] = 'Tambah Pinjaman COASS';
         $data['username'] = session()->get('username');
         $data['coassmodels'] = $coassmodels->findAll();
@@ -49,38 +56,64 @@ class LoanCoass extends BaseController
         return view('coassloan/add', $data);
     }
 
-    // public function store()
-    // {
-    //     $session = session();
+    public function store()
+    {
+        $session = session();
 
-    //     $rules = [
-    //         'rmid'               => 'required|min_length[2]|max_length[50]|is_unique[medical_records.rm_id]',
-    //         'fullname'           => 'required|min_length[2]|max_length[50]',
-    //         'address'            => 'required|min_length[2]|max_length[100]',
-    //         'gender'             => 'required',
-    //         'birthday'           => 'required',
-    //         'serviceunit'        => 'required',
-    //     ];
+        $rules = [
+            'rmid'                  => 'required|min_length[2]|max_length[50]|',
+            'fullname'              => 'required|min_length[2]|max_length[50]',
+            'coassnumber'           => 'required|min_length[2]|max_length[100]',
+            'phone'                 => 'required|min_length[2]',
+            'onsitedate'            => 'required',
+            'clinic'                => 'required',
+            'loandate'              => 'required',
+        ];
+        $coassmodels = new CoassModel();
+        $transactionmodels = new TransactionModel();
 
-    //     if ($this->validate($rules)) {
-    //         $recordmedicalModel = new RecordMedicalModel();
-    //         $data = [
-    //             'rm_id'          => $this->request->getVar('rmid'),
-    //             'fullname'      => $this->request->getVar('fullname'),
-    //             'address'       => $this->request->getVar('address'),
-    //             'gender'        => $this->request->getVar('gender'),
-    //             'birth_date'      => $this->request->getVar('birthday'),
-    //             'service_unit'   => $this->request->getVar('serviceunit'),
-    //         ];
-    //         $recordmedicalModel->save($data);
-    //         $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
-    //         return redirect()->to('/recordmedical');
-    //     } else {
-    //         $msg = $this->validator->listErrors();
-    //         $session->setFlashdata('error', $msg);
-    //         return redirect()->to('recordmedical/add');
-    //     }
-    // }
+        if ($this->validate($rules)) {
+
+            $transactiondata = [
+                'rm_id'          => $this->request->getPost('rmid'),
+                'loan_date'      => $this->request->getPost('loandate'),
+                'loan_type'       => 2,
+                'loan_desc'        => implode(" ", $this->request->getPost('loandesc')),
+            ];
+
+            $transactionmodels->insert($transactiondata);
+
+            $coassdata = [
+                'rm_id'          => $this->request->getPost('rmid'),
+                'coass_name'      => $this->request->getPost('fullname'),
+                'clinic_name'       => $this->request->getPost('clinic'),
+                'coass_number'        => $this->request->getPost('coassnumber'),
+                'coass_date'      => $this->request->getPost('onsitedate'),
+                'coass_phone'   => $this->request->getPost('phone'),
+                'transaction_id' => $transactionmodels->getInsertId(),
+            ];
+
+
+            $coassmodels->save($coassdata);
+            $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
+            return redirect()->to('/loancoass/add');
+        } else {
+            $msg = $this->validator->listErrors();
+            $session->setFlashdata('error', $msg);
+            return redirect()->to('loancoass/add');
+        }
+        // $data = [
+        //     'rm_id'          => $this->request->getPost('rmid'),
+        //     'coass_name'      => $this->request->getPost('fullname'),
+        //     'clinic_name'       => $this->request->getPost('clinic'),
+        //     'coass_number'        => $this->request->getPost('coassnumber'),
+        //     'coass_date'      => $this->request->getPost('onsitedate'),
+        //     'coass_phone'   => $this->request->getPost('phone'),
+        //     'loan_desc'        => $this->request->getPost('loandesc[]'),
+        //     'loan_date'      => $this->request->getPost('loandate'),
+        // ];
+        // print_r($data);
+    }
 
     // public function edit($id)
     // {

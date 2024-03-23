@@ -1,48 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<?= $this->extend('layout/page_layout') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barcode Scanner</title>
-    <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
-</head>
+<?= $this->section('content') ?>
 
-<body>
-    <h1>Barcode Scanner</h1>
-    <div id="interactive" class="viewport"></div>
-    <script>
-        // Konfigurasi Quagga
-        Quagga.init({
-            inputStream: {
-                name: "Live",
-                type: "LiveStream",
-                target: document.querySelector("#interactive"),
-                constraints: {
-                    width: 480,
-                    height: 320,
-                    facingMode: "environment" // Atur mode kamera (kamera belakang)
-                },
-            },
-            decoder: {
-                readers: ["ean_reader"] // Jenis barcode yang akan dibaca
-            },
-        }, function(err) {
-            if (err) {
-                console.error("Gagal menginisialisasi Quagga: ", err);
-                return;
-            }
-            console.log("Quagga diinisialisasi dengan sukses.");
-            Quagga.start();
-        });
+<div class="card">
+    <div class="card-header">
+        No. Rekam Medis: <?= $data->id_rekam_medik ?>
+    </div>
+    <div class="card-body mb-5">
+        <blockquote class="blockquote mb-0">
+            <p>Nama Lengkap Pasien</p>
+            <h2 class="blockquote-footer"> <?= $data->fullname ?></h2>
+        </blockquote>
+        <blockquote class="blockquote mb-0">
+            <p>Tanggal Peminjaman</p>
+            <h2 class="blockquote-footer"> <?= $data->loan_date ?></h2>
+        </blockquote>
+        <blockquote class="blockquote mb-0">
+            <p>Unit Pelayanan</p>
+            <h2 class="blockquote-footer"> <?= $data->service_name ?></h2>
+        </blockquote>
+        <blockquote class="blockquote mb-0">
+            <p>Deskripsi Peminjaman</p>
+            <h2 class="blockquote-footer"> <?= $data->loan_desc ?></h2>
+        </blockquote>
 
-        // Tangani hasil pemindaian
-        Quagga.onDetected(function(result) {
-            console.log("Hasil pemindaian: ", result);
-            alert("Barcode terdeteksi: " + result.codeResult.code);
-            Quagga.stop(); // Hentikan pemindaian setelah barcode terdeteksi
-        });
-    </script>
-</body>
+    </div>
+    <div class="container-sm my-5">
+        <?= $barcode ?>
+        <p class="h6 mt-3"> <?php echo base_url('/t/') ?> <?= $data->tid ?></p>
+    </div>
 
-</html>
+</div>
+
+<div>
+
+</div>
+
+
+<?= $this->endSection() ?>

@@ -22,6 +22,8 @@ class RecordMedical extends BaseController
         $data['pager'] = $recordmedicalModel->pager;
         $data['nomor'] = nomor($this->request->getVar('page_recordmedicals'), 20);
         $data['title'] = 'Rekam Medis';
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 1;
         $data['username'] = session()->get('username');
         return view('recordmedical/index', $data);
     }
@@ -32,6 +34,8 @@ class RecordMedical extends BaseController
         $recordmedicalModel = new RecordMedicalModel();
         $data['profile'] = $recordmedicalModel->join('service_unit', 'service_unit.id = medical_records.service_unit')->getWhere(['medical_records.rm_id' => $id])->getRow();
         $data['title'] = 'Detail Rekam Medis';
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 1;
         $data['username'] = session()->get('username');
         $data['barcode'] = $generator->getBarcode($id, $generator::TYPE_CODE_128, 1);
         return view('recordmedical/show', $data);
@@ -43,6 +47,8 @@ class RecordMedical extends BaseController
         $serviceunitmodel = new ServiceUnitModel();
         $data['title'] = 'Tambah Rekam Medis';
         $data['username'] = session()->get('username');
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 1;
         $data['serviceunits'] = $serviceunitmodel->findAll();
 
         return view('recordmedical/add', $data);
@@ -84,6 +90,8 @@ class RecordMedical extends BaseController
     public function edit($id)
     {
         $data['username'] = session()->get('username');
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 1;
         $recordmedicalModel = new RecordMedicalModel();
         $serviceunitmodel = new ServiceUnitModel();
         $recordmedicals = $recordmedicalModel->getWhere(['id' => $id])->getRow();
@@ -137,6 +145,10 @@ class RecordMedical extends BaseController
 
     public function test()
     {
+        $recordmedical = new RecordMedicalModel();
+        $rm = $recordmedical->select('rm_id')->orderBy('rm_id', 'RANDOM')->limit(1)->first();
+        // print_r($rm);
+        echo $rm['rm_id'] . "Test";
     }
 
     public function searchData()

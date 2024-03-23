@@ -11,6 +11,8 @@ class Dashboard extends BaseController
     {
         $data['title'] = "Dashboard";
         $data['username'] = session()->get('username');
+        $data['pagesidebar'] = 1;
+        $data['subsidebar'] = 0;
 
         return view('dashboard', $data);
         // print_r($data);

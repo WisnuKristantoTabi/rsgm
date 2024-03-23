@@ -9,7 +9,7 @@ $routes->get('/', 'Login::index');
 $routes->post('/auth', 'Login::auth');
 $routes->get('/logout', 'Login::logout');
 
-$routes->get('/f', 'Find::find');
+$routes->get('/t/(:any)', 'Tracer::find/$1');
 $routes->get('/recordmedical/searchdata', 'RecordMedical::searchData');
 
 
@@ -41,6 +41,15 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->post('/serviceunit/update', 'ServiceUnit::update');
     $routes->get('/serviceunit/delete/(:any)', 'ServiceUnit::delete/$1');
 
+    $routes->get('/f', 'Tracer::findloan');
+
     $routes->get('/loancoass', 'LoanCoass::index');
     $routes->get('/loancoass/add', 'LoanCoass::add');
+    $routes->post('/loancoass/store', 'LoanCoass::store');
+
+    $routes->get('/loanpublic', 'LoanPublic::index');
+    $routes->get('/loanpublic/add', 'LoanPublic::add');
+    $routes->post('/loanpublic/store', 'LoanPublic::store');
+
+    $routes->get('/returndoc', 'ReturnDocument::index');
 });

@@ -41,28 +41,28 @@
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="<?php echo base_url('dashboard') ?>" class="sidebar-link">
+                    <a href="<?php echo base_url('dashboard') ?>" class="sidebar-link <?= ($pagesidebar == 1) ? 'active' : '' ?>">
                         <i class="lni lni-home"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#masterdata" aria-expanded="false" aria-controls="masterdata">
+                    <a href="#" class="sidebar-link <?= ($pagesidebar == 2) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#masterdata" aria-expanded="false" aria-controls="masterdata">
                         <i class="lni lni-database"></i>
                         <span>Master Data</span>
                     </a>
                     <ul id="masterdata" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
+                        <li class="sidebar-item <?= ($subsidebar == 1) ? 'active' : '' ?>">
                             <a href="<?php echo base_url('recordmedical') ?>" class="sidebar-link">
                                 Rekam Medis
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item <?= ($subsidebar == 2) ? 'active' : '' ?>">
                             <a href="<?php echo base_url('officer') ?>" class="sidebar-link">
                                 Petugas
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <li class="sidebar-item <?= ($subsidebar == 3) ? 'active' : '' ?>">
                             <a href="<?php echo base_url('serviceunit') ?>" class="sidebar-link">
                                 Unit Pelayanan
                             </a>
@@ -71,28 +71,22 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#transaction" aria-expanded="false" aria-controls="transaction">
+                    <a href="#" class="sidebar-link <?= ($pagesidebar == 3) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#transaction" aria-expanded="false" aria-controls="transaction">
                         <i class="lni lni-write"></i>
                         <span>Transaksi</span>
                     </a>
                     <ul id="transaction" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#transaction">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
+                        <li class="sidebar-item <?= ($subsidebar == 4) ? 'active' : '' ?>">
+                            <a href="<?php echo base_url('loanpublic') ?>" class="sidebar-link">
                                 Peminjaman
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
+                        <li class="sidebar-item <?= ($subsidebar == 5) ? 'active' : '' ?>">
+                            <a href="<?php echo base_url('returndoc') ?>" class="sidebar-link">
                                 Pengembalian
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="lni lni-hospital"></i>
-                        <span>RM aktif</span>
-                    </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#report" aria-expanded="false" aria-controls="report">
@@ -100,7 +94,7 @@
                         <span>Laporan</span>
                     </a>
                     <ul id="report" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#transaction">
-                        <li class="sidebar-item">
+                        <li class="sidebar-item ">
                             <a href="#" class="sidebar-link">
                                 Peminjaman
                             </a>

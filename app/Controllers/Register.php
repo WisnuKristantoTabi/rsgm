@@ -18,6 +18,8 @@ class Register extends Controller
     {
         $data['title'] = "Daftar User";
         $data['username'] = 'Petugas';
+        $data['pagesidebar'] = 2;
+        $data['subsidebar'] = 2;
         return view('auth/register', $data);
     }
 
