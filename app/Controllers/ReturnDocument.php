@@ -42,15 +42,17 @@ class ReturnDocument extends BaseController
     //     // print_r($data);
     // }
 
-    // public function add()
-    // {
-    //     $serviceunitmodel = new ServiceUnitModel();
-    //     $data['title'] = 'Tambah Rekam Medis';
-    //     $data['username'] = session()->get('username');
-    //     $data['serviceunits'] = $serviceunitmodel->findAll();
+    public function add()
+    {
+        // $serviceunitmodel = new ServiceUnitModel();
+        $data['title'] = 'Tambah Pengembalian';
+        $data['username'] = session()->get('username');
+        $data['pagesidebar'] = 3;
+        $data['subsidebar'] = 5;
+        // $data['serviceunits'] = $serviceunitmodel->findAll();
 
-    //     return view('recordmedical/add', $data);
-    // }
+        return view('returndocument/add', $data);
+    }
 
     // public function store()
     // {
@@ -149,7 +151,7 @@ class ReturnDocument extends BaseController
             // Fetch record
             $transactionModel = new TransactionModel();
 
-            $transactions = $transactionModel->select('rm_id,fullname')
+            $transactions = $transactionModel->select('id,fullname')
                 ->orderBy('rm_id')
                 ->findAll(5);
         } else {

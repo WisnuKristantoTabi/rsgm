@@ -18,7 +18,7 @@ class CoassLoanSeeder extends Seeder
             $datatransaction = [
                 'rm_id' => $rm['rm_id'],
                 // 'loan_date' => $faker->date('Y-m-d', 'now'),
-                'loan_date' => $faker->dateTimeBetween('-1 years', 'now', null),
+                'loan_date' => $faker->dateTimeBetween('2024'),
                 'loan_type' => $faker->numberBetween(1, 2),
                 'loan_desc' => $faker->text(130),
             ];

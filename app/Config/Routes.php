@@ -19,6 +19,8 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->post('/register', 'Register::store');
 
     $routes->get('/dashboard', 'Dashboard::index');
+    $routes->get('/dashboard/getdataloan', 'Dashboard::getDataLoan');
+    $routes->get('/dashboard/getdatareturn', 'Dashboard::getDataReturn');
 
     $routes->get('/recordmedical', 'RecordMedical::index');
     $routes->get('/recordmedical/show/(:any)', 'RecordMedical::show/$1');
@@ -52,4 +54,5 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->post('/loanpublic/store', 'LoanPublic::store');
 
     $routes->get('/returndoc', 'ReturnDocument::index');
+    $routes->get('/returndoc/add', 'ReturnDocument::add');
 });

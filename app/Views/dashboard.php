@@ -2,31 +2,82 @@
 
 <?= $this->section('content') ?>
 
+
+
+
 <div class="row">
 	<div class="col-md-12 my-2 card">
-		<div class="card-body">
-			<h5 class="h5">Codeigniter 4 Sudah Rilis!</h5>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam perferendis commodi tenetur quos ducimus repellat nulla, nam magni. Commodi iusto ad harum voluptas exercitationem facere eos earum laboriosam excepturi quas?</p>
-		</div>
+		<canvas id="chart"></canvas>
 	</div>
 	<div class="col-md-12 my-2 card">
-		<div class="card-body">
-			<h5 class="h5">Pengembangan Codeiginter 4 Tertunda</h5>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam perferendis commodi tenetur quos ducimus repellat nulla, nam magni. Commodi iusto ad harum voluptas exercitationem facere eos earum laboriosam excepturi quas?</p>
-		</div>
-	</div>
-	<div class="col-md-12 my-2 card">
-		<div class="card-body">
-			<h5 class="h5">Wow, Ini 5 Startup yang Menggunakan Codeigniter</h5>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam perferendis commodi tenetur quos ducimus repellat nulla, nam magni. Commodi iusto ad harum voluptas exercitationem facere eos earum laboriosam excepturi quas?</p>
-		</div>
-	</div>
-	<div class="col-md-12 my-2 card">
-		<div class="card-body">
-			<h5 class="h5">Codeigniter Ternyata Framework Terpopuler di Inodnesia</h5>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam perferendis commodi tenetur quos ducimus repellat nulla, nam magni. Commodi iusto ad harum voluptas exercitationem facere eos earum laboriosam excepturi quas?</p>
+		<div class="input-group m-3">
+			<span class="input-group-text">
+				Jumlah Keterlambatan Rekam Medis
+			</span>
+			<input type="text" class="form-control" value="<?= $count['count_late'] ?>" readonly>
 		</div>
 	</div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+	var data_total_loans = []
+	var data_total_return = []
+	var data_labels = []
+
+
+	<?php foreach ($transactions as $transaction) : ?>
+		data_total_loans.push(<?= $transaction['totalloan'] ?>);
+		data_total_return.push(<?= $transaction['totalreturn'] ?>)
+		data_labels.push(<?= $transaction['month'] ?>);
+	<?php endforeach ?>
+
+	const data = {
+		labels: data_labels,
+		datasets: [{
+				label: 'Grafik Peminjaman',
+				data: data_total_loans,
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+				],
+				borderColor: [
+					'rgb(255, 99, 132)',
+				],
+				borderWidth: 1
+			},
+			{
+				label: 'Grafik Pengembalian',
+				data: data_total_return,
+				backgroundColor: [
+					'rgba(54, 162, 235, 0.2)',
+				],
+				borderColor: [
+					'rgb(54, 162, 235)',
+				],
+				borderWidth: 1
+			}
+		]
+	};
+
+	const config = {
+		type: 'bar',
+		data: data,
+		options: {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		},
+	}
+
+	var chart = new Chart(
+		document.getElementById('chart'),
+		config
+	)
+</script>
+
+
 
 <?= $this->endSection() ?>
