@@ -15,6 +15,7 @@
         "ext-json": "*",
         "ext-mbstring": "*",
         "laminas/laminas-escaper": "^2.9",
+        "phpoffice/phpspreadsheet": "^2.0",
         "picqer/php-barcode-generator": "^2.4",
         "psr/log": "^1.1"
     },
