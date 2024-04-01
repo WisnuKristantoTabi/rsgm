@@ -82,7 +82,7 @@ class LoanPublic extends BaseController
 
             $transactionmodels->insert($transactiondata);
 
-            $coassdata = [
+            $publicdata = [
                 'rm_id'                 => $this->request->getPost('rmid'),
                 'fullname'              => $this->request->getPost('fullname'),
                 'identity_number'       => $this->request->getPost('identitynumber'),
@@ -92,7 +92,7 @@ class LoanPublic extends BaseController
             ];
 
 
-            $publicmodels->save($coassdata);
+            $publicmodels->save($publicdata);
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
             return redirect()->to('/loanpublic');
         } else {
@@ -113,61 +113,93 @@ class LoanPublic extends BaseController
         // print_r($data);
     }
 
-    // public function edit($id)
-    // {
-    //     $data['username'] = session()->get('username');
-    //     $recordmedicalModel = new RecordMedicalModel();
-    //     $serviceunitmodel = new ServiceUnitModel();
-    //     $recordmedicals = $recordmedicalModel->getWhere(['id' => $id])->getRow();
-    //     if (isset($recordmedicals)) {
-    //         $data['recordmedicals'] = $recordmedicals;
-    //         $data['title']  = 'Edit Rekam Medis No. ' . $recordmedicals->rm_id;
-    //         $data['serviceunits'] = $serviceunitmodel->findAll();
-
-    //         return view('recordmedical/edit', $data);
-    //     } else {
-    //         session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
-    //         return redirect()->to('recordmedical');
-    //     }
-    // }
-
-    // public function update()
-    // {
-    //     $recordmedicalModel = new RecordMedicalModel();
-    //     $id = $this->request->getPost('recordId');
-    //     $data = array(
-    //         'rm_id'         => $this->request->getPost('rmid'),
-    //         'fullname'      => $this->request->getPost('fullname'),
-    //         'address'       => $this->request->getPost('address'),
-    //         'gender'        => $this->request->getPost('gender'),
-    //         'birth_date'    => $this->request->getPost('birthdate'),
-    //         'service_unit'  => $this->request->getPost('serviceunit'),
-    //     );
-    //     if ($recordmedicalModel->find($id)) {
-    //         $recordmedicalModel->update($id, $data);
-    //         session()->setFlashdata('success', 'Data Berhasil Di edit');
-    //         return redirect()->to('recordmedical/edit/' . $id);
-    //     } else {
-    //         echo "Data Tidak Ditemukan";
-    //     }
-    // }
-
-    // public function delete($id)
-    // {
-    //     $recordmedicalModel = new RecordMedicalModel();
-
-    //     $check = $recordmedicalModel->find($id);
-    //     if ($check) {
-    //         $recordmedicalModel->delete($id);
-    //         session()->setFlashdata('success', 'Data Berhasil Di Hapus');
-    //         return redirect()->to('recordmedical/');
-    //     } else {
-    //         session()->setFlashdata('error', 'Data Tidak Ditemukan');
-    //         return redirect()->to('recordmedical/');
-    //     }
-    // }
-
-    public function test()
+    public function edit($id)
     {
+        $data['username'] = session()->get('username');
+        $transactionmodels = new TransactionModel();
+        $transactions = $transactionmodels->select('transaction.rm_id, public_doc.fullname as patientname, 
+        public_doc.phone, public_doc.identity_number, public_doc.address, transaction.loan_date,
+        medical_records.fullname, transaction.id as tid  ')
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
+            ->join('public_doc', 'public_doc.transaction_id = transaction.id')
+            ->getWhere(['transaction.id' => $id, 'loan_type' => 1])
+            ->getRow();
+
+        if ($transactionmodels->find(['transaction.id' => $id, 'loan_type' => 1])) {
+            $data['transaction'] = $transactions;
+            $data['title']  = 'Edit Rekam Medis No. ' . $transactions->rm_id;
+            $data['pagesidebar'] = 3;
+            $data['subsidebar'] = 4;
+            // dd($data);
+            return view('publicloan/edit', $data);
+        } else {
+            session()->setFlashdata('error', 'Data Tidak Ditemukan');
+            return redirect()->to('/loanpublic');
+        }
+    }
+
+    public function update()
+    {
+        $id = $this->request->getPost('tid');
+        $rules = [
+            'rmid'                  => 'required|min_length[2]|max_length[50]|',
+            'fullname'              => 'required|min_length[2]|max_length[200]',
+            'identitynumber'        => 'required|min_length[2]|max_length[100]',
+            'phone'                 => 'required|min_length[2]',
+            'address'               => 'required',
+            'loandate'              => 'required',
+        ];
+
+        $publicmodels = new PublicModel();
+        $transactionmodels = new TransactionModel();
+
+        if ($this->validate($rules)) {
+
+            $transactiondata = [
+                'rm_id'                 => $this->request->getPost('rmid'),
+                'loan_date'             => $this->request->getPost('loandate'),
+                'loan_desc'             => implode(" ", $this->request->getPost('loandesc')),
+            ];
+
+            $publicdata = [
+                'rm_id'                 => $this->request->getPost('rmid'),
+                'fullname'              => $this->request->getPost('fullname'),
+                'identity_number'       => $this->request->getPost('identitynumber'),
+                'address'               => $this->request->getPost('address'),
+                'phone'                 => $this->request->getPost('phone'),
+            ];
+
+            if ($transactionmodels->find(['id' => $id])) {
+                $transactionmodels->update($id, $transactiondata);
+                $publicmodels->where('transaction_id', $id)->set($publicdata)->update();
+
+                session()->setFlashdata('success', 'Data Berhasil Di edit');
+                return redirect()->to('loanpublic/edit/' . $id);
+            } else {
+                session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
+                return redirect()->to('loanpublic/edit/' . $id);
+            }
+        } else {
+            $msg = $this->validator->listErrors();
+            session()->setFlashdata('error', $msg);
+            return redirect()->to('/loanpublic/add');
+        }
+    }
+
+    public function delete($id)
+    {
+        $publicmodels = new PublicModel();
+        $transactionmodels = new TransactionModel();
+
+        $check = $transactionmodels->find($id);
+        if ($check) {
+            $transactionmodels->delete(['id' => $id]);
+            $publicmodels->where('transaction_id', $id)->delete();
+            session()->setFlashdata('success', 'Data Berhasil Di Hapus');
+            return redirect()->to('loanpublic/');
+        } else {
+            session()->setFlashdata('error', 'Data Tidak Ditemukan');
+            return redirect()->to('loanpublic/');
+        }
     }
 }

@@ -8,27 +8,27 @@
     </div>
 <?php endif; ?>
 
-<form action="<?php echo base_url('/loanpublic/store'); ?>" method="post">
+<form action="<?php echo base_url('loanpublic/update') ?>" method="post">
     <!-- <input type="hidden" class="txt_csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" /> -->
     <!-- <div class="form-floating mb-3"> -->
     <!-- <input type="text" name="rmid" id="rmid" placeholder="RM.NO" value="" class="form-control"> -->
-
+    <input type="hidden" name="tid" value="<?= $transaction->tid ?>">
     <div class="mb-5">
         <label class="mb-3" for="searchrm">Cari Nomor Rekam Medik</label>
         <select id="searchrm" name="rmid" class="form-select">
-            <option value=""></option>
+            <option value="<?= $transaction->rm_id ?>"><?= $transaction->fullname ?> - <?= $transaction->rm_id ?></option>
         </select>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap " value="" class="form-control">
+        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap " value="<?= $transaction->patientname ?>" class="form-control">
         <label for="fullname">Nama Lengkap</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="identitynumber" id="identitynumber" placeholder="Masukkan Nomor NIP/KTP" value="" class="form-control">
+        <input type="text" name="identitynumber" id="identitynumber" placeholder="Masukkan Nomor NIP/KTP" value="<?= $transaction->identity_number ?>" class="form-control">
         <label for="identitynumber">Nomor Identitas</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon" value="" class="form-control">
+        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon" value="<?= $transaction->phone ?>" class="form-control">
         <label for="phone">Nomor Telpon</label>
     </div>
     <!-- <div class="form-group mb-5">
@@ -40,11 +40,11 @@
         <label class="btn btn-outline-primary btn-sm" for="option2">Perempuan</label>
     </div> -->
     <div class="form-floating mb-3">
-        <input type="text" name="address" id="address" placeholder="Alamat" value="" class="form-control">
+        <input type="text" name="address" id="address" placeholder="Alamat" value="<?= $transaction->address ?>" class="form-control">
         <label for="address">Alamat</label>
     </div>
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="loandate" id="loandate" placeholder="Tanggal Peminjaman" value="" class="inputdate form-control">
+        <input type="date" name="loandate" id="loandate" placeholder="Tanggal Peminjaman" value="<?= $transaction->loan_date ?>" class="inputdate form-control">
         <label for="loandate">Tanggal Peminjaman</label>
     </div>
     <div class="mb-3">
@@ -76,7 +76,7 @@
     </div>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="submit" class="btn btn-primary">Tambah</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
     </div>
 </form>
 

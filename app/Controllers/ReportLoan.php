@@ -14,6 +14,11 @@ class ReportLoan extends BaseController
 
     public function index()
     {
+        $data['pagesidebar'] = 4;
+        $data['subsidebar'] = 6;
+        $data['title'] = 'Laporan Peminjaman';
+        $data['username'] = session()->get('username');
+        return view('report/loanreport', $data);
     }
 
     public function saveExcel()

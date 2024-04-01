@@ -39,9 +39,8 @@
                 <td><?= $coassmodel['identity_number'] ?></td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a role="button" href="<?php echo base_url("recordmedical/show/") . $coassmodel['rm_id'] ?>" class="btn btn-outline-primary btn-sm me-md-2">Lihat</a>
-                        <a role="button" href="<?php echo base_url("recordmedical/edit/") . $coassmodel['id'] ?>" class="btn btn-outline-warning btn-sm">Edit</a>
-                        <a class="btn btn-outline-danger btn-sm" href="<?= base_url('recordmedical/delete/' . $coassmodel['id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
+                        <a role="button" href="<?php echo base_url("loanpublic/edit/") . $coassmodel['transaction_id'] ?>" class="btn btn-outline-warning btn-sm">Edit</a>
+                        <a class="btn btn-outline-danger btn-sm" href="<?= base_url('loanpublic/delete/' . $coassmodel['transaction_id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             Hapus</a>
                     </div>
                 </td>

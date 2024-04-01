@@ -8,28 +8,28 @@
     </div>
 <?php endif; ?>
 
-<form action="<?php echo base_url('/loanpublic/store'); ?>" method="post">
+<form action="<?php echo base_url('/loancoass/update'); ?>" method="post">
     <!-- <input type="hidden" class="txt_csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" /> -->
     <!-- <div class="form-floating mb-3"> -->
     <!-- <input type="text" name="rmid" id="rmid" placeholder="RM.NO" value="" class="form-control"> -->
-
+    <input type="hidden" name="tid" value="<?= $transactions->tid ?>">
     <div class="mb-5">
         <label class="mb-3" for="searchrm">Cari Nomor Rekam Medik</label>
         <select id="searchrm" name="rmid" class="form-select">
-            <option value=""></option>
+            <option value="<?= $transactions->rm_id ?>"><?= $transactions->fullname ?> - <?= $transactions->rm_id ?></option>
         </select>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap " value="" class="form-control">
-        <label for="fullname">Nama Lengkap</label>
+        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap Koass" value="<?= $transactions->coass_name ?>" class="form-control">
+        <label for="fullname">Nama Koass</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="identitynumber" id="identitynumber" placeholder="Masukkan Nomor NIP/KTP" value="" class="form-control">
-        <label for="identitynumber">Nomor Identitas</label>
+        <input type="text" name="coassnumber" id="coassnumber" placeholder="NIM" value="<?= $transactions->coass_number ?>" class="form-control">
+        <label for="coassnumber">NIM</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon" value="" class="form-control">
-        <label for="phone">Nomor Telpon</label>
+        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="<?= $transactions->coass_phone ?>" class="form-control">
+        <label for="phone">Nomor Telpon Coass</label>
     </div>
     <!-- <div class="form-group mb-5">
         <label for="inputPassword5" class="form-label">Jenis Kelamin</label>
@@ -39,12 +39,16 @@
         <input type="radio" class="btn-check" value="0" name="gender" id="option2" autocomplete="off">
         <label class="btn btn-outline-primary btn-sm" for="option2">Perempuan</label>
     </div> -->
+    <div class="form-floating mb-3 dateformat">
+        <input type="date" name="onsitedate" id="onsitedate" value="<?= $transactions->coass_date ?>" placeholder="Tanggal Onsite" class="inputdate form-control">
+        <label for="onsitedate">Tanggal Onsite</label>
+    </div>
     <div class="form-floating mb-3">
-        <input type="text" name="address" id="address" placeholder="Alamat" value="" class="form-control">
-        <label for="address">Alamat</label>
+        <input type="text" name="clinic" id="clinic" placeholder="Nama Klinik" value="<?= $transactions->clinic_name ?>" class="form-control">
+        <label for="clinic">Klinik</label>
     </div>
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="loandate" id="loandate" placeholder="Tanggal Peminjaman" value="" class="inputdate form-control">
+        <input type="date" name="loandate" id="loandate" placeholder="Tanggal Peminjaman" value="<?= $transactions->loan_date ?>" class="inputdate form-control">
         <label for="loandate">Tanggal Peminjaman</label>
     </div>
     <div class="mb-3">
@@ -76,7 +80,7 @@
     </div>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="submit" class="btn btn-primary">Tambah</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
     </div>
 </form>
 

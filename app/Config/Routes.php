@@ -48,13 +48,20 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/loancoass', 'LoanCoass::index');
     $routes->get('/loancoass/add', 'LoanCoass::add');
     $routes->post('/loancoass/store', 'LoanCoass::store');
+    $routes->get('/loancoass/edit/(:any)', 'LoanCoass::edit/$1');
+    $routes->post('/loancoass/update', 'LoanCoass::update');
+    $routes->get('/loancoass/delete/(:any)', 'LoanCoass::delete/$1');
 
     $routes->get('/loanpublic', 'LoanPublic::index');
     $routes->get('/loanpublic/add', 'LoanPublic::add');
     $routes->post('/loanpublic/store', 'LoanPublic::store');
+    $routes->get('/loanpublic/edit/(:any)', 'LoanPublic::edit/$1');
+    $routes->post('/loanpublic/update', 'LoanPublic::update');
+    $routes->get('/loanpublic/delete/(:any)', 'LoanPublic::delete/$1');
 
     $routes->get('/returndoc', 'ReturnDocument::index');
     $routes->get('/returndoc/add', 'ReturnDocument::add');
 
-    $routes->get('reportloan', 'ReportLoan::saveExcel');
+    $routes->get('reportloan', 'ReportLoan::index');
+    $routes->get('reportloanexcel', 'ReportLoan::saveExcel');
 });
