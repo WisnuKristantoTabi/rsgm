@@ -100,7 +100,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link <?= ($subsidebar == 7) ? 'active' : '' ?>">
+                            <a href="<?php echo base_url('reportreturn') ?> " class="sidebar-link <?= ($subsidebar == 7) ? 'active' : '' ?>">
                                 Pengembalian
                             </a>
                         </li>
