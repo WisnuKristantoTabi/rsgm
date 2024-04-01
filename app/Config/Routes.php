@@ -63,5 +63,5 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/returndoc/add', 'ReturnDocument::add');
 
     $routes->get('reportloan', 'ReportLoan::index');
-    $routes->get('reportloanexcel', 'ReportLoan::saveExcel');
+    $routes->post('reportloanexcel', 'ReportLoan::saveExcel');
 });

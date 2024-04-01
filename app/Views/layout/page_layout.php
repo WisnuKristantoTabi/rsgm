@@ -95,7 +95,7 @@
                     </a>
                     <ul id="report" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#transaction">
                         <li class="sidebar-item ">
-                            <a href="#" class="sidebar-link <?= ($subsidebar == 6) ? 'active' : '' ?>">
+                            <a href="<?php echo base_url('reportloan') ?> " class="sidebar-link <?= ($subsidebar == 6) ? 'active' : '' ?>">
                                 Peminjaman
                             </a>
                         </li>

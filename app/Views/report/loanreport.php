@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 
 <div class="card">
-    <form action="" method="post">
+    <form action="<?php echo base_url('reportloanexcel') ?>" method="post">
         <div class="card-header">
 
         </div>
@@ -11,7 +11,7 @@
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Pilih Bulan</span>
                 <select class="form-select" name="month">
-                    <option value="1">Januari</option>
+                    <option value="1" selected>Januari</option>
                     <option value="2">Februari</option>
                     <option value="3">Maret</option>
                     <option value="4">April</option>
@@ -31,7 +31,7 @@
                     <option value="2021">2021</option>
                     <option value="2022">2022</option>
                     <option value="2023">2023</option>
-                    <option value="2024">2024</option>
+                    <option value="2024" selected>2024</option>
                 </select>
             </div>
         </div>
