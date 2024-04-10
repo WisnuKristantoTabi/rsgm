@@ -28,7 +28,7 @@
         <label for="coassnumber">NIM</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="<?= $transactions->coass_phone ?>" class="form-control">
+        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="<?= $transactions->phone ?>" class="form-control">
         <label for="phone">Nomor Telpon Coass</label>
     </div>
     <!-- <div class="form-group mb-5">
@@ -50,6 +50,10 @@
     <div class="form-floating mb-3 dateformat">
         <input type="date" name="loandate" id="loandate" placeholder="Tanggal Peminjaman" value="<?= $transactions->loan_date ?>" class="inputdate form-control">
         <label for="loandate">Tanggal Peminjaman</label>
+    </div>
+    <div class="form-floating mb-3 dateformat">
+        <input type="date" name="deadline" id="deadline" placeholder="Tanggal Batas Pengembalian" value="<?= $transactions->deadline ?>" class="inputdate form-control">
+        <label for="deadline">Tanggal Batas Pengembalian</label>
     </div>
     <div class="mb-3">
         <label>Keperluan</label>

@@ -7,6 +7,21 @@
 
 <div class="row">
 	<div class="col-md-12 my-2 card">
+		<div>
+			<form class="input-group p-3" action="" method="GET">
+				<span class="input-group-text">Pilih Poli</span>
+				<select name="poli" class="form-select form-select-sm ">
+					<option>Daftar Poli</option>
+					<?php foreach ($serviceunits as $serviceunit) : ?>
+						<option value="<?= $serviceunit['id'] ?>" <?= ($serviceunit['id'] == $poli) ? "Selected" : "" ?>><?= $serviceunit['service_name'] ?></option>
+					<?php endforeach ?>
+				</select>
+				<button type="submit" class="btn btn-outline-primary btn-sm "> <i class="lni lni-search"></i>Tampil</button>
+			</form>
+		</div>
+
+	</div>
+	<div class="col-md-12 my-2 card">
 		<canvas id="chart"></canvas>
 	</div>
 	<div class="col-md-12 my-2 card">

@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\TransactionModel;
+use App\Models\ServiceUnitModel;
+use PhpOffice\PhpSpreadsheet\Calculation\Web\Service;
 
 class Dashboard extends BaseController
 {
@@ -11,15 +13,23 @@ class Dashboard extends BaseController
 
     public function index()
     {
+        $poli = $this->request->getVar('poli');
+
         $transactionModels = new TransactionModel();
+        $serviceUnitModels = new ServiceUnitModel();
         $data['title'] = "Dashboard";
         $data['username'] = session()->get('username');
+        $data['role'] = session()->get('role');
         $data['pagesidebar'] = 1;
         $data['subsidebar'] = 0;
+        $data['serviceunits'] = $serviceUnitModels->findAll();
+        $data['poli'] = $poli;
 
         $transactions = $transactionModels->select("MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn")
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
             ->orderBy('loan_date')
             ->where('YEAR(loan_date)', '2024')
+            ->where('service_unit', $poli)
             ->groupBy('MONTH(loan_date)')
             ->findAll();
 
@@ -27,7 +37,9 @@ class Dashboard extends BaseController
 
         $count = $transactionModels
             ->select('COUNT(*) as count_late')
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
             ->where('is_late', 2)
+            ->where('service_unit', $poli)
             ->first();
 
         $data['count'] = $count;
@@ -35,7 +47,7 @@ class Dashboard extends BaseController
 
 
         return view('dashboard', $data);
-        // return $this->response->setJSON($data);
+        // return $poli;
     }
 
 

@@ -18,6 +18,7 @@ class RecordMedical extends BaseController
     public function index()
     {
         $recordmedicalModel = new RecordMedicalModel();
+        $data['role'] = session()->get('role');
         $data['recordmedicals'] = $recordmedicalModel->orderBy('rm_id', 'desc')->paginate(20, 'recordmedicals');
         $data['pager'] = $recordmedicalModel->pager;
         $data['nomor'] = nomor($this->request->getVar('page_recordmedicals'), 20);
@@ -32,6 +33,7 @@ class RecordMedical extends BaseController
     {
         $generator = new BarcodeGeneratorHTML();
         $recordmedicalModel = new RecordMedicalModel();
+        $data['role'] = session()->get('role');
         $data['profile'] = $recordmedicalModel->join('service_unit', 'service_unit.id = medical_records.service_unit')->getWhere(['medical_records.rm_id' => $id])->getRow();
         $data['title'] = 'Detail Rekam Medis';
         $data['pagesidebar'] = 2;
@@ -46,6 +48,7 @@ class RecordMedical extends BaseController
     {
         $serviceunitmodel = new ServiceUnitModel();
         $data['title'] = 'Tambah Rekam Medis';
+        $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 1;
@@ -92,6 +95,7 @@ class RecordMedical extends BaseController
         $data['username'] = session()->get('username');
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 1;
+        $data['role'] = session()->get('role');
         $recordmedicalModel = new RecordMedicalModel();
         $serviceunitmodel = new ServiceUnitModel();
         $recordmedicals = $recordmedicalModel->getWhere(['id' => $id])->getRow();

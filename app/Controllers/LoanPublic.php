@@ -22,6 +22,7 @@ class LoanPublic extends BaseController
         $coassmodels = new PublicModel();
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
+        $data['role'] = session()->get('role');
         $data['coassmodels'] = $coassmodels->paginate(20, 'publiccoass');
         $data['pager'] = $coassmodels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_loancoass'), 20);
@@ -50,6 +51,7 @@ class LoanPublic extends BaseController
         $data['title'] = 'Tambah Pinjaman Umum';
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
+        $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
         $data['coassmodels'] = $coassmodels->findAll();
 
@@ -67,6 +69,7 @@ class LoanPublic extends BaseController
             'phone'                 => 'required|min_length[2]',
             'address'               => 'required',
             'loandate'              => 'required',
+            'deadline'              => 'required',
         ];
         $publicmodels = new PublicModel();
         $transactionmodels = new TransactionModel();
@@ -76,8 +79,10 @@ class LoanPublic extends BaseController
             $transactiondata = [
                 'rm_id'          => $this->request->getPost('rmid'),
                 'loan_date'      => $this->request->getPost('loandate'),
-                'loan_type'       => 1,
-                'loan_desc'        => implode(" ", $this->request->getPost('loandesc')),
+                'loan_type'      => 1,
+                'loan_desc'      => implode(" ", $this->request->getPost('loandesc')),
+                'phone'          => $this->request->getPost('phone'),
+                'deadline'       => $this->request->getPost('deadline'),
             ];
 
             $transactionmodels->insert($transactiondata);
@@ -87,7 +92,6 @@ class LoanPublic extends BaseController
                 'fullname'              => $this->request->getPost('fullname'),
                 'identity_number'       => $this->request->getPost('identitynumber'),
                 'address'               => $this->request->getPost('address'),
-                'phone'                 => $this->request->getPost('phone'),
                 'transaction_id'        => $transactionmodels->getInsertId(),
             ];
 
@@ -116,9 +120,10 @@ class LoanPublic extends BaseController
     public function edit($id)
     {
         $data['username'] = session()->get('username');
+        $data['role'] = session()->get('role');
         $transactionmodels = new TransactionModel();
-        $transactions = $transactionmodels->select('transaction.rm_id, public_doc.fullname as patientname, 
-        public_doc.phone, public_doc.identity_number, public_doc.address, transaction.loan_date,
+        $transactions = $transactionmodels->select('transaction.rm_id, public_doc.fullname as patientname, transaction.deadline,
+        transaction.phone, public_doc.identity_number, public_doc.address, transaction.loan_date,
         medical_records.fullname, transaction.id as tid  ')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
             ->join('public_doc', 'public_doc.transaction_id = transaction.id')
@@ -148,6 +153,7 @@ class LoanPublic extends BaseController
             'phone'                 => 'required|min_length[2]',
             'address'               => 'required',
             'loandate'              => 'required',
+            'deadline'              => 'required',
         ];
 
         $publicmodels = new PublicModel();
@@ -159,6 +165,8 @@ class LoanPublic extends BaseController
                 'rm_id'                 => $this->request->getPost('rmid'),
                 'loan_date'             => $this->request->getPost('loandate'),
                 'loan_desc'             => implode(" ", $this->request->getPost('loandesc')),
+                'deadline'       => $this->request->getPost('deadline'),
+                'phone'                 => $this->request->getPost('phone'),
             ];
 
             $publicdata = [
@@ -166,7 +174,6 @@ class LoanPublic extends BaseController
                 'fullname'              => $this->request->getPost('fullname'),
                 'identity_number'       => $this->request->getPost('identitynumber'),
                 'address'               => $this->request->getPost('address'),
-                'phone'                 => $this->request->getPost('phone'),
             ];
 
             if ($transactionmodels->find(['id' => $id])) {

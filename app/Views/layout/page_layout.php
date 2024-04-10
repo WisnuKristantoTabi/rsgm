@@ -40,36 +40,44 @@
                 </div>
             </div>
             <ul class="sidebar-nav">
+                <!-- Dashboard  -->
                 <li class="sidebar-item">
                     <a href="<?php echo base_url('dashboard') ?>" class="sidebar-link <?= ($pagesidebar == 1) ? 'active' : '' ?>">
                         <i class="lni lni-home"></i>
-                        <span>Dashboard</span>
+                        <span>Dashboard </span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link <?= ($pagesidebar == 2) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#masterdata" aria-expanded="false" aria-controls="masterdata">
-                        <i class="lni lni-database"></i>
-                        <span>Master Data</span>
-                    </a>
-                    <ul id="masterdata" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item <?= ($subsidebar == 1) ? 'active' : '' ?>">
-                            <a href="<?php echo base_url('recordmedical') ?>" class="sidebar-link">
-                                Rekam Medis
-                            </a>
-                        </li>
-                        <li class="sidebar-item <?= ($subsidebar == 2) ? 'active' : '' ?>">
-                            <a href="<?php echo base_url('officer') ?>" class="sidebar-link">
-                                Petugas
-                            </a>
-                        </li>
-                        <li class="sidebar-item <?= ($subsidebar == 3) ? 'active' : '' ?>">
-                            <a href="<?php echo base_url('serviceunit') ?>" class="sidebar-link">
-                                Unit Pelayanan
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                <!-- End Dashboard -->
 
+                <?php if ($role == 1) : ?>
+                    <!-- Master Data -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link <?= ($pagesidebar == 2) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#masterdata" aria-expanded="false" aria-controls="masterdata">
+                            <i class="lni lni-database"></i>
+                            <span>Master Data</span>
+                        </a>
+                        <ul id="masterdata" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item <?= ($subsidebar == 1) ? 'active' : '' ?>">
+                                <a href="<?php echo base_url('recordmedical') ?>" class="sidebar-link">
+                                    Rekam Medis
+                                </a>
+                            </li>
+                            <li class="sidebar-item <?= ($subsidebar == 2) ? 'active' : '' ?>">
+                                <a href="<?php echo base_url('officer') ?>" class="sidebar-link">
+                                    Petugas
+                                </a>
+                            </li>
+                            <li class="sidebar-item <?= ($subsidebar == 3) ? 'active' : '' ?>">
+                                <a href="<?php echo base_url('serviceunit') ?>" class="sidebar-link">
+                                    Poli
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Master Data -->
+                <?php endif ?>
+
+                <!-- Transaksi -->
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link <?= ($pagesidebar == 3) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#transaction" aria-expanded="false" aria-controls="transaction">
                         <i class="lni lni-write"></i>
@@ -88,47 +96,31 @@
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link <?= ($pagesidebar == 4) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#report" aria-expanded="false" aria-controls="report">
-                        <i class="lni lni-folder"></i>
-                        <span>Laporan</span>
-                    </a>
-                    <ul id="report" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#transaction">
-                        <li class="sidebar-item ">
-                            <a href="<?php echo base_url('reportloan') ?> " class="sidebar-link <?= ($subsidebar == 6) ? 'active' : '' ?>">
-                                Peminjaman
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="<?php echo base_url('reportreturn') ?> " class="sidebar-link <?= ($subsidebar == 7) ? 'active' : '' ?>">
-                                Pengembalian
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                        data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
-                        <i class="lni lni-layout"></i>
-                        <span>Multi Level</span>
-                    </a>
-                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#multi-two" aria-expanded="false" aria-controls="multi-two">
-                                Two Links
-                            </a>
-                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Link 1</a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link">Link 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li> -->
+                <!-- End Transaksi -->
+
+                <?php if ($role == 1 or $role == 2) : ?>
+                    <!-- Laporan -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link <?= ($pagesidebar == 4) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#report" aria-expanded="false" aria-controls="report">
+                            <i class="lni lni-folder"></i>
+                            <span>Laporan</span>
+                        </a>
+                        <ul id="report" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#transaction">
+                            <li class="sidebar-item ">
+                                <a href="<?php echo base_url('reportloan') ?> " class="sidebar-link <?= ($subsidebar == 6) ? 'active' : '' ?>">
+                                    Peminjaman
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="<?php echo base_url('reportreturn') ?> " class="sidebar-link <?= ($subsidebar == 7) ? 'active' : '' ?>">
+                                    Pengembalian
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Laporan -->
+                <?php endif ?>
+
             </ul>
             <div class="sidebar-footer">
                 <a href="<?php echo base_url('/logout') ?>" class="sidebar-link">
@@ -151,6 +143,7 @@
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle me-md-2 text-white" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="lni lni-user"></i>
                                     <?= esc($username) ?>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

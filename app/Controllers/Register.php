@@ -16,8 +16,9 @@ class Register extends Controller
 
     public function index()
     {
-        $data['title'] = "Daftar User";
+        $data['title'] = "Daftar Petugas";
         $data['username'] = 'Petugas';
+        $data['role'] = session()->get('role');
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 2;
         return view('auth/register', $data);
@@ -26,10 +27,11 @@ class Register extends Controller
     public function store()
     {
         $rules = [
-            'username'          => 'required|min_length[2]|max_length[100]',
+            'username'          => 'required|min_length[2]|max_length[100]|is_unique[user.username]',
             'fullname'          => 'required|min_length[2]|max_length[100]',
             'email'             => 'required|min_length[4]|max_length[100]|valid_email|is_unique[user.email]',
             'password'          => 'required|min_length[4]|max_length[100]',
+            'role'              => 'required',
             'confirmpassword'   => 'matches[password]'
         ];
 
@@ -39,14 +41,15 @@ class Register extends Controller
                 'username'      => $this->request->getVar('username'),
                 'fullname'      => $this->request->getVar('fullname'),
                 'email'         => $this->request->getVar('email'),
+                'role'          => $this->request->getVar('role'),
                 'password'      => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
             $userModel->save($data);
-            session()->setFlashdata('success', 'Data Berhasil Di edit');
+            session()->setFlashdata('success', 'Data Berhasil Ditambah');
             return redirect()->to('officer');
         } else {
-            $data['validation'] = $this->validator;
-            session()->setFlashdata('error', "Tidak Berhasil");
+            $msg = $this->validator->listErrors();
+            session()->setFlashdata('error', $msg);
             return redirect()->to('officer');
         }
     }

@@ -18,7 +18,7 @@ class ReturnDocument extends BaseController
     {
         $trasactionModels = new TransactionModel();
         $data['trasactions'] = $trasactionModels
-            ->select('transaction.id as tid,transaction.rm_id as idrm, medical_records.fullname, service_unit.service_name, transaction.loan_date, transaction.return_date ')
+            ->select('transaction.id as tid,transaction.rm_id as idrm, medical_records.fullname, service_unit.service_name, transaction.loan_date, transaction.return_date, transaction.deadline ')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->join('service_unit', 'service_unit.id = medical_records.service_unit')
             ->orderBy('loan_date', 'asc')
@@ -26,6 +26,7 @@ class ReturnDocument extends BaseController
         $data['title'] = 'Pengembalian Rekam Medis';
         $data['pager'] = $trasactionModels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_returndoc'), 20);
+        $data['role'] = session()->get('role');
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 5;
         $data['username'] = session()->get('username');
@@ -47,6 +48,7 @@ class ReturnDocument extends BaseController
         // $serviceunitmodel = new ServiceUnitModel();
         $data['title'] = 'Tambah Pengembalian';
         $data['username'] = session()->get('username');
+        $data['role'] = session()->get('role');
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 5;
         // $data['serviceunits'] = $serviceunitmodel->findAll();

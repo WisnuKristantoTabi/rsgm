@@ -22,7 +22,12 @@ class LoanCoass extends BaseController
         $coassmodels = new CoassModel();
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
-        $data['coassmodels'] = $coassmodels->orderBy('coass_date', 'desc')->paginate(20, 'loancoass');
+        $data['role'] = session()->get('role');
+        $data['coassmodels'] = $coassmodels
+            ->select('coass_name,clinic_name,coass_number,coass_date,transaction.phone, coass_doc.transaction_id')
+            ->join('transaction', 'transaction.id = coass_doc.transaction_id')
+            ->orderBy('coass_date', 'desc')
+            ->paginate(20, 'loancoass');
         $data['pager'] = $coassmodels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_loancoass'), 20);
         $data['title'] = 'Peminjaman Coass';
@@ -49,6 +54,7 @@ class LoanCoass extends BaseController
         $coassmodels = new CoassModel();
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
+        $data['role'] = session()->get('role');
         $data['title'] = 'Tambah Pinjaman COASS';
         $data['username'] = session()->get('username');
         $data['coassmodels'] = $coassmodels->findAll();
@@ -68,6 +74,7 @@ class LoanCoass extends BaseController
             'onsitedate'            => 'required',
             'clinic'                => 'required',
             'loandate'              => 'required',
+            'deadline'              => 'required',
         ];
         $coassmodels = new CoassModel();
         $transactionmodels = new TransactionModel();
@@ -77,8 +84,10 @@ class LoanCoass extends BaseController
             $transactiondata = [
                 'rm_id'          => $this->request->getPost('rmid'),
                 'loan_date'      => $this->request->getPost('loandate'),
-                'loan_type'       => 2,
-                'loan_desc'        => implode(" ", $this->request->getPost('loandesc')),
+                'loan_type'      => 2,
+                'loan_desc'      => implode(" ", $this->request->getPost('loandesc')),
+                'phone'          => $this->request->getPost('phone'),
+                'deadline'       => $this->request->getPost('deadline'),
             ];
 
             $transactionmodels->insert($transactiondata);
@@ -89,7 +98,6 @@ class LoanCoass extends BaseController
                 'clinic_name'       => $this->request->getPost('clinic'),
                 'coass_number'        => $this->request->getPost('coassnumber'),
                 'coass_date'      => $this->request->getPost('onsitedate'),
-                'coass_phone'   => $this->request->getPost('phone'),
                 'transaction_id' => $transactionmodels->getInsertId(),
             ];
 
@@ -118,9 +126,11 @@ class LoanCoass extends BaseController
     public function edit($id)
     {
         $data['username'] = session()->get('username');
+        $data['role'] = session()->get('role');
+
         $transactionmodels = new TransactionModel();
-        $transactions = $transactionmodels->select('transaction.rm_id, coass_doc.coass_name, 
-        coass_doc.coass_number, coass_doc.coass_phone, coass_doc.coass_date, clinic_name, transaction.loan_date,
+        $transactions = $transactionmodels->select('transaction.rm_id, coass_doc.coass_name, transaction.deadline,  
+        coass_doc.coass_number, coass_doc.coass_date, clinic_name, transaction.loan_date,transaction.phone,
         medical_records.fullname, transaction.id as tid  ')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
             ->join('coass_doc', 'coass_doc.transaction_id = transaction.id')
@@ -150,6 +160,7 @@ class LoanCoass extends BaseController
             'onsitedate'            => 'required',
             'clinic'                => 'required',
             'loandate'              => 'required',
+            'deadline'              => 'required',
         ];
         $coassmodels = new CoassModel();
         $transactionmodels = new TransactionModel();
@@ -160,6 +171,8 @@ class LoanCoass extends BaseController
                 'rm_id'          => $this->request->getPost('rmid'),
                 'loan_date'      => $this->request->getPost('loandate'),
                 'loan_desc'        => implode(" ", $this->request->getPost('loandesc')),
+                'deadline'       => $this->request->getPost('deadline'),
+                'phone'   => $this->request->getPost('phone'),
             ];
 
             // $transactionmodels->insert($transactiondata);
@@ -170,7 +183,6 @@ class LoanCoass extends BaseController
                 'clinic_name'       => $this->request->getPost('clinic'),
                 'coass_number'        => $this->request->getPost('coassnumber'),
                 'coass_date'      => $this->request->getPost('onsitedate'),
-                'coass_phone'   => $this->request->getPost('phone'),
             ];
 
 

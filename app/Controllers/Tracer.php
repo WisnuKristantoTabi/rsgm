@@ -22,6 +22,7 @@ class Tracer extends BaseController
         $data['title'] = 'Tracer Rekam Medis';
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
+        $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
         $data['barcode'] = $generator->getBarcode(base_url('/t/') . $id, $generator::TYPE_CODE_128, 1);
         // print_r($data);
@@ -42,6 +43,7 @@ class Tracer extends BaseController
         $data['title'] = 'Tracer Rekam Medis';
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
+        $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
         $data['barcode'] = $generator->getBarcode(base_url('/t/') . $id, $generator::TYPE_CODE_128, 1);
         // print_r($data);

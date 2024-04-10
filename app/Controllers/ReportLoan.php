@@ -17,6 +17,7 @@ class ReportLoan extends BaseController
     {
         $data['pagesidebar'] = 4;
         $data['subsidebar'] = 6;
+        $data['role'] = session()->get('role');
         $data['title'] = 'Laporan Peminjaman';
         $data['username'] = session()->get('username');
         return view('report/loanreport', $data);

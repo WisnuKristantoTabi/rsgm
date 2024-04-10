@@ -18,6 +18,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/signup', 'Register::index');
     $routes->post('/register', 'Register::store');
 
+
     $routes->get('/dashboard', 'Dashboard::index');
     $routes->get('/dashboard/getdataloan', 'Dashboard::getDataLoan');
     $routes->get('/dashboard/getdatareturn', 'Dashboard::getDataReturn');
@@ -33,6 +34,8 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/test', 'RecordMedical::test');
 
     $routes->get('/officer', 'Officer::index');
+    $routes->get('/officer/edit/(:any)', 'Officer::edit/$1');
+    $routes->post('/officer/update', 'Officer::update');
     $routes->get('/officer/delete/(:any)', 'Officer::delete/$1');
 
 

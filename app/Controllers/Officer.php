@@ -16,6 +16,7 @@ class Officer extends BaseController
     public function index()
     {
         $UserModel = new UserModel();
+        $data['role'] = session()->get('role');
         $data['officers'] = $UserModel->findAll();
         $data['title'] = 'Petugas';
         $data['pagesidebar'] = 2;
@@ -24,94 +25,63 @@ class Officer extends BaseController
         return view('officer/index', $data);
     }
 
-    // public function show($id)
-    // {
-    //     $UserModel = new UserModel();
-    //     $data['profile'] = $UserModel->join('service_unit', 'service_unit.id = medical_records.service_unit')->getWhere(['medical_records.id' => $id])->getRow();
-    //     $data['title'] = 'Detail Rekam Medis';
-    //     $data['username'] = session()->get('username');
-    //     return view('recordmedical/show', $data);
-    //     // print_r($data);
-    // }
-
-    // public function add()
-    // {
-    //     $data['title'] = 'Tambah Rekam Medis';
-    //     $data['username'] = session()->get('username');
-
-    //     return view('recordmedical/add', $data);
-    // }
-
-    // public function store()
-    // {
-    //     $session = session();
-
-    //     $rules = [
-    //         'rmid'               => 'required|min_length[2]|max_length[50]|is_unique[medical_records.rm_id]',
-    //         'fullname'           => 'required|min_length[2]|max_length[50]',
-    //         'address'            => 'required|min_length[2]|max_length[100]',
-    //         'gender'             => 'required',
-    //         'birthday'           => 'required',
-    //         'serviceunit'        => 'required',
-    //     ];
-
-    //     if ($this->validate($rules)) {
-    //         $UserModel = new UserModel();
-    //         $data = [
-    //             'rm_id'          => $this->request->getVar('rmid'),
-    //             'fullname'      => $this->request->getVar('fullname'),
-    //             'address'       => $this->request->getVar('address'),
-    //             'gender'        => $this->request->getVar('gender'),
-    //             'birth_date'      => $this->request->getVar('birthday'),
-    //             'service_unit'   => $this->request->getVar('serviceunit'),
-    //         ];
-    //         $UserModel->save($data);
-    //         $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
-    //         return redirect()->to('/recordmedical');
-    //     } else {
-    //         $msg = $this->validator->listErrors();
-    //         $session->setFlashdata('error', $msg);
-    //         return redirect()->to('recordmedical/add');
-    //     }
-    // }
-
     public function edit($id)
     {
-        $data['username'] = session()->get('username');
+        $data['title'] = "Edit Petugas ";
+        $data['username'] = 'Petugas';
+        $data['role'] = session()->get('role');
         $data['pagesidebar'] = 2;
-        $UserModel = new UserModel();
-        $recordmedicals = $UserModel->getWhere(['id' => $id])->getRow();
-        if (isset($recordmedicals)) {
-            $data['recordmedicals'] = $recordmedicals;
-            $data['title']  = 'Edit Rekam Medis No. ' . $recordmedicals->rm_id;
-
-            return view('recordmedical/edit', $data);
+        $data['subsidebar'] = 2;
+        $userModel = new UserModel();
+        $users = $userModel->getWhere(['id' => $id])->getRow();
+        if (isset($users)) {
+            $data['id'] = $users->id;
+            $data['name'] =  $users->username;
+            $data['fullname'] = $users->fullname;
+            $data['email'] = $users->email;
+            $data['role'] = $users->role;
+            return view('officer/edit', $data);
         } else {
             session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
-            return redirect()->to('recordmedical');
+            return redirect()->to('officer');
         }
     }
 
     public function update()
     {
+        $rules = [
+            // 'username'          => 'required|min_length[2]|max_length[100]|is_unique[user.username]',
+            'fullname'          => 'required|min_length[2]|max_length[100]',
+            'email'             => 'required|min_length[4]|max_length[100]|valid_email|is_unique[user.email]',
+            'role'              => 'required'
+        ];
         $UserModel = new UserModel();
-        $id = $this->request->getPost('recordId');
-        $data = array(
-            'rm_id'         => $this->request->getPost('rmid'),
-            'fullname'      => $this->request->getPost('fullname'),
-            'address'       => $this->request->getPost('address'),
-            'gender'        => $this->request->getPost('gender'),
-            'birth_date'    => $this->request->getPost('birthdate'),
-            'service_unit'  => $this->request->getPost('serviceunit'),
-        );
-        if ($UserModel->find($id)) {
-            $UserModel->update($id, $data);
-            session()->setFlashdata('success', 'Data Berhasil Di edit');
-            return redirect()->to('recordmedical/edit/' . $id);
+        $id = $this->request->getPost('id');
+
+        if ($this->validate($rules)) {
+            if ($UserModel->find($id)) {
+                $userModel = new UserModel();
+                $data = [
+                    'username'      => $this->request->getVar('username'),
+                    'fullname'      => $this->request->getVar('fullname'),
+                    'email'         => $this->request->getVar('email'),
+                    'role'          => $this->request->getVar('role'),
+                ];
+                $UserModel->update($id, $data);
+                session()->setFlashdata('success', 'Data Berhasil Di edit');
+                return redirect()->to('officer');
+            } else {
+                session()->setFlashdata('error', 'Data Tidak Ditemukan');
+                return redirect()->to('officer');
+            }
         } else {
-            echo "Data Tidak Ditemukan";
+            $msg = $this->validator->listErrors();
+            session()->setFlashdata('error', $msg);
+            return redirect()->to('officer');
         }
     }
+
+
 
     public function delete($id)
     {

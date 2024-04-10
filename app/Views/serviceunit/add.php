@@ -11,7 +11,7 @@
 <form action="<?php echo base_url('/serviceunit/store'); ?>" method="post">
     <div class="form-floating mb-3">
         <input type="text" name="servicename" id="serviceunit" placeholder="Nama Unit Pelayanan" value="" class="form-control">
-        <label for="servicename">Nama Unit Pelayanan</label>
+        <label for="servicename">Nama Poli</label>
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="submit" class="btn btn-primary">Tambah</button>

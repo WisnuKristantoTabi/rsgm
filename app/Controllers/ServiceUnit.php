@@ -18,12 +18,13 @@ class ServiceUnit extends BaseController
         $serviceunitModel = new ServiceUnitModel();
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 3;
+        $data['role'] = session()->get('role');
         $data['serviceunits'] = $serviceunitModel
             ->select('(SELECT COALESCE(COUNT(medical_records.service_unit),0) FROM medical_records 
             WHERE medical_records.service_unit = service_unit.id ) AS amount, 
             service_unit.service_name, id')
             ->findAll();
-        $data['title'] = 'Unit Pelayanan';
+        $data['title'] = 'Daftar Poli';
         $data['username'] = session()->get('username');
         return view('serviceunit/index', $data);
         // dd($data);
@@ -32,9 +33,10 @@ class ServiceUnit extends BaseController
 
     public function add()
     {
-        $data['title'] = 'Tambah Unit Pelayanan';
+        $data['title'] = 'Tambah Poli';
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 3;
+        $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
 
         return view('serviceunit/add', $data);
@@ -69,11 +71,12 @@ class ServiceUnit extends BaseController
         $data['username'] = session()->get('username');
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 3;
+        $data['role'] = session()->get('role');
         $serviceunitModel = new ServiceUnitModel();
         $serviceunits = $serviceunitModel->getWhere(['id' => $id])->getRow();
         if (isset($serviceunits)) {
             $data['serviceunits'] = $serviceunits;
-            $data['title']  = 'Edit Pelayanan Unit';
+            $data['title']  = 'Edit Poli';
             return view('serviceunit/edit', $data);
         } else {
             session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');

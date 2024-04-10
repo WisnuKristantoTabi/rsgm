@@ -19,6 +19,7 @@ class ReportReturn extends BaseController
         $data['subsidebar'] = 7;
         $data['title'] = 'Laporan Pengembalian';
         $data['username'] = session()->get('username');
+        $data['role'] = session()->get('role');
         return view('report/returnreport', $data);
     }
 

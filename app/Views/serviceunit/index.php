@@ -10,7 +10,7 @@
     <thead>
         <tr>
             <th scope="col">No</th>
-            <th scope="col">Unit Pelayanan</th>
+            <th scope="col">Nama Poli</th>
             <th scope="col">Jumlah DRM</th>
 
         </tr>
