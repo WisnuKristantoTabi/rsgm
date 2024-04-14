@@ -19,6 +19,8 @@
 				<button type="submit" class="btn btn-outline-primary btn-sm "> <i class="lni lni-search"></i>Tampil</button>
 			</form>
 		</div>
+	</div>
+	<div class="col-md-12 my-2 card">
 
 	</div>
 	<div class="col-md-12 my-2 card">

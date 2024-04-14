@@ -30,6 +30,8 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/recordmedical/edit/(:any)', 'RecordMedical::edit/$1');
     $routes->post('/recordmedical/update', 'RecordMedical::update');
     $routes->get('/recordmedical/delete/(:any)', 'RecordMedical::delete/$1');
+    $routes->get('/print/recordmedical/(:any)', 'PrintPDF::printrm/$1');
+    $routes->get('/print/test', 'PrintPDF::test');
 
     $routes->get('/test', 'RecordMedical::test');
 
