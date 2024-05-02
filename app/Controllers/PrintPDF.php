@@ -45,7 +45,7 @@ class PrintPDF extends BaseController
 
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetTitle('Print Rekam Medik');
-        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, "Rekam Medik ", "RSGM - Universitas Negeri Jember");
+        $pdf->SetHeaderData("E:/RSGM/public/img/logo.jpg", PDF_HEADER_LOGO_WIDTH, "Rekam Medik ", "RSGM - Universitas Negeri Jember");
         // $pdf->setPrintHeader(true);
         $pdf->setPrintFooter(false);
 

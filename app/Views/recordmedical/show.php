@@ -2,6 +2,12 @@
 
 <?= $this->section('content') ?>
 
+<div class=" mb-3">
+    <a href="<?php echo base_url('print/recordmedical/') . $profile->rm_id ?>" class="btn btn-outline-info">
+        <i class="lni lni-printer"></i>
+        Print</a>
+</div>
+
 <div class="card">
     <div class="card-header">
         No. Rekam Medis: <?= $profile->rm_id ?>
@@ -23,10 +29,7 @@
             <p>Tanggal Lahir</p>
             <h2 class="blockquote-footer"> <?= $profile->birth_date ?></h2>
         </blockquote>
-        <blockquote class="blockquote mb-0">
-            <p>Unit Pelayanan</p>
-            <h2 class="blockquote-footer"> <?= $profile->service_name ?></h2>
-        </blockquote>
+
     </div>
     <div class="container-sm my-5">
         <?= $barcode ?>

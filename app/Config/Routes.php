@@ -11,6 +11,7 @@ $routes->get('/logout', 'Login::logout');
 
 $routes->get('/t/(:any)', 'Tracer::find/$1');
 $routes->get('/recordmedical/searchdata', 'RecordMedical::searchData');
+$routes->get('/returndoc/searchdata', 'ReturnDocument::searchData');
 
 
 $routes->group('', ['filter' => 'auth'], static function ($routes) {
@@ -66,6 +67,10 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
 
     $routes->get('/returndoc', 'ReturnDocument::index');
     $routes->get('/returndoc/add', 'ReturnDocument::add');
+    $routes->get('/returndoc/sendmessage', 'ReturnDocument::sendmessage');
+
+    $routes->get('/returndocoass', 'ReturnDocumentCoass::index');
+
 
     $routes->get('reportloan', 'ReportLoan::index');
     $routes->post('reportloanexcel', 'ReportLoan::saveExcel');

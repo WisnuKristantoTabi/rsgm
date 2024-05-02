@@ -18,19 +18,30 @@ class ReturnDocument extends BaseController
     {
         $trasactionModels = new TransactionModel();
         $data['trasactions'] = $trasactionModels
-            ->select('transaction.id as tid,transaction.rm_id as idrm, medical_records.fullname, service_unit.service_name, transaction.loan_date, transaction.return_date, transaction.deadline ')
+            ->select('transaction.id as tid,transaction.rm_id as idrm, public_doc.fullname, 
+            service_unit.service_name, transaction.loan_date, transaction.phone,
+            transaction.return_date, transaction.deadline ')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
+            ->join('public_doc', 'public_doc.transaction_id = transaction.id')
             ->join('service_unit', 'service_unit.id = medical_records.service_unit')
-            ->orderBy('loan_date', 'asc')
+            ->orderBy('return_date', 'asc')
             ->paginate(20, 'returndoc');
         $data['title'] = 'Pengembalian Rekam Medis';
         $data['pager'] = $trasactionModels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_returndoc'), 20);
         $data['role'] = session()->get('role');
+        $data['type'] = 1;
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 5;
         $data['username'] = session()->get('username');
         return view('returndocument/index', $data);
+    }
+
+    public function sendmessage()
+    {
+        $message = $this->request->getVar('message');
+        $phone = $this->request->getVar('phone');
+        return redirect()->to('https://wa.me/' . $phone . "?text=" . $message);
     }
 
     // public function show($id)

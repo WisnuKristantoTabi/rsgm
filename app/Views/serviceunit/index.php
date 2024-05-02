@@ -11,7 +11,6 @@
         <tr>
             <th scope="col">No</th>
             <th scope="col">Nama Poli</th>
-            <th scope="col">Jumlah DRM</th>
 
         </tr>
     </thead>
@@ -20,7 +19,6 @@
             <tr>
                 <th scope="row">-</th>
                 <td><?= $serviceunit['service_name'] ?></td>
-                <td><?= $serviceunit['amount'] ?></td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <a role="button" href="<?php echo base_url("serviceunit/edit/") . $serviceunit['id'] ?>" class="btn btn-outline-warning btn-sm">Edit</a>

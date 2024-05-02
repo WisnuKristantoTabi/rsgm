@@ -100,10 +100,10 @@
 
 <script>
     $(document).ready(function() {
-        $('#searchrm').select2({
-            placeholder: "Cari Rekam Medik",
+        $('#searchid').select2({
+            placeholder: "Cari ID Transaksi",
             ajax: {
-                url: "<?php echo base_url('/recordmedical/searchdata') ?>",
+                url: "<?php echo base_url('/returndoc/searchdata') ?>",
                 dataType: 'json',
                 delay: 250,
                 data: function(params) {

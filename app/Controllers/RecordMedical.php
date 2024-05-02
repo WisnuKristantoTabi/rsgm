@@ -34,7 +34,8 @@ class RecordMedical extends BaseController
         $generator = new BarcodeGeneratorHTML();
         $recordmedicalModel = new RecordMedicalModel();
         $data['role'] = session()->get('role');
-        $data['profile'] = $recordmedicalModel->join('service_unit', 'service_unit.id = medical_records.service_unit')->getWhere(['medical_records.rm_id' => $id])->getRow();
+        $data['profile'] = $recordmedicalModel->select('fullname,address,gender,birth_date,rm_id')
+            ->getWhere(['medical_records.rm_id' => $id])->getRow();
         $data['title'] = 'Detail Rekam Medis';
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 1;

@@ -20,9 +20,7 @@ class ServiceUnit extends BaseController
         $data['subsidebar'] = 3;
         $data['role'] = session()->get('role');
         $data['serviceunits'] = $serviceunitModel
-            ->select('(SELECT COALESCE(COUNT(medical_records.service_unit),0) FROM medical_records 
-            WHERE medical_records.service_unit = service_unit.id ) AS amount, 
-            service_unit.service_name, id')
+            ->select('service_unit.service_name, id')
             ->findAll();
         $data['title'] = 'Daftar Poli';
         $data['username'] = session()->get('username');
