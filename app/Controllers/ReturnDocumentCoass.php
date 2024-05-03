@@ -18,7 +18,7 @@ class ReturnDocumentCoass extends BaseController
     {
         $trasactionModels = new TransactionModel();
         $data['trasactions'] = $trasactionModels
-            ->select('transaction.id as tid,transaction.rm_id as idrm, coass_doc.coass_name, service_unit.service_name, transaction.loan_date, transaction.return_date, transaction.deadline ')
+            ->select('transaction.id as tid,transaction.rm_id as idrm,transaction.phone, coass_doc.coass_name, service_unit.service_name, transaction.loan_date, transaction.return_date, transaction.deadline ')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->join('coass_doc', 'coass_doc.transaction_id = transaction.id')
             ->join('service_unit', 'service_unit.id = medical_records.service_unit')
