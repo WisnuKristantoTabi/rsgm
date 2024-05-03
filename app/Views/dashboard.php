@@ -9,7 +9,7 @@
 	<div class="col-md-12 my-2 card">
 		<div>
 			<form class="input-group p-3" action="" method="GET">
-				<span class="input-group-text">Pilih Poli</span>
+				<span class="input-group-text">Pilih Poli Pelayanan</span>
 				<select name="poli" class="form-select form-select-sm ">
 					<option>Daftar Poli</option>
 					<?php foreach ($serviceunits as $serviceunit) : ?>
