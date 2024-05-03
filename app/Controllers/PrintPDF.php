@@ -58,7 +58,56 @@ class PrintPDF extends BaseController
         //line ini penting
         $this->response->setContentType('application/pdf');
         //Close and output PDF document
-        $pdf->Output('invoice.pdf', 'I');
+        $pdf->Output('RekamMedik.pdf', 'I');
+    }
+
+    public function printTracer($id)
+    {
+        $generator = new BarcodeGeneratorHTML();
+        $recordmedicalModel = new RecordMedicalModel();
+        $data['role'] = session()->get('role');
+        $data['tracer'] = $recordmedicalModel
+            ->select('medical_records.rm_id,fullname,service_name,loan_date,loan_desc')
+            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->join('transaction', 'transaction.rm_id = medical_records.rm_id')
+            ->getWhere(['transaction.id' => $id])
+            ->getRow();
+
+        $style = array(
+            'position' => '',
+            'align' => 'C',
+            'stretch' => false,
+            'fitwidth' => true,
+            'cellfitalign' => '',
+            'border' => true,
+            'hpadding' => 'auto',
+            'vpadding' => 'auto',
+            'fgcolor' => array(0, 0, 0),
+            'bgcolor' => false, //array(255,255,255),
+            'text' => true,
+            'font' => 'helvetica',
+            'fontsize' => 8,
+            'stretchtext' => 4
+        );
+
+        $pdf = new TCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetTitle('Tracer');
+        // $pdf->SetHeaderData("E:/RSGM/public/img/logo.jpg", PDF_HEADER_LOGO_WIDTH, "Rekam Medik ", "RSGM - Universitas Negeri Jember");
+        $pdf->setPrintHeader(false);
+        $pdf->setPrintFooter(false);
+
+        $pdf->addPage();
+        $html = view('print_tracer', $data);
+        $pdf->writeHTML($html, true, false, true, false, '');
+        $pdf->Cell(0, 0, 'Code Barcode', 0, 1);
+        $pdf->write1DBarcode($id, 'C39', '', '', '', 18, 0.4, $style, 'N');
+
+        //line ini penting
+        $this->response->setContentType('application/pdf');
+        //Close and output PDF document
+        $pdf->Output('Tracer.pdf', 'I');
     }
 
     public function test()

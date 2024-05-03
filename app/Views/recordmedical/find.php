@@ -2,6 +2,11 @@
 
 <?= $this->section('content') ?>
 
+<div class=" mb-3">
+    <a href="<?php echo base_url('/print/tracer/') . $data->tid ?>" class="btn btn-outline-info">
+        <i class="lni lni-printer"></i>
+        Print</a>
+</div>
 <div class="card">
     <div class="card-header">
         No. Rekam Medis: <?= $data->id_rekam_medik ?>
@@ -12,12 +17,12 @@
             <h2 class="blockquote-footer"> <?= $data->fullname ?></h2>
         </blockquote>
         <blockquote class="blockquote mb-0">
-            <p>Tanggal Peminjaman</p>
-            <h2 class="blockquote-footer"> <?= $data->loan_date ?></h2>
+            <p>Poli Pelayanan</p>
+            <h2 class="blockquote-footer"> <?= $data->service_name ?></h2>
         </blockquote>
         <blockquote class="blockquote mb-0">
-            <p>Unit Pelayanan</p>
-            <h2 class="blockquote-footer"> <?= $data->service_name ?></h2>
+            <p>Tanggal Peminjaman</p>
+            <h2 class="blockquote-footer"> <?= $data->loan_date ?></h2>
         </blockquote>
         <blockquote class="blockquote mb-0">
             <p>Deskripsi Peminjaman</p>
@@ -27,7 +32,7 @@
     </div>
     <div class="container-sm my-5">
         <?= $barcode ?>
-        <p class="h6 mt-3"> <?php echo base_url('/t/') ?> <?= $data->tid ?></p>
+        <p class="h6 mt-3">ID Transaksi : <?= $data->tid ?></p>
     </div>
 
 </div>

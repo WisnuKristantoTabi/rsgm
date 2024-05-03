@@ -50,6 +50,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/serviceunit/delete/(:any)', 'ServiceUnit::delete/$1');
 
     $routes->get('/f', 'Tracer::findloan');
+    $routes->get('/print/tracer/(:any)', 'PrintPDF::printTracer/$1');
 
     $routes->get('/loancoass', 'LoanCoass::index');
     $routes->get('/loancoass/add', 'LoanCoass::add');

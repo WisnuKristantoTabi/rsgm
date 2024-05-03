@@ -51,7 +51,7 @@
         <input type="date" name="deadline" id="deadline" placeholder="Tanggal Batas Pengembalian" class="inputdate form-control">
         <label for="deadline">Tanggal Batas Pengembalian</label>
     </div>
-    <div class="mb-3">
+    <!-- <div class="mb-3">
         <label>Keperluan</label>
         <div class="form-check">
             <input name="loandesc[]" class="form-check-input" type="checkbox" value="Kerja," id="loandesc[]">
@@ -77,7 +77,7 @@
             </label>
             <input name="loandesc[]" class="form-control" type="text" value="" id="loandesc[]">
         </div>
-    </div>
+    </div> -->
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="submit" class="btn btn-primary">Tambah</button>

@@ -24,7 +24,7 @@ class Tracer extends BaseController
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
-        $data['barcode'] = $generator->getBarcode(base_url('/t/') . $id, $generator::TYPE_CODE_128, 1);
+        $data['barcode'] = $generator->getBarcode($id, $generator::TYPE_CODE_128, 1);
         // print_r($data);
         return view('recordmedical/find', $data);
     }
@@ -45,7 +45,7 @@ class Tracer extends BaseController
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
-        $data['barcode'] = $generator->getBarcode(base_url('/t/') . $id, $generator::TYPE_CODE_128, 1);
+        $data['barcode'] = $generator->getBarcode($id, $generator::TYPE_CODE_128, 1);
         // print_r($data);
         return view('recordmedical/find', $data);
     }

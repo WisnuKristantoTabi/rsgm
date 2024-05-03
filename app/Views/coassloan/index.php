@@ -11,7 +11,7 @@
 
 <div class=" mb-5">
     <form class="input-group" method="get" action="<?php echo base_url('/f') ?>">
-        <span class="input-group-text">Tracer</span>
+        <span class="input-group-text">Cari Data</span>
         <input type="text" name="id" class="form-control" placeholder="Masukkan ID Transaksi" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="lni lni-search"></i> Cari</button>
     </form>
