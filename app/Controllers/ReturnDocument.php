@@ -124,6 +124,9 @@ class ReturnDocument extends BaseController
                 $transactionModel->update($id, $data);
                 $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
                 return redirect()->to('/returndoc');
+            } else {
+                $session->setFlashdata('error', "Data Tidak Ditemukan");
+                return redirect()->to('returndoc');
             }
         } else {
             $msg = $this->validator->listErrors();

@@ -13,10 +13,11 @@
     <!-- <div class="form-floating mb-3"> -->
     <!-- <input type="text" name="rmid" id="rmid" placeholder="RM.NO" value="" class="form-control"> -->
 
+
     <div class="mb-5">
         <label class="mb-3" for="searchtid">Nomor Transaksi</label>
         <select id="searchid" name="tid" class="form-select">
-            <option value="<?= $transaction->id ?>">ID : <?= $transaction->id ?></option>
+            <option value="<?= $transaction->id ?>"> ID : <?= $transaction->id ?></option>
         </select>
     </div>
     <div class="form-floating mb-3">
@@ -35,7 +36,6 @@
         <input type="text" id="loandate" class="form-control" value="<?= $transaction->loan_date ?>" readonly>
         <label for="loandate">Tanggal Pinjam</label>
     </div>
-    <input type="hidden" name="tid" id="tid">
     <div class="form-floating mb-3 dateformat">
         <input type="date" name="returndate" id="returndate" value="<?= $transaction->return_date ?>" placeholder="Tanggal Pengembalian" class="inputdate form-control">
         <label for="returndate">Tanggal Pengembalian</label>
@@ -67,7 +67,7 @@
     });
 </script> -->
 
-<script>
+<!-- <script>
     $(document).ready(function() {
         $('#searchid').select2({
             placeholder: "Cari ID Transaksi",
@@ -110,7 +110,7 @@
             });
         });
     });
-</script>
+</script> -->
 
 <script src="<?php echo base_url('/select2/dist/js/select2.min.js') ?>" type='text/javascript' defer></script>
 

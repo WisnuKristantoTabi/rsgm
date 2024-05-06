@@ -35,7 +35,7 @@
         <input type="text" id="loandate" class="form-control" readonly>
         <label for="loandate">Tanggal Pinjam</label>
     </div>
-    <input type="hidden" name="tid" id="tid">
+    <!-- <input type="hidden" name="tid" id="tid"> -->
     <div class="form-floating mb-3 dateformat">
         <input type="date" name="returndate" id="returndate" placeholder="Tanggal Pengembalian" class="inputdate form-control">
         <label for="returndate">Tanggal Pengembalian</label>
