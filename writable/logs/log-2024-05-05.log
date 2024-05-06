@@ -1,0 +1,656 @@
+INFO - 2024-05-05 13:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-05 13:19:17 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in E:\RSGM\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'rsgmapp', 3306, '', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\RSGM\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\RSGM\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 E:\RSGM\app\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Login->auth()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in E:\RSGM\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\RSGM\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\RSGM\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\RSGM\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\RSGM\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 E:\RSGM\app\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Login->auth()
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-05 13:19:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->auth()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-05 13:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:20:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 14:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 14:22:34 --> TypeError: CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in E:\RSGM\system\Model.php on line 872
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->like('id', null)
+ 2 APPPATH\Controllers\ReturnDocument.php(203): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:01:00 --> TypeError: CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in E:\RSGM\system\Model.php on line 872
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->like('id', null)
+ 2 APPPATH\Controllers\ReturnDocument.php(203): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:01:11 --> TypeError: CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in E:\RSGM\system\Model.php on line 872
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->like('id', null)
+ 2 APPPATH\Controllers\ReturnDocument.php(203): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:03:28 --> TypeError: CodeIgniter\Database\BaseBuilder::like(): Argument #2 ($match) must be of type string, null given, called in E:\RSGM\system\Model.php on line 872
+in SYSTEMPATH\Database\BaseBuilder.php on line 984.
+ 1 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->like('id', null)
+ 2 APPPATH\Controllers\ReturnDocument.php(203): CodeIgniter\Model->__call('like', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-05 15:04:06 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-05 15:04:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` IS NULL
+ORDER BY `id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:04:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` IS NULL
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` IS NULL
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` IS NULL
+ORDER BY `id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:04:06 --> [Caused by] mysqli_sql_exception: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` IS NULL
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` IS NULL
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` IS NULL
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` IS NULL
+ORDER BY `id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-05 15:04:23 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-05 15:04:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:04:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:04:23 --> [Caused by] mysqli_sql_exception: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-05 15:04:41 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-05 15:04:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:04:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:04:41 --> [Caused by] mysqli_sql_exception: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-05 15:05:11 --> mysqli_sql_exception: Column 'id' in order clause is ambiguous in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-05 15:05:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:05:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:05:11 --> [Caused by] mysqli_sql_exception: Column 'id' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:09:20 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\ReturnDocument.php on line 217.
+ 1 APPPATH\Controllers\ReturnDocument.php(217): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'E:\\RSGM\\app\\Controllers\\ReturnDocument.php', 217)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-05 15:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:23:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:24:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 15:31:30 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRow
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:31:43 --> Error: Cannot use object of type mysqli as array
+in APPPATH\Controllers\ReturnDocument.php on line 209.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:32:14 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRow
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:32:26 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getFirst
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\Model->__call('getFirst', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:33:06 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getData
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(205): CodeIgniter\Model->__call('getData', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-05 15:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 15:37:17 --> ErrorException: Attempt to read property "searchTerm" on null
+in APPPATH\Controllers\ReturnDocument.php on line 198.
+ 1 APPPATH\Controllers\ReturnDocument.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "searchTerm" on null', 'E:\\RSGM\\app\\Controllers\\ReturnDocument.php', 198)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:37:30 --> ErrorException: Attempt to read property "searchTerm" on null
+in APPPATH\Controllers\ReturnDocument.php on line 198.
+ 1 APPPATH\Controllers\ReturnDocument.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "searchTerm" on null', 'E:\\RSGM\\app\\Controllers\\ReturnDocument.php', 198)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:37:44 --> ErrorException: Attempt to read property "searchTerm" on null
+in APPPATH\Controllers\ReturnDocument.php on line 198.
+ 1 APPPATH\Controllers\ReturnDocument.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "searchTerm" on null', 'E:\\RSGM\\app\\Controllers\\ReturnDocument.php', 198)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:38:56 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getData
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(207): CodeIgniter\Model->__call('getData', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:39:44 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getData
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(208): CodeIgniter\Model->__call('getData', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:40:25 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRow
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(208): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:42:30 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\ReturnDocument.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:42:58 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\ReturnDocument.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:43:27 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\ReturnDocument.php on line 213.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-05 15:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 15:46:06 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRowArray
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(208): CodeIgniter\Model->__call('getRowArray', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-05 15:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 15:48:19 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\ReturnDocument.php on line 212.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-05 15:53:19 --> Error: Call to a member function getResult() on array
+in APPPATH\Controllers\ReturnDocument.php on line 210.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-05 15:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 16:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 16:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 16:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 16:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

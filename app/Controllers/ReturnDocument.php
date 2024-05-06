@@ -67,6 +67,32 @@ class ReturnDocument extends BaseController
         return view('returndocument/add', $data);
     }
 
+    public function update()
+    {
+        $session = session();
+        $transactionModel = new TransactionModel();
+        $id = $this->request->getPost('tid');
+        $rules = [
+            'returndate'   => 'required',
+        ];
+
+        if ($this->validate($rules)) {
+            $data = [
+                'return_date'      => $this->request->getPost('returndate'),
+                'return_desc'      => $this->request->getPost('returndesc'),
+            ];
+            if ($transactionModel->find($id)) {
+                $transactionModel->update($id, $data);
+                $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
+                return redirect()->to('/returndoc');
+            }
+        } else {
+            $msg = $this->validator->listErrors();
+            $session->setFlashdata('error', $msg);
+            return redirect()->to('returndoc/add');
+        }
+    }
+
     // public function store()
     // {
     //     $session = session();
@@ -164,7 +190,7 @@ class ReturnDocument extends BaseController
             // Fetch record
             $transactionModel = new TransactionModel();
 
-            $transactions = $transactionModel->select('id,fullname')
+            $transactions = $transactionModel->select('id,rm_id')
                 ->orderBy('rm_id')
                 ->findAll(5);
         } else {
@@ -172,22 +198,47 @@ class ReturnDocument extends BaseController
 
             // Fetch record
             $transactionModel = new TransactionModel();
-            $transactions = $transactionModel->select('rm_id ,fullname')
-                ->like('rm_id', $searchTerm)
-                ->orderBy('rm_id')
+            $transactions = $transactionModel->select('id , rm_id ')
+                ->like('id', $searchTerm)
+                ->orderBy('id')
                 ->findAll(5);
         }
 
         $data = array();
         foreach ($transactions as $transaction) {
             $data[] = array(
-                "id" => $transaction['rm_id'],
-                "text" => $transaction['fullname'] . " - " . $transaction['rm_id'],
+                "id" => $transaction['id'],
+                "text" => 'ID : ' . $transaction['id'],
             );
         }
 
         $response['data'] = $data;
 
         return $this->response->setJSON($response);
+    }
+
+    public function showData()
+    {
+        $postData = $this->request->getVar('id');
+        $transactionModel = new TransactionModel();
+        $transactions = $transactionModel
+            ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_name, transaction.loan_date ')
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
+            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->where('transaction.id', $postData)
+            ->orderBy('id')
+            ->get();
+
+        foreach ($transactions->getResult() as $transaction) {
+            $data[] = array(
+                "tid" => $transaction->id,
+                "rmid" => $transaction->rm_id,
+                "patientname" => $transaction->fullname,
+                "poli" => $transaction->service_name,
+                "loandate" => $transaction->loan_date,
+            );
+            break;
+        }
+        return $this->response->setJSON($data);
     }
 }

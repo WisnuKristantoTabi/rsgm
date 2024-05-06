@@ -10,8 +10,9 @@ $routes->post('/auth', 'Login::auth');
 $routes->get('/logout', 'Login::logout');
 
 $routes->get('/t/(:any)', 'Tracer::find/$1');
-$routes->get('/recordmedical/searchdata', 'RecordMedical::searchData');
-$routes->get('/returndoc/searchdata', 'ReturnDocument::searchData');
+$routes->post('/recordmedical/searchdata', 'RecordMedical::searchData');
+$routes->post('/returndoc/searchdata', 'ReturnDocument::searchData');
+$routes->post('/returndoc/showdata', 'ReturnDocument::showData');
 
 
 $routes->group('', ['filter' => 'auth'], static function ($routes) {
@@ -68,6 +69,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
 
     $routes->get('/returndoc', 'ReturnDocument::index');
     $routes->get('/returndoc/add', 'ReturnDocument::add');
+    $routes->post('/returndoc/update', 'ReturnDocument::update');
     $routes->get('/returndoc/sendmessage', 'ReturnDocument::sendmessage');
 
     $routes->get('/returndocoass', 'ReturnDocumentCoass::index');

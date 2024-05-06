@@ -9,6 +9,7 @@
 <?php endif; ?>
 
 <form action="<?php echo base_url('/recordmedical/store'); ?>" method="post">
+
     <div class="form-floating mb-3">
         <input type="text" name="rmid" id="rmid" placeholder="RM.NO" value="" class="form-control">
         <label for="rmid">Nomor RM</label>
@@ -45,7 +46,7 @@
         <button type="submit" class="btn btn-primary">Tambah</button>
     </div>
 </form>
-
+<!-- 
 <script>
     $("input").on("change", function() {
         this.setAttribute(
@@ -54,6 +55,6 @@
             .format(this.getAttribute("data-date-format"))
         )
     }).trigger("change")
-</script>
+</script> -->
 
 <?= $this->endSection() ?>
