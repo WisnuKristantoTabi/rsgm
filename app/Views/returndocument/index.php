@@ -40,9 +40,9 @@
 
                             <i class="lni lni-whatsapp"></i>
                             WA</a>
-                        <a role="button" href="<?php echo base_url("/") . $trasaction['tid'] ?>" class="btn btn-outline-primary btn-sm me-md-2"> <i class="lni lni-eye"></i> Lihat</a>
-                        <a role="button" href="" class="btn btn-outline-warning btn-sm"> <i class="lni lni-pencil-alt"></i> Edit</a>
-                        <a class="btn btn-outline-danger btn-sm" href="<?= base_url('/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
+                        <a role="button" href="<?php echo base_url("/returndoc/show/") . $trasaction['tid'] ?>" class="btn btn-outline-primary btn-sm me-md-2"> <i class="lni lni-eye"></i> Lihat</a>
+                        <a role="button" href="<?php echo base_url("returndoc/edit/") . $trasaction['tid'] ?>" class="btn btn-outline-warning btn-sm"> <i class="lni lni-pencil-alt"></i> Edit</a>
+                        <a class="btn btn-outline-danger btn-sm" href="<?= base_url('/returndoc/delete/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             <i class="lni lni-trash-can"></i>Hapus</a>
                     </div>
                 </td>

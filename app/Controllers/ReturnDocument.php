@@ -24,6 +24,7 @@ class ReturnDocument extends BaseController
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->join('public_doc', 'public_doc.transaction_id = transaction.id')
             ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->where('is_return', 2)
             ->orderBy('return_date', 'asc')
             ->paginate(20, 'returndoc');
         $data['title'] = 'Pengembalian Rekam Medis';
@@ -44,15 +45,28 @@ class ReturnDocument extends BaseController
         return redirect()->to('https://wa.me/' . $phone . "?text=" . $message);
     }
 
-    // public function show($id)
-    // {
-    //     $recordmedicalModel = new RecordMedicalModel();
-    //     $data['profile'] = $recordmedicalModel->join('service_unit', 'service_unit.id = medical_records.service_unit')->getWhere(['medical_records.id' => $id])->getRow();
-    //     $data['title'] = 'Detail Rekam Medis';
-    //     $data['username'] = session()->get('username');
-    //     return view('recordmedical/show', $data);
-    //     // print_r($data);
-    // }
+    public function show($id)
+    {
+        $transactionModels = new TransactionModel();
+        $transaction = $transactionModels
+            ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_name, 
+            transaction.loan_date, transaction.return_date, transaction.return_desc ')
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
+            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->getWhere(['transaction.id' => $id])->getRow();
+        if (isset($transaction)) {
+            $data['title'] = 'Edit Pengembalian';
+            $data['username'] = session()->get('username');
+            $data['role'] = session()->get('role');
+            $data['pagesidebar'] = 3;
+            $data['subsidebar'] = 5;
+            $data['transaction'] = $transaction;
+            return view('returndocument/show', $data);
+        } else {
+            session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
+            return redirect()->to('returndoc');
+        }
+    }
 
     public function add()
     {
@@ -65,6 +79,30 @@ class ReturnDocument extends BaseController
         // $data['serviceunits'] = $serviceunitmodel->findAll();
 
         return view('returndocument/add', $data);
+    }
+
+    public function edit($id)
+    {
+
+        $transactionModels = new TransactionModel();
+        $transaction = $transactionModels
+            ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_name, 
+            transaction.loan_date, transaction.return_date, transaction.return_desc ')
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
+            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->getWhere(['transaction.id' => $id])->getRow();
+        if (isset($transaction)) {
+            $data['title'] = 'Edit Pengembalian';
+            $data['username'] = session()->get('username');
+            $data['role'] = session()->get('role');
+            $data['pagesidebar'] = 3;
+            $data['subsidebar'] = 5;
+            $data['transaction'] = $transaction;
+            return view('returndocument/edit', $data);
+        } else {
+            session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
+            return redirect()->to('returndoc');
+        }
     }
 
     public function update()
@@ -80,6 +118,7 @@ class ReturnDocument extends BaseController
             $data = [
                 'return_date'      => $this->request->getPost('returndate'),
                 'return_desc'      => $this->request->getPost('returndesc'),
+                'is_return'        => 2,
             ];
             if ($transactionModel->find($id)) {
                 $transactionModel->update($id, $data);
@@ -165,20 +204,20 @@ class ReturnDocument extends BaseController
     //     }
     // }
 
-    // public function delete($id)
-    // {
-    //     $recordmedicalModel = new RecordMedicalModel();
+    public function delete($id)
+    {
+        $trasactionModels = new TransactionModel();
 
-    //     $check = $recordmedicalModel->find($id);
-    //     if ($check) {
-    //         $recordmedicalModel->delete($id);
-    //         session()->setFlashdata('success', 'Data Berhasil Di Hapus');
-    //         return redirect()->to('recordmedical/');
-    //     } else {
-    //         session()->setFlashdata('error', 'Data Tidak Ditemukan');
-    //         return redirect()->to('recordmedical/');
-    //     }
-    // }
+        $check = $trasactionModels->find($id);
+        if ($check) {
+            $trasactionModels->update($id, ['is_return' => 1]);
+            session()->setFlashdata('success', 'Data Berhasil Di Hapus');
+            return redirect()->to('/returndoc/');
+        } else {
+            session()->setFlashdata('error', 'Data Tidak Ditemukan');
+            return redirect()->to('/returndoc/');
+        }
+    }
     public function searchData()
     {
 
@@ -191,6 +230,7 @@ class ReturnDocument extends BaseController
             $transactionModel = new TransactionModel();
 
             $transactions = $transactionModel->select('id,rm_id')
+                ->where('is_return', 1)
                 ->orderBy('rm_id')
                 ->findAll(5);
         } else {
@@ -200,6 +240,7 @@ class ReturnDocument extends BaseController
             $transactionModel = new TransactionModel();
             $transactions = $transactionModel->select('id , rm_id ')
                 ->like('id', $searchTerm)
+                ->where('is_return', 1)
                 ->orderBy('id')
                 ->findAll(5);
         }

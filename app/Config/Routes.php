@@ -69,7 +69,10 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
 
     $routes->get('/returndoc', 'ReturnDocument::index');
     $routes->get('/returndoc/add', 'ReturnDocument::add');
+    $routes->get('/returndoc/edit/(:any)', 'ReturnDocument::edit/$1');
+    $routes->get('/returndoc/show/(:any)', 'ReturnDocument::show/$1');
     $routes->post('/returndoc/update', 'ReturnDocument::update');
+    $routes->get('/returndoc/delete/(:any)', 'ReturnDocument::delete/$1');
     $routes->get('/returndoc/sendmessage', 'ReturnDocument::sendmessage');
 
     $routes->get('/returndocoass', 'ReturnDocumentCoass::index');

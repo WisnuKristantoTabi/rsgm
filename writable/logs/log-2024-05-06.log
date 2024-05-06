@@ -84,3 +84,1429 @@ INFO - 2024-05-06 01:51:09 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-06 01:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-06 01:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-06 01:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 01:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 01:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 02:16:29 --> TypeError: implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Controllers\LoanPublic.php on line 83.
+ 1 APPPATH\Controllers\LoanPublic.php(83): implode(' ', null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 02:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 02:17:06 --> TypeError: implode(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Controllers\LoanPublic.php on line 83.
+ 1 APPPATH\Controllers\LoanPublic.php(83): implode(' ', null)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 02:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:44:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 02:52:47 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-06 02:52:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 02:52:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 02:52:47 --> [Caused by] mysqli_sql_exception: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 02:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 02:55:03 --> ErrorException: Undefined variable $transaction
+in APPPATH\Views\returndocument\edit.php on line 23.
+ 1 APPPATH\Views\returndocument\edit.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $transaction', 'E:\\RSGM\\app\\Views\\returndocument\\edit.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\returndocument\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('returndocument/edit', [], true)
+ 5 APPPATH\Controllers\ReturnDocument.php(88): view('returndocument/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 02:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 02:55:23 --> ErrorException: Undefined variable $transaction
+in APPPATH\Views\returndocument\edit.php on line 23.
+ 1 APPPATH\Views\returndocument\edit.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $transaction', 'E:\\RSGM\\app\\Views\\returndocument\\edit.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\returndocument\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('returndocument/edit', [], true)
+ 5 APPPATH\Controllers\ReturnDocument.php(88): view('returndocument/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 02:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 02:55:37 --> ErrorException: Undefined variable $transaction
+in APPPATH\Views\returndocument\edit.php on line 23.
+ 1 APPPATH\Views\returndocument\edit.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $transaction', 'E:\\RSGM\\app\\Views\\returndocument\\edit.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\returndocument\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('returndocument/edit', [], true)
+ 5 APPPATH\Controllers\ReturnDocument.php(88): view('returndocument/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 02:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 02:55:52 --> ErrorException: Attempt to read property "rm_id" on null
+in APPPATH\Views\returndocument\edit.php on line 23.
+ 1 APPPATH\Views\returndocument\edit.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rm_id" on null', 'E:\\RSGM\\app\\Views\\returndocument\\edit.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\returndocument\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('returndocument/edit', [], true)
+ 5 APPPATH\Controllers\ReturnDocument.php(88): view('returndocument/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 02:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 02:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 02:57:27 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRow
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 02:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 02:59:14 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRowResult
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\Model->__call('getRowResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:01:02 --> mysqli_sql_exception: Unknown column '$id' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere('transaction.id ...')
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-06 03:01:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '$id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id', [], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere('transaction.id = $id')
+ 3 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:01:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '$id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id', [], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere('transaction.id = $id')
+ 5 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:01:02 --> [Caused by] mysqli_sql_exception: Unknown column '$id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id', [], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere('transaction.id = $id')
+ 6 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:02:39 --> mysqli_sql_exception: Unknown column '$id' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere('transaction.id ...')
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-06 03:02:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '$id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id', [], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere('transaction.id = $id')
+ 3 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:02:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '$id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id', [], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere('transaction.id = $id')
+ 5 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:02:39 --> [Caused by] mysqli_sql_exception: Unknown column '$id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = $id', [], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere('transaction.id = $id')
+ 6 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:08:28 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-06 03:08:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:08:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:08:28 --> [Caused by] mysqli_sql_exception: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:08:45 --> mysqli_sql_exception: Unknown column 'tid' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-06 03:08:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tid' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `tid` = :tid:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:08:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tid' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `tid` = \'\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `tid` = \'\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `tid` = :tid:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:08:45 --> [Caused by] mysqli_sql_exception: Unknown column 'tid' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `tid` = \'\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `tid` = \'\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `tid` = \'\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `tid` = :tid:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:11:14 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-06 03:11:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:11:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:11:14 --> [Caused by] mysqli_sql_exception: Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = \'\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `id` = :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:14:11 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRow
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:15:05 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getResultArray
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\Model->__call('getResultArray', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:23:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-06 03:23:04 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:23:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:23:04 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:23:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('3')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-06 03:23:20 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('3')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:23:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:23:20 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('3')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:23:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('3')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-06 03:23:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('3')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:23:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:23:37 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('3')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:24:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-06 03:24:21 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:24:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:24:21 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:24:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-06 03:24:22 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:24:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:24:22 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\ReturnDocument.php(79): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:24:38 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRow
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 03:24:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(577): CodeIgniter\Model->doFind(false, NULL)
+#6 E:\RSGM\app\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->find()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-06 03:24:52 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 2 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->find()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:24:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 4 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->find()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 03:24:52 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 SYSTEMPATH\Model.php(202): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(577): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:25:12 --> ErrorException: Attempt to read property "rm_id" on array
+in APPPATH\Views\returndocument\edit.php on line 23.
+ 1 APPPATH\Views\returndocument\edit.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rm_id" on array', 'E:\\RSGM\\app\\Views\\returndocument\\edit.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\returndocument\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('returndocument/edit', [], true)
+ 5 APPPATH\Controllers\ReturnDocument.php(90): view('returndocument/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:25:42 --> ErrorException: Undefined array key "rm_id"
+in APPPATH\Views\returndocument\edit.php on line 23.
+ 1 APPPATH\Views\returndocument\edit.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rm_id"', 'E:\\RSGM\\app\\Views\\returndocument\\edit.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\returndocument\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('returndocument/edit', [], true)
+ 5 APPPATH\Controllers\ReturnDocument.php(90): view('returndocument/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:26:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:26:37 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRow
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:27:10 --> ErrorException: Undefined variable $rm_id
+in APPPATH\Views\returndocument\edit.php on line 23.
+ 1 APPPATH\Views\returndocument\edit.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rm_id', 'E:\\RSGM\\app\\Views\\returndocument\\edit.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\returndocument\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('returndocument/edit', [], true)
+ 5 APPPATH\Controllers\ReturnDocument.php(90): view('returndocument/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:27:22 --> ErrorException: Attempt to read property "rm_id" on array
+in APPPATH\Views\returndocument\edit.php on line 23.
+ 1 APPPATH\Views\returndocument\edit.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rm_id" on array', 'E:\\RSGM\\app\\Views\\returndocument\\edit.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\returndocument\\edit.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('returndocument/edit', [], true)
+ 5 APPPATH\Controllers\ReturnDocument.php(90): view('returndocument/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 03:30:56 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getRowArray
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\ReturnDocument.php(80): CodeIgniter\Model->__call('getRowArray', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 03:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 03:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:33:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 05:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

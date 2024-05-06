@@ -80,9 +80,10 @@ class LoanPublic extends BaseController
                 'rm_id'          => $this->request->getPost('rmid'),
                 'loan_date'      => $this->request->getPost('loandate'),
                 'loan_type'      => 1,
-                'loan_desc'      => implode(" ", $this->request->getPost('loandesc')),
+                'loan_desc'      => '-',
                 'phone'          => $this->request->getPost('phone'),
                 'deadline'       => $this->request->getPost('deadline'),
+                'is_return'      => 1,
             ];
 
             $transactionmodels->insert($transactiondata);

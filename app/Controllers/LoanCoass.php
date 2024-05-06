@@ -88,6 +88,7 @@ class LoanCoass extends BaseController
                 'loan_desc'      => implode(" ", $this->request->getPost('loandesc')),
                 'phone'          => $this->request->getPost('phone'),
                 'deadline'       => $this->request->getPost('deadline'),
+                'is_return'      => 1,
             ];
 
             $transactionmodels->insert($transactiondata);

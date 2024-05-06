@@ -22,6 +22,7 @@ class ReturnDocumentCoass extends BaseController
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->join('coass_doc', 'coass_doc.transaction_id = transaction.id')
             ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->where('is_return', 2)
             ->orderBy('loan_date', 'asc')
             ->paginate(20, 'returndoc');
         $data['title'] = 'Pengembalian Dokumen Coass';

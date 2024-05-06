@@ -14,38 +14,38 @@
     <!-- <input type="text" name="rmid" id="rmid" placeholder="RM.NO" value="" class="form-control"> -->
 
     <div class="mb-5">
-        <label class="mb-3" for="searchtid">Cari Nomor Transaksi</label>
+        <label class="mb-3" for="searchtid">Nomor Transaksi</label>
         <select id="searchid" name="tid" class="form-select">
-            <option value=""></option>
+            <option value="<?= $transaction->id ?>">ID : <?= $transaction->id ?></option>
         </select>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" id="rmid" class="form-control" readonly>
+        <input type="text" id="rmid" class="form-control" value="<?= $transaction->rm_id ?>" readonly>
         <label for="rmid">RM.ID</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" id="patientname" class="form-control" readonly>
+        <input type="text" id="patientname" class="form-control" value="<?= $transaction->fullname ?>" readonly>
         <label for="patientname">Nama Pasien</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" id="poli" class="form-control" readonly>
+        <input type="text" id="poli" class="form-control" value="<?= $transaction->service_name ?>" readonly>
         <label for="poli">Poli</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" id="loandate" class="form-control" readonly>
+        <input type="text" id="loandate" class="form-control" value="<?= $transaction->loan_date ?>" readonly>
         <label for="loandate">Tanggal Pinjam</label>
     </div>
     <input type="hidden" name="tid" id="tid">
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="returndate" id="returndate" placeholder="Tanggal Pengembalian" class="inputdate form-control">
+        <input type="date" name="returndate" id="returndate" value="<?= $transaction->return_date ?>" placeholder="Tanggal Pengembalian" class="inputdate form-control">
         <label for="returndate">Tanggal Pengembalian</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="returndesc" id="returndesc" placeholder="Keterangan" value="" class="form-control">
+        <input type="text" name="returndesc" id="returndesc" value="<?= $transaction->return_desc ?>" placeholder="Keterangan" class="form-control">
         <label for="returndesc">Keterangan</label>
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="submit" class="btn btn-primary">Tambah</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
     </div>
 </form>
 
