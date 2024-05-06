@@ -80,7 +80,4 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
 
     $routes->get('report', 'Report::index');
     $routes->post('reportexcel', 'Report::saveExcel');
-
-    $routes->get('reportreturn', 'ReportReturn::index');
-    $routes->post('reportreturnexcel', 'ReportReturn::saveExcel');
 });

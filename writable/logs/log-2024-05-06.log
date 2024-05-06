@@ -1615,3 +1615,884 @@ AND `service_unit` IS NULL
 12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
 INFO - 2024-05-06 06:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-06 06:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:45:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 06:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-06 07:07:26 --> ErrorException: Undefined array key "deadline"
+in APPPATH\Controllers\Report.php on line 65.
+ 1 APPPATH\Controllers\Report.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "deadline"', 'E:\\RSGM\\app\\Controllers\\Report.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 07:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 07:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 09:44:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\app\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-06 09:44:28 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:44:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:44:28 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 09:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 09:44:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\app\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-06 09:44:44 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:44:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:44:44 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 09:46:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 09:46:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\app\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-06 09:46:09 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:46:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:46:09 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 09:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 09:47:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\app\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-06 09:47:27 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:47:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:47:27 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Report.php(111): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 09:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 09:48:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Report.php(112): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\app\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-06 09:48:24 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Report.php(112): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:48:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Report.php(112): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:48:24 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `coass_name`, `transaction`.`deadline`, `clinic_name`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `return_date`
+FROM `transaction`
+JOIN `coass_doc` ON `transaction`.`id` = `coass_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Report.php(112): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Report.php(33): App\Controllers\Report->savecoass('2024', '5')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 09:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-06 09:49:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 09:49:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Report.php(55): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\app\Controllers\Report.php(35): App\Controllers\Report->savepublic('2024', '5')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-06 09:49:09 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Report.php(55): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Report.php(35): App\Controllers\Report->savepublic('2024', '5')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:49:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Report.php(55): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Report.php(35): App\Controllers\Report->savepublic('2024', '5')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:49:09 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'return _date) = '5'
+ORDER BY `loan_date` DESC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return _date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return _date) = :MONTH(return _date):
+ORDER BY `loan_date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Report.php(55): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Report.php(35): App\Controllers\Report->savepublic('2024', '5')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 09:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-06 09:49:45 --> mysqli_sql_exception: Unknown column 'publicdoc.fullname' in 'field list' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Report.php(55): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\app\Controllers\Report.php(35): App\Controllers\Report->savepublic('2024', '5')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-06 09:49:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'publicdoc.fullname' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return_date) = :MONTH(return_date):
+ORDER BY `loan_date` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Report.php(55): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Report.php(35): App\Controllers\Report->savepublic('2024', '5')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:49:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'publicdoc.fullname' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return_date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return_date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return_date) = :MONTH(return_date):
+ORDER BY `loan_date` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Report.php(55): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Report.php(35): App\Controllers\Report->savepublic('2024', '5')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-06 09:49:45 --> [Caused by] mysqli_sql_exception: Unknown column 'publicdoc.fullname' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return_date) = \'5\'
+ORDER BY `loan_date` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return_date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND MONTH(loan_date) = \'5\'
+OR MONTH(return_date) = \'5\'
+ORDER BY `loan_date` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`loan_date`, `publicdoc`.`fullname`, `publicdoc`.`address`, `transaction`.`deadline`, `medical_records`.`rm_id` as `rm_number`, `medical_records`.`fullname` as `patient_name`, `transaction`.`return_date`
+FROM `transaction`
+JOIN `public_doc` ON `transaction`.`id` = `public_doc`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND MONTH(loan_date) = :MONTH(loan_date):
+OR MONTH(return_date) = :MONTH(return_date):
+ORDER BY `loan_date` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Report.php(55): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Report.php(35): App\Controllers\Report->savepublic('2024', '5')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Report->saveExcel()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Report))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-06 09:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

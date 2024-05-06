@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 
 <div class="card">
-    <form action="<?php echo base_url('reportloanexcel') ?>" method="post">
+    <form action="<?php echo base_url('reportexcel') ?>" method="post">
         <div class="card-header">
 
         </div>
@@ -33,6 +33,21 @@
                     <option value="2023">2023</option>
                     <option value="2024" selected>2024</option>
                 </select>
+            </div>
+            <div class="mb-3">
+                <Label>Kategori</Label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="category" id="type1" value="1" checked>
+                    <label class="form-check-label" for="type1">
+                        Coass
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="category" id="type2" value="2">
+                    <label class="form-check-label" for="type2">
+                        Umum
+                    </label>
+                </div>
             </div>
         </div>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
