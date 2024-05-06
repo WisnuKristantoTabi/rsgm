@@ -101,22 +101,10 @@
                 <?php if ($role == 1 or $role == 2) : ?>
                     <!-- Laporan -->
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link <?= ($pagesidebar == 4) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#report" aria-expanded="false" aria-controls="report">
+                        <a href="<?php echo base_url('report') ?>" class="sidebar-link <?= ($pagesidebar == 4) ? 'active' : '' ?>">
                             <i class="lni lni-folder"></i>
-                            <span>Laporan</span>
+                            <span>Laporan </span>
                         </a>
-                        <ul id="report" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#transaction">
-                            <li class="sidebar-item ">
-                                <a href="<?php echo base_url('reportloan') ?> " class="sidebar-link <?= ($subsidebar == 6) ? 'active' : '' ?>">
-                                    Peminjaman
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="<?php echo base_url('reportreturn') ?> " class="sidebar-link <?= ($subsidebar == 7) ? 'active' : '' ?>">
-                                    Pengembalian
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <!-- End Laporan -->
                 <?php endif ?>

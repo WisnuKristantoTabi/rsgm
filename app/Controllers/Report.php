@@ -7,7 +7,7 @@ use App\Models\TransactionModel;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-class ReportLoan extends BaseController
+class Report extends BaseController
 {
 
     // protected $session = null;
@@ -18,9 +18,9 @@ class ReportLoan extends BaseController
         $data['pagesidebar'] = 4;
         $data['subsidebar'] = 6;
         $data['role'] = session()->get('role');
-        $data['title'] = 'Laporan Peminjaman';
+        $data['title'] = 'Laporan';
         $data['username'] = session()->get('username');
-        return view('report/loanreport', $data);
+        return view('report/report', $data);
     }
 
     public function saveExcel()

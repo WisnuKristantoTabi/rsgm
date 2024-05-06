@@ -38,7 +38,7 @@ class Dashboard extends BaseController
         $count = $transactionModels
             ->select('COUNT(*) as count_late')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->where('is_late', 2)
+            ->where('return_date > deadline')
             ->where('service_unit', $poli)
             ->first();
 
