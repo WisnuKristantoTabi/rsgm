@@ -105,7 +105,7 @@ class LoanCoass extends BaseController
 
             $coassmodels->save($coassdata);
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
-            return redirect()->to('/loancoass/add');
+            return redirect()->to('f?id=' . $transactionmodels->getInsertId());
         } else {
             $msg = $this->validator->listErrors();
             $session->setFlashdata('error', $msg);

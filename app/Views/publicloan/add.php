@@ -44,11 +44,11 @@
         <label for="address">Alamat</label>
     </div>
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="loandate" id="loandate" placeholder="Tanggal Peminjaman" value="" class="inputdate form-control">
+        <input type="date" name="loandate" id="loandate" value="<?= date('Y-m-d'); ?>" class="inputdate form-control">
         <label for="loandate">Tanggal Peminjaman</label>
     </div>
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="deadline" id="deadline" placeholder="Tanggal Batas Pengembalian" class="inputdate form-control">
+        <input type="date" name="deadline" id="deadline" value="<?= date('Y-m-d', strtotime('+1 day')); ?>" class="inputdate form-control">
         <label for="deadline">Tanggal Batas Pengembalian</label>
     </div>
     <!-- <div class="mb-3">

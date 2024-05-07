@@ -99,7 +99,7 @@ class LoanPublic extends BaseController
 
             $publicmodels->save($publicdata);
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
-            return redirect()->to('/loanpublic');
+            return redirect()->to('f?id=' . $transactionmodels->getInsertId());
         } else {
             $msg = $this->validator->listErrors();
             $session->setFlashdata('error', $msg);
