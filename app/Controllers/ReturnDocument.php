@@ -221,6 +221,20 @@ class ReturnDocument extends BaseController
             return redirect()->to('/returndoc/');
         }
     }
+
+    public function find()
+    {
+        $trasactionModels = new TransactionModel();
+        $id = $this->request->getPost('id');
+        $check = $trasactionModels->find($id);
+        if ($check) {
+            return redirect()->to('/returndoc/show/' . $id);
+        } else {
+            session()->setFlashdata('error', 'Data Tidak Ditemukan');
+            return redirect()->to('/returndoc/');
+        }
+    }
+
     public function searchData()
     {
 
