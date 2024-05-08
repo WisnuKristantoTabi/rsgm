@@ -72,6 +72,11 @@
                                     Poli
                                 </a>
                             </li>
+                            <li class="sidebar-item <?= ($subsidebar == 6) ? 'active' : '' ?>">
+                                <a href="<?php echo base_url('coass') ?>" class="sidebar-link">
+                                    Coass
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <!-- End Master Data -->

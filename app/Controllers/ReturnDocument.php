@@ -63,7 +63,7 @@ class ReturnDocument extends BaseController
             $data['transaction'] = $transaction;
             return view('returndocument/show', $data);
         } else {
-            session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
+            session()->setFlashdata('error', 'Data Tidak Berhasil Di Tampilkan');
             return redirect()->to('returndoc');
         }
     }
@@ -224,15 +224,44 @@ class ReturnDocument extends BaseController
 
     public function find()
     {
-        $trasactionModels = new TransactionModel();
-        $id = $this->request->getPost('id');
-        $check = $trasactionModels->find($id);
-        if ($check) {
-            return redirect()->to('/returndoc/show/' . $id);
+        $postData = $this->request->getVar('searchTerm');
+
+        $response = array();
+
+        if (!isset($postData)) {
+            // Fetch record
+            $transactionModel = new TransactionModel();
+
+            $transactions = $transactionModel->select('transaction.id,transaction.rm_id,public_doc.fullname')
+                ->join('public_doc', 'public_doc.transaction_id = transaction.id')
+                ->where('loan_type', 1)
+                ->orderBy('transaction.rm_id')
+                ->findAll(5);
         } else {
-            session()->setFlashdata('error', 'Data Tidak Ditemukan');
-            return redirect()->to('/returndoc/');
+            $searchTerm = $postData;
+
+            // Fetch record
+            $transactionModel = new TransactionModel();
+            $transactions = $transactionModel->select('transaction.id,transaction.rm_id,public_doc.fullname')
+                ->join('public_doc', 'public_doc.transaction_id = transaction.id')
+                ->like('fullname', $searchTerm)
+                ->orLike('transaction.rm_id', $searchTerm)
+                ->where('loan_type', 1)
+                ->orderBy('transaction.id')
+                ->findAll(5);
         }
+
+        $data = array();
+        foreach ($transactions as $transaction) {
+            $data[] = array(
+                "id" => $transaction['id'],
+                "text" => 'ID: ' . $transaction['id'] . ', Nama: ' . $transaction['fullname'] . ', RM.ID: ' . $transaction['rm_id'],
+            );
+        }
+
+        $response['data'] = $data;
+
+        return $this->response->setJSON($data);
     }
 
     public function searchData()

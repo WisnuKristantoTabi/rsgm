@@ -6,13 +6,11 @@
     <a href="<?php echo base_url('/returndoc') ?>" class="btn btn-outline-primary <?= ($type == 1) ? 'active' : '' ?>">UMUM</a>
     <a href="<?php echo base_url('/returndocoass') ?>" class="btn btn-outline-primary <?= ($type == 2) ? 'active' : '' ?> ">CO.ass</a>
 </div>
-
-<div class=" mb-5">
-    <form class="input-group" method="post" action="<?php echo base_url('/returndoc/find/') ?>">
-        <span class="input-group-text">Cari Data</span>
-        <input type="text" name="id" class="form-control" placeholder="Masukkan ID Transaksi" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="submit" id="button-addon2"> <i class="lni lni-search"></i> Cari</button>
-    </form>
+<div class="mb-5">
+    <label class="mb-3" for="searchrm">Cari Data</label>
+    <select id="searchdata" name="tid" class="form-select">
+        <option value=""></option>
+    </select>
 </div>
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -98,6 +96,35 @@
     });
 </script>
 
+<script>
+    $(document).ready(function() {
+        $('#searchdata').select2({
+            placeholder: "Cari Nama/RM ID",
+            ajax: {
+                url: "<?php echo base_url('/returndoc/find/') ?>",
+                dataType: 'json',
+                type: 'POST',
+                delay: 250,
+                data: function(params) {
+                    return {
+                        searchTerm: params.term
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        }).on("select2:select", function(e) {
+            window.location.href = '<?php echo base_url('/returndoc/show/') ?>' + e.params.data.id;
+        });
+    });
+</script>
+
 <?= $pager->links('returndoc', 'bootstrap_pagination') ?>
+
+<script src="<?php echo base_url('/select2/dist/js/select2.min.js') ?>" type='text/javascript' defer></script>
 
 <?= $this->endSection() ?>

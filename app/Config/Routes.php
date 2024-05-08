@@ -53,6 +53,14 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/f', 'Tracer::findloan');
     $routes->get('/print/tracer/(:any)', 'PrintPDF::printTracer/$1');
 
+    $routes->get('/coass', 'Coass::index');
+    $routes->get('/coass/add', 'Coass::add');
+    $routes->post('/coass/store', 'Coass::store');
+    $routes->get('/coass/edit/(:any)', 'Coass::edit/$1');
+    $routes->post('/coass/update', 'Coass::update');
+    $routes->get('/coass/show/(:any)', 'Coass::show/$1');
+    $routes->get('/coass/delete/(:any)', 'Coass::delete/$1');
+
     $routes->get('/loancoass', 'LoanCoass::index');
     $routes->get('/loancoass/add', 'LoanCoass::add');
     $routes->post('/loancoass/store', 'LoanCoass::store');
@@ -73,10 +81,11 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/returndoc/show/(:any)', 'ReturnDocument::show/$1');
     $routes->post('/returndoc/update', 'ReturnDocument::update');
     $routes->get('/returndoc/delete/(:any)', 'ReturnDocument::delete/$1');
-    $routes->post('/returndoc/find/', 'ReturnDocument::find/');
+    $routes->post('/returndoc/find/', 'ReturnDocument::find');
     $routes->get('/returndoc/sendmessage', 'ReturnDocument::sendmessage');
 
     $routes->get('/returndocoass', 'ReturnDocumentCoass::index');
+    $routes->post('/returndocoass/find/', 'ReturnDocumentCoass::find');
 
 
     $routes->get('report', 'Report::index');

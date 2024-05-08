@@ -29,7 +29,7 @@ class Dashboard extends BaseController
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
             ->orderBy('loan_date')
             ->where('YEAR(loan_date)', '2024')
-            ->where('service_unit', $poli)
+            ->where('service_id', $poli)
             ->groupBy('MONTH(loan_date)')
             ->findAll();
 
@@ -39,7 +39,7 @@ class Dashboard extends BaseController
             ->select('COUNT(*) as count_late')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
             ->where('return_date > deadline')
-            ->where('service_unit', $poli)
+            ->where('service_id', $poli)
             ->first();
 
         $data['count'] = $count;

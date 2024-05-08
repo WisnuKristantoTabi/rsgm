@@ -35,4 +35,46 @@ class ReturnDocumentCoass extends BaseController
         $data['username'] = session()->get('username');
         return view('returndocument/index_coass', $data);
     }
+
+    public function find()
+    {
+        $postData = $this->request->getVar('searchTerm');
+
+        $response = array();
+
+        if (!isset($postData)) {
+            // Fetch record
+            $transactionModel = new TransactionModel();
+
+            $transactions = $transactionModel->select('transaction.id,transaction.rm_id,coass_doc.coass_name')
+                ->join('coass_doc', 'coass_doc.transaction_id = transaction.id')
+                ->where('loan_type', 2)
+                ->orderBy('transaction.rm_id')
+                ->findAll(5);
+        } else {
+            $searchTerm = $postData;
+
+            // Fetch record
+            $transactionModel = new TransactionModel();
+            $transactions = $transactionModel->select('transaction.id,transaction.rm_id,coass_doc.coass_name')
+                ->join('coass_doc', 'coass_doc.transaction_id = transaction.id')
+                ->like('coass_doc.coass_name', $searchTerm)
+                ->orLike('transaction.rm_id', $searchTerm)
+                ->where('loan_type', 2)
+                ->orderBy('transaction.id')
+                ->findAll(5);
+        }
+
+        $data = array();
+        foreach ($transactions as $transaction) {
+            $data[] = array(
+                "id" => $transaction['id'],
+                "text" => 'ID: ' . $transaction['id'] . ', Nama: ' . $transaction['coass_name'] . ', RM.ID: ' . $transaction['rm_id'],
+            );
+        }
+
+        $response['data'] = $data;
+
+        return $this->response->setJSON($data);
+    }
 }

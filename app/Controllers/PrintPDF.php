@@ -87,13 +87,12 @@ class PrintPDF extends BaseController
             'text' => true,
             'font' => 'helvetica',
             'fontsize' => 8,
-            'stretchtext' => 4
+            'stretchtext' => 6
         );
 
-        $pdf = new TCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+        $pdf = new TCPDF('P', PDF_UNIT, 'A6', true, 'UTF-8', false);
 
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetTitle('Tracer');
         // $pdf->SetHeaderData("E:/RSGM/public/img/logo.jpg", PDF_HEADER_LOGO_WIDTH, "Rekam Medik ", "RSGM - Universitas Negeri Jember");
         $pdf->setPrintHeader(false);
         $pdf->setPrintFooter(false);
@@ -101,8 +100,7 @@ class PrintPDF extends BaseController
         $pdf->addPage();
         $html = view('print_tracer', $data);
         $pdf->writeHTML($html, true, false, true, false, '');
-        $pdf->Cell(0, 0, 'Code Barcode', 0, 1);
-        $pdf->write1DBarcode($id, 'C39', '', '', '', 18, 0.4, $style, 'N');
+        $pdf->write1DBarcode($id, 'C39', '', '', '', 15, 0.4, $style, 'N');
 
         //line ini penting
         $this->response->setContentType('application/pdf');

@@ -1,21 +1,15 @@
-<div>
-    <H1>Tracer</H1>
-</div>
-<hr>
-<br>
-<div>
-    No. Rekam Medis: <?= $tracer->rm_id ?>
-</div>
-<div>
-    <p>Nama Pasien</p>
-    <h2> <?= $tracer->fullname ?> </h2>
-    <p>Poli Pelayanan</p>
-    <h2> <?= $tracer->service_name ?> </h2>
-    </br>
-    <p>Tanggal Peminjaman</p>
-    <h2> <?= $tracer->loan_date ?> </h2>
-    </br>
-    <p>Keterangan</p>
-    <h2> <?= $tracer->loan_desc ?> </h2>
-    </br>
-</div>
+<style>
+    h1 {
+        font-family: helvetica;
+        font-size: 10pt;
+    }
+</style>
+</p> No. Rekam Medis: <?= $tracer->rm_id ?> </p>
+<p>Nama Pasien</p>
+<p> <?= $tracer->fullname ?> </p>
+<p>Poli Pelayanan</p>
+<p> <?= $tracer->service_name ?> </p>
+<p>Tanggal Peminjaman</p>
+<p> <?= $tracer->loan_date ?> </p>
+<p>Keterangan</p>
+<p> <?= $tracer->loan_desc ?> </p>
