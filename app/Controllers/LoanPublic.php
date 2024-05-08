@@ -5,6 +5,7 @@ namespace App\Controllers;
 // use App\Models\RecordMedicalModel;
 use App\Models\PublicModel;
 use App\Models\TransactionModel;
+use App\Models\ServiceUnitModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
 
 class LoanPublic extends BaseController
@@ -47,13 +48,13 @@ class LoanPublic extends BaseController
     public function add()
     {
         // $serviceunitmodel = new ServiceUnitModel();
-        $coassmodels = new PublicModel();
+        $serviceUnitModels = new ServiceUnitModel();
         $data['title'] = 'Tambah Pinjaman Umum';
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
-        $data['coassmodels'] = $coassmodels->findAll();
+        $data['serviceunits'] = $serviceUnitModels->findAll();
 
         return view('publicloan//add', $data);
     }
@@ -70,6 +71,7 @@ class LoanPublic extends BaseController
             'address'               => 'required',
             'loandate'              => 'required',
             'deadline'              => 'required',
+            'service'               => 'required',
         ];
         $publicmodels = new PublicModel();
         $transactionmodels = new TransactionModel();
@@ -81,9 +83,9 @@ class LoanPublic extends BaseController
                 'loan_date'      => $this->request->getPost('loandate'),
                 'loan_type'      => 1,
                 'loan_desc'      => '-',
-                'phone'          => $this->request->getPost('phone'),
                 'deadline'       => $this->request->getPost('deadline'),
                 'is_return'      => 1,
+                'service_id'     => $this->request->getPost('service'),
             ];
 
             $transactionmodels->insert($transactiondata);
@@ -93,11 +95,11 @@ class LoanPublic extends BaseController
                 'fullname'              => $this->request->getPost('fullname'),
                 'identity_number'       => $this->request->getPost('identitynumber'),
                 'address'               => $this->request->getPost('address'),
+                'phone'                 => $this->request->getPost('phone'),
                 'transaction_id'        => $transactionmodels->getInsertId(),
             ];
-
-
             $publicmodels->save($publicdata);
+
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
             return redirect()->to('f?id=' . $transactionmodels->getInsertId());
         } else {
@@ -124,12 +126,15 @@ class LoanPublic extends BaseController
         $data['role'] = session()->get('role');
         $transactionmodels = new TransactionModel();
         $transactions = $transactionmodels->select('transaction.rm_id, public_doc.fullname as patientname, transaction.deadline,
-        transaction.phone, public_doc.identity_number, public_doc.address, transaction.loan_date,
-        medical_records.fullname, transaction.id as tid  ')
+        public_doc.phone, public_doc.identity_number, public_doc.address, transaction.loan_date,
+        medical_records.fullname, transaction.id as tid, service_id ')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
             ->join('public_doc', 'public_doc.transaction_id = transaction.id')
             ->getWhere(['transaction.id' => $id, 'loan_type' => 1])
             ->getRow();
+
+        $serviceUnitModels = new ServiceUnitModel();
+        $data['serviceunits'] = $serviceUnitModels->findAll();
 
         if ($transactionmodels->find(['transaction.id' => $id, 'loan_type' => 1])) {
             $data['transaction'] = $transactions;
@@ -163,18 +168,20 @@ class LoanPublic extends BaseController
         if ($this->validate($rules)) {
 
             $transactiondata = [
-                'rm_id'                 => $this->request->getPost('rmid'),
-                'loan_date'             => $this->request->getPost('loandate'),
-                'loan_desc'             => implode(" ", $this->request->getPost('loandesc')),
+                'rm_id'          => $this->request->getPost('rmid'),
+                'loan_date'      => $this->request->getPost('loandate'),
+                'loan_desc'      => '-',
                 'deadline'       => $this->request->getPost('deadline'),
-                'phone'                 => $this->request->getPost('phone'),
+                'service_id'     => $this->request->getPost('service'),
+
             ];
 
             $publicdata = [
-                'rm_id'                 => $this->request->getPost('rmid'),
-                'fullname'              => $this->request->getPost('fullname'),
-                'identity_number'       => $this->request->getPost('identitynumber'),
-                'address'               => $this->request->getPost('address'),
+                'rm_id'           => $this->request->getPost('rmid'),
+                'fullname'        => $this->request->getPost('fullname'),
+                'identity_number' => $this->request->getPost('identitynumber'),
+                'address'         => $this->request->getPost('address'),
+                'phone'          => $this->request->getPost('phone'),
             ];
 
             if ($transactionmodels->find(['id' => $id])) {

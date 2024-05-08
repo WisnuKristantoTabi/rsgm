@@ -5,6 +5,8 @@ namespace App\Controllers;
 // use App\Models\RecordMedicalModel;
 use App\Models\CoassModel;
 use App\Models\TransactionModel;
+use App\Models\TransactionCoassModel;
+use App\Models\ServiceUnitModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
 
 class LoanCoass extends BaseController
@@ -19,16 +21,19 @@ class LoanCoass extends BaseController
     public function index()
     {
         // $recordmedicalModel = new RecordMedicalModel();
-        $coassmodels = new CoassModel();
+        $tcmodels = new TransactionCoassModel();
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
-        $data['coassmodels'] = $coassmodels
-            ->select('coass_name,clinic_name,coass_number,coass_date,transaction.phone, coass_doc.transaction_id')
-            ->join('transaction', 'transaction.id = coass_doc.transaction_id')
+        $data['coassmodels'] = $tcmodels
+            ->select('coass_doc.coass_name,coass_doc.clinic_name,coass_doc.coass_number,
+            coass_doc.coass_date,coass_doc.phone, transaction_coass.transaction_id, medical_records.fullname as patient')
+            ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
+            ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
+            ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->orderBy('coass_date', 'desc')
             ->paginate(20, 'loancoass');
-        $data['pager'] = $coassmodels->pager;
+        $data['pager'] = $tcmodels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_loancoass'), 20);
         $data['title'] = 'Peminjaman Coass';
         $data['type'] = 2;
@@ -50,14 +55,14 @@ class LoanCoass extends BaseController
 
     public function add()
     {
-        // $serviceunitmodel = new ServiceUnitModel();
-        $coassmodels = new CoassModel();
+
+        $serviceUnitModels = new ServiceUnitModel();
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
         $data['title'] = 'Tambah Pinjaman COASS';
         $data['username'] = session()->get('username');
-        $data['coassmodels'] = $coassmodels->findAll();
+        $data['serviceunits'] = $serviceUnitModels->findAll();
 
         return view('coassloan/add', $data);
     }
@@ -67,17 +72,14 @@ class LoanCoass extends BaseController
         $session = session();
 
         $rules = [
-            'rmid'                  => 'required|min_length[2]|max_length[50]|',
-            'fullname'              => 'required|min_length[2]|max_length[50]',
-            'coassnumber'           => 'required|min_length[2]|max_length[100]',
-            'phone'                 => 'required|min_length[2]',
-            'onsitedate'            => 'required',
-            'clinic'                => 'required',
-            'loandate'              => 'required',
-            'deadline'              => 'required',
+            'rmid'                 => 'required|min_length[2]|max_length[50]|',
+            'coassid'              => 'required',
+            'loandate'             => 'required',
+            'deadline'             => 'required',
+            'service'              => 'required',
         ];
-        $coassmodels = new CoassModel();
         $transactionmodels = new TransactionModel();
+        $tcmodels = new TransactionCoassModel();
 
         if ($this->validate($rules)) {
 
@@ -86,23 +88,17 @@ class LoanCoass extends BaseController
                 'loan_date'      => $this->request->getPost('loandate'),
                 'loan_type'      => 2,
                 'loan_desc'      => implode(" ", $this->request->getPost('loandesc')),
-                'phone'          => $this->request->getPost('phone'),
                 'deadline'       => $this->request->getPost('deadline'),
                 'is_return'      => 1,
+                'service_id'     => $this->request->getPost('service')
             ];
 
             $transactionmodels->insert($transactiondata);
+            $tcmodels->save([
+                'transaction_id'    => $transactionmodels->getInsertId(),
+                'coass_id'          =>  $this->request->getPost('coassid')
+            ]);
 
-            $coassdata = [
-                'rm_id'          => $this->request->getPost('rmid'),
-                'coass_name'      => $this->request->getPost('fullname'),
-                'clinic_name'       => $this->request->getPost('clinic'),
-                'coass_number'        => $this->request->getPost('coassnumber'),
-                'coass_date'      => $this->request->getPost('onsitedate'),
-                'transaction_id' => $transactionmodels->getInsertId(),
-            ];
-
-            $coassmodels->save($coassdata);
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
             return redirect()->to('f?id=' . $transactionmodels->getInsertId());
         } else {
@@ -128,18 +124,22 @@ class LoanCoass extends BaseController
         $data['username'] = session()->get('username');
         $data['role'] = session()->get('role');
 
-        $transactionmodels = new TransactionModel();
-        $transactions = $transactionmodels->select('transaction.rm_id, coass_doc.coass_name, transaction.deadline,  
-        coass_doc.coass_number, coass_doc.coass_date, clinic_name, transaction.loan_date,transaction.phone,
-        medical_records.fullname, transaction.id as tid  ')
+
+        $tcModels = new TransactionCoassModel();
+        $serviceUnitModels = new ServiceUnitModel();
+        $tcData = $tcModels->select('transaction.rm_id, coass_doc.coass_name, transaction.deadline,  
+        coass_doc.coass_number, coass_doc.coass_date, coass_doc.clinic_name, transaction.loan_date, coass_doc.phone,
+        medical_records.fullname, transaction.id as tid, coass_doc.id as coassid, transaction.service_id')
+            ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
+            ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->join('coass_doc', 'coass_doc.transaction_id = transaction.id')
             ->getWhere(['transaction.id' => $id, 'loan_type' => 2])
             ->getRow();
 
-        if ($transactionmodels->find(['transaction.id' => $id, 'loan_type' => 2])) {
-            $data['transactions'] = $transactions;
-            $data['title']  = 'Edit Rekam Medis No. ' . $transactions->rm_id;
+        if ($tcModels->where(['transaction_id' => $id])->first()) {
+            $data['transactions'] = $tcData;
+            $data['serviceunits'] = $serviceUnitModels->findAll();
+            $data['title']  = 'Edit Data Pinjaman Coass';
             $data['pagesidebar'] = 3;
             $data['subsidebar'] = 4;
             return view('coassloan/edit', $data);
@@ -153,46 +153,33 @@ class LoanCoass extends BaseController
     {
         $id = $this->request->getPost('tid');
         $rules = [
-            'rmid'                  => 'required|min_length[2]|max_length[50]|',
-            'fullname'              => 'required|min_length[2]|max_length[50]',
-            'coassnumber'           => 'required|min_length[2]|max_length[100]',
-            'phone'                 => 'required|min_length[2]',
-            'onsitedate'            => 'required',
-            'clinic'                => 'required',
-            'loandate'              => 'required',
-            'deadline'              => 'required',
+            'rmid'                 => 'required|min_length[2]|max_length[50]|',
+            'coassid'              => 'required',
+            'loandate'             => 'required',
+            'deadline'             => 'required',
+            'service'              => 'required',
         ];
-        $coassmodels = new CoassModel();
+
         $transactionmodels = new TransactionModel();
+        $tcModels = new TransactionCoassModel();
 
         if ($this->validate($rules)) {
 
             $transactiondata = [
                 'rm_id'          => $this->request->getPost('rmid'),
                 'loan_date'      => $this->request->getPost('loandate'),
-                'loan_desc'        => implode(" ", $this->request->getPost('loandesc')),
+                'loan_type'      => 2,
+                // 'loan_desc'      => implode(" ", $this->request->getPost('loandesc')),
                 'deadline'       => $this->request->getPost('deadline'),
-                'phone'   => $this->request->getPost('phone'),
+                'is_return'      => 1,
+                'service_id'     => $this->request->getPost('service')
             ];
 
-            // $transactionmodels->insert($transactiondata);
-
-            $coassdata = [
-                'rm_id'          => $this->request->getPost('rmid'),
-                'coass_name'      => $this->request->getPost('fullname'),
-                'clinic_name'       => $this->request->getPost('clinic'),
-                'coass_number'        => $this->request->getPost('coassnumber'),
-                'coass_date'      => $this->request->getPost('onsitedate'),
-            ];
-
-
-            // $coassmodels->save($coassdata);
             if ($transactionmodels->find(['id' => $id])) {
                 $transactionmodels->update($id, $transactiondata);
-                $coassmodels->where('transaction_id', $id)->set($coassdata)->update();
-
+                $tcModels->set(['coass_id' => $this->request->getPost('coassid')])->where('transaction_id', $id)->update();
                 session()->setFlashdata('success', 'Data Berhasil Di edit');
-                return redirect()->to('loancoass/edit/' . $id);
+                return redirect()->to('f?id=' . $id);
             } else {
                 session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
                 return redirect()->to('loancoass/edit/' . $id);
@@ -200,42 +187,81 @@ class LoanCoass extends BaseController
         } else {
             $msg = $this->validator->listErrors();
             session()->setFlashdata('error', $msg);
-            return redirect()->to('loancoass/add');
+            return redirect()->to('loancoass/edit/' . $id);
         }
-
-        // $recordmedicalModel = new RecordMedicalModel();
-        // $id = $this->request->getPost('recordId');
-        // $data = array(
-        //     'rm_id'         => $this->request->getPost('rmid'),
-        //     'fullname'      => $this->request->getPost('fullname'),
-        //     'address'       => $this->request->getPost('address'),
-        //     'gender'        => $this->request->getPost('gender'),
-        //     'birth_date'    => $this->request->getPost('birthdate'),
-        //     'service_unit'  => $this->request->getPost('serviceunit'),
-        // );
-        // if ($recordmedicalModel->find($id)) {
-        //     $recordmedicalModel->update($id, $data);
-        //     session()->setFlashdata('success', 'Data Berhasil Di edit');
-        //     return redirect()->to('recordmedical/edit/' . $id);
-        // } else {
-        //     echo "Data Tidak Ditemukan";
-        // }
     }
 
     public function delete($id)
     {
-        $coassmodels = new CoassModel();
+        $tcModels = new TransactionCoassModel();
         $transactionmodels = new TransactionModel();
 
         $check = $transactionmodels->find($id);
         if ($check) {
             $transactionmodels->delete(['id' => $id]);
-            $coassmodels->where('transaction_id', $id)->delete();
+            $tcModels->where('transaction_id', $id)->delete();
             session()->setFlashdata('success', 'Data Berhasil Di Hapus');
             return redirect()->to('loancoass/');
         } else {
             session()->setFlashdata('error', 'Data Tidak Ditemukan');
             return redirect()->to('loancoass/');
         }
+    }
+
+    public function searchCoass()
+    {
+        $postData = $this->request->getVar('searchTerm');
+
+        $response = array();
+        $coassModels = new CoassModel();
+
+        if (!isset($postData)) {
+            // Fetch record
+            $coassData = $coassModels->select('id,coass_name,coass_number')
+                ->orderBy('id')
+                ->findAll(5);
+        } else {
+            $coassData = $coassModels->select('id,coass_name,coass_number')
+                ->like('coass_name', $postData)
+                ->orLike('coass_number')
+                ->orderBy('id')
+                ->findAll(5);
+        }
+
+        $data = array();
+        foreach ($coassData as $coass) {
+            $data[] = array(
+                "id" => $coass['id'],
+                "text" => $coass['coass_name'] . ' - ' . $coass['coass_number'],
+            );
+        }
+
+        $response['data'] = $data;
+
+        return $this->response->setJSON($response);
+    }
+
+    public function showCoass()
+    {
+        $postData = $this->request->getVar('id');
+        $coassModels = new CoassModel();
+        $coassData = $coassModels->select('id,coass_name,coass_number,phone,coass_date,clinic_name')
+            ->where('id', $postData)
+            ->orderBy('id')
+            ->get();
+
+        $data = array();
+        foreach ($coassData->getResult() as $coass) {
+            $data[] = array(
+                "id"            => $coass->id,
+                "coassname"    => $coass->coass_name,
+                "coassnumber"  => $coass->coass_number,
+                "phone"         => $coass->phone,
+                "coassdate"    => $coass->coass_date,
+                "clinicname"   => $coass->clinic_name,
+            );
+            break;
+        }
+        return $this->response->setJSON($data);
     }
 }

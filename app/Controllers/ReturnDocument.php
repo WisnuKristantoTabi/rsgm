@@ -316,6 +316,7 @@ class ReturnDocument extends BaseController
             ->orderBy('id')
             ->get();
 
+        $data = array();
         foreach ($transactions->getResult() as $transaction) {
             $data[] = array(
                 "tid" => $transaction->id,

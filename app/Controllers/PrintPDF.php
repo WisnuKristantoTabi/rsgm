@@ -68,8 +68,8 @@ class PrintPDF extends BaseController
         $data['role'] = session()->get('role');
         $data['tracer'] = $recordmedicalModel
             ->select('medical_records.rm_id,fullname,service_name,loan_date,loan_desc')
-            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
             ->join('transaction', 'transaction.rm_id = medical_records.rm_id')
+            ->join('service_unit', 'service_unit.id = transaction.service_id')
             ->getWhere(['transaction.id' => $id])
             ->getRow();
 

@@ -37,7 +37,7 @@ class Tracer extends BaseController
         $data['data'] = $recordmedicalModel
             ->select('transaction.id as tid , medical_records.rm_id as id_rekam_medik, fullname,loan_date,loan_desc,service_name')
             ->join('transaction', 'medical_records.rm_id = transaction.rm_id')
-            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->join('service_unit', 'service_unit.id = transaction.service_id')
             ->getwhere(['transaction.id' => $id])
             ->getRow();
         $data['title'] = 'Tracer Rekam Medis';

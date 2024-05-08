@@ -19,32 +19,30 @@
             <option value="<?= $transactions->rm_id ?>"><?= $transactions->fullname ?> - <?= $transactions->rm_id ?></option>
         </select>
     </div>
+    <div class="mb-5">
+        <label class="mb-3" for="searchtid">Cari Data Coass</label>
+        <select id="coassid" name="coassid" class="form-select">
+            <option value="<?= $transactions->coassid ?>"><?= $transactions->coass_name ?> - <?= $transactions->coass_number ?> </option>
+        </select>
+    </div>
     <div class="form-floating mb-3">
-        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap Koass" value="<?= $transactions->coass_name ?>" class="form-control">
+        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap Koass" value="<?= $transactions->coass_name ?>" class="form-control" readonly>
         <label for="fullname">Nama Koass</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="coassnumber" id="coassnumber" placeholder="NIM" value="<?= $transactions->coass_number ?>" class="form-control">
+        <input type="text" name="coassnumber" id="coassnumber" placeholder="NIM" value="<?= $transactions->coass_number ?>" class="form-control" readonly>
         <label for="coassnumber">NIM</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="<?= $transactions->phone ?>" class="form-control">
+        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="<?= $transactions->phone ?>" class="form-control" readonly>
         <label for="phone">Nomor Telpon Coass</label>
     </div>
-    <!-- <div class="form-group mb-5">
-        <label for="inputPassword5" class="form-label">Jenis Kelamin</label>
-        <input type="radio" class="btn-check" value="1" name="gender" id="option1" autocomplete="off" checked>
-        <label class="btn btn-outline-primary btn-sm" for="option1">Laki-Laki</label>
-
-        <input type="radio" class="btn-check" value="0" name="gender" id="option2" autocomplete="off">
-        <label class="btn btn-outline-primary btn-sm" for="option2">Perempuan</label>
-    </div> -->
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="onsitedate" id="onsitedate" value="<?= $transactions->coass_date ?>" placeholder="Tanggal Onsite" class="inputdate form-control">
+        <input type="date" name="onsitedate" id="onsitedate" value="<?= $transactions->coass_date ?>" placeholder="Tanggal Onsite" class="inputdate form-control" readonly>
         <label for="onsitedate">Tanggal Onsite</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="clinic" id="clinic" placeholder="Nama Klinik" value="<?= $transactions->clinic_name ?>" class="form-control">
+        <input type="text" name="clinic" id="clinic" placeholder="Nama Klinik" value="<?= $transactions->clinic_name ?>" class="form-control" readonly>
         <label for="clinic">Klinik</label>
     </div>
     <div class="form-floating mb-3 dateformat">
@@ -56,31 +54,13 @@
         <label for="deadline">Tanggal Batas Pengembalian</label>
     </div>
     <div class="mb-3">
-        <label>Keperluan</label>
-        <div class="form-check">
-            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Kerja," id="loandesc[]">
-            <label class="form-check-label" for="loandesc[]">
-                Kerja
-            </label>
-        </div>
-        <div class="form-check">
-            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Nilai," id="loandesc[]">
-            <label class="form-check-label" for="loandesc[]">
-                Nilai
-            </label>
-        </div>
-        <div class="form-check">
-            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Diskusi/Up," id="loandesc[]">
-            <label class="form-check-label" for="loandesc[]">
-                Diskusi/Up
-            </label>
-        </div>
-        <div class="form-check mb-5">
-            <label class="form-check-label" for="loandesc[]">
-                Lainnya
-            </label>
-            <input name="loandesc[]" class="form-control" type="text" value="" id="loandesc[]">
-        </div>
+        <label for="searchrm">Pilih Poli</label>
+        <select name="service" id="serivce" class="form-select">
+            <?php foreach ($serviceunits as $serviceunit) : ?>
+                <option value="<?= $serviceunit['id'] ?>" <?= ($transactions->service_id == $serviceunit['id']) ? 'selected' : '' ?>><?= $serviceunit['service_name'] ?></option>
+            <?php endforeach ?>
+
+        </select>
     </div>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -106,6 +86,8 @@
     });
 </script> -->
 
+<!-- Data Rekam Medis -->
+
 <script>
     $(document).ready(function() {
         $('#searchrm').select2({
@@ -126,6 +108,53 @@
                 },
                 cache: true
             }
+        });
+    });
+</script>
+
+<!-- Data Coass -->
+
+<script>
+    $(document).ready(function() {
+        $('#coassid').select2({
+            placeholder: "Cari Coass",
+            ajax: {
+                url: "<?php echo base_url('/loancoass/searchcoass') ?>",
+                dataType: 'json',
+                type: 'POST',
+                delay: 250,
+                data: function(params) {
+                    return {
+                        searchTerm: params.term
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data.data
+                    };
+                },
+                cache: true
+            }
+        }).on('select2:select', function(e) {
+            var selectedID = e.params.data.id;
+            $.ajax({
+                url: "<?php echo base_url('/loancoass/showcoass/') ?>", // Ganti dengan URL yang sesuai
+                dataType: 'json',
+                type: 'POST',
+                data: {
+                    id: selectedID
+                },
+                success: function(response) {
+                    $('#fullname').val(response[0].coassname);
+                    $('#coassnumber').val(response[0].coassnumber);
+                    $('#phone').val(response[0].phone);
+                    $('#onsitedate').val(response[0].coassdate);
+                    $('#clinic').val(response[0].clinicname);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
         });
     });
 </script>

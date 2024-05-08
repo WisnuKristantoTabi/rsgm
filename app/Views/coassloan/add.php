@@ -19,32 +19,31 @@
             <option value=""></option>
         </select>
     </div>
+    <div class="mb-5">
+        <label class="mb-3" for="searchtid">Cari Data Coass</label>
+        <select id="coassid" name="coassid" class="form-select">
+            <option value=""></option>
+        </select>
+    </div>
     <div class="form-floating mb-3">
-        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap Koass" value="" class="form-control">
+        <input type="text" id="fullname" placeholder="Nama Lengkap Koass" class="form-control" readonly>
         <label for="fullname">Nama Koass</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="coassnumber" id="coassnumber" placeholder="NIM" value="" class="form-control">
+        <input type="text" id="coassnumber" placeholder="NIM" value="" class="form-control" readonly>
         <label for="coassnumber">NIM</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="" class="form-control">
+        <input type="tel" id="phone" placeholder="Nomor Telpon Coass" value="" class="form-control" readonly>
         <label for="phone">Nomor Telpon Coass</label>
     </div>
-    <!-- <div class="form-group mb-5">
-        <label for="inputPassword5" class="form-label">Jenis Kelamin</label>
-        <input type="radio" class="btn-check" value="1" name="gender" id="option1" autocomplete="off" checked>
-        <label class="btn btn-outline-primary btn-sm" for="option1">Laki-Laki</label>
 
-        <input type="radio" class="btn-check" value="0" name="gender" id="option2" autocomplete="off">
-        <label class="btn btn-outline-primary btn-sm" for="option2">Perempuan</label>
-    </div> -->
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="onsitedate" id="onsitedate" placeholder="Tanggal Onsite" class="inputdate form-control">
+        <input type="date" id="onsitedate" placeholder="Tanggal Onsite" class="inputdate form-control" readonly>
         <label for="onsitedate">Tanggal Onsite</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="clinic" id="clinic" placeholder="Nama Klinik" value="" class="form-control">
+        <input type="text" id="clinic" placeholder="Nama Klinik" value="" class="form-control" readonly>
         <label for="clinic">Klinik</label>
     </div>
     <div class="form-floating mb-3 dateformat">
@@ -54,6 +53,15 @@
     <div class="form-floating mb-3 dateformat">
         <input type="date" name="deadline" id="deadline" value="<?= date('Y-m-d', strtotime('+1 day')); ?>" class="inputdate form-control">
         <label for="deadline">Tanggal Batas Pengembalian</label>
+    </div>
+    <div class="mb-3">
+        <label for="searchrm">Pilih Poli</label>
+        <select name="service" id="serivce" class="form-select">
+            <?php foreach ($serviceunits as $serviceunit) : ?>
+                <option value="<?= $serviceunit['id'] ?>"><?= $serviceunit['service_name'] ?></option>
+            <?php endforeach ?>
+
+        </select>
     </div>
     <div class="mb-3">
         <label>Keperluan</label>
@@ -106,6 +114,8 @@
     });
 </script> -->
 
+<!-- Data Rekam Medis -->
+
 <script>
     $(document).ready(function() {
         $('#searchrm').select2({
@@ -130,5 +140,53 @@
         });
     });
 </script>
+
+<!-- Data Coass -->
+
+<script>
+    $(document).ready(function() {
+        $('#coassid').select2({
+            placeholder: "Cari Coass",
+            ajax: {
+                url: "<?php echo base_url('/loancoass/searchcoass') ?>",
+                dataType: 'json',
+                type: 'POST',
+                delay: 250,
+                data: function(params) {
+                    return {
+                        searchTerm: params.term
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data.data
+                    };
+                },
+                cache: true
+            }
+        }).on('select2:select', function(e) {
+            var selectedID = e.params.data.id;
+            $.ajax({
+                url: "<?php echo base_url('/loancoass/showcoass/') ?>", // Ganti dengan URL yang sesuai
+                dataType: 'json',
+                type: 'POST',
+                data: {
+                    id: selectedID
+                },
+                success: function(response) {
+                    $('#fullname').val(response[0].coassname);
+                    $('#coassnumber').val(response[0].coassnumber);
+                    $('#phone').val(response[0].phone);
+                    $('#onsitedate').val(response[0].coassdate);
+                    $('#clinic').val(response[0].clinicname);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    });
+</script>
+<script src="<?php echo base_url('/select2/dist/js/select2.min.js') ?>" type='text/javascript' defer></script>
 
 <?= $this->endSection() ?>

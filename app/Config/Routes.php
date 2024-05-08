@@ -67,6 +67,8 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/loancoass/edit/(:any)', 'LoanCoass::edit/$1');
     $routes->post('/loancoass/update', 'LoanCoass::update');
     $routes->get('/loancoass/delete/(:any)', 'LoanCoass::delete/$1');
+    $routes->post('/loancoass/searchcoass/', 'LoanCoass::searchCoass');
+    $routes->post('/loancoass/showcoass/', 'LoanCoass::showCoass');
 
     $routes->get('/loanpublic', 'LoanPublic::index');
     $routes->get('/loanpublic/add', 'LoanPublic::add');

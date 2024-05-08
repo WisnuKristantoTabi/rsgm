@@ -26,6 +26,7 @@
     <thead>
         <tr>
             <th scope="col">No</th>
+            <th scope="col">Nama Pasien</th>
             <th scope="col">Nama Coass</th>
             <th scope="col">Klinik</th>
             <th scope="col">NIM</th>
@@ -38,6 +39,7 @@
         <?php foreach ($coassmodels as $coassmodel) : ?>
             <tr>
                 <th scope="row"><?= $nomor++; ?></th>
+                <td><?= $coassmodel['patient'] ?></td>
                 <td><?= $coassmodel['coass_name'] ?></td>
                 <td><?= $coassmodel['clinic_name'] ?></td>
                 <td><?= $coassmodel['coass_number'] ?></td>

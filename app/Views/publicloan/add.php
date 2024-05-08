@@ -51,6 +51,15 @@
         <input type="date" name="deadline" id="deadline" value="<?= date('Y-m-d', strtotime('+1 day')); ?>" class="inputdate form-control">
         <label for="deadline">Tanggal Batas Pengembalian</label>
     </div>
+    <div class="mb-3">
+        <label for="searchrm">Pilih Poli</label>
+        <select name="service" id="serivce" class="form-select">
+            <?php foreach ($serviceunits as $serviceunit) : ?>
+                <option value="<?= $serviceunit['id'] ?>"><?= $serviceunit['service_name'] ?></option>
+            <?php endforeach ?>
+
+        </select>
+    </div>
     <!-- <div class="mb-3">
         <label>Keperluan</label>
         <div class="form-check">

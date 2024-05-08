@@ -49,24 +49,6 @@
     </div>
 </form>
 
-
-<!-- <script>
-    $(".inputdate").on("change", function() {
-        this.setAttribute(
-            "data-date",
-            moment(this.value, "YYYY-MM-DD")
-            .format(this.getAttribute("data-date-format"))
-        )
-    }).trigger("change")
-</script> -->
-<!-- <script type='text/javascript'>
-    $(document).ready(function() {
-        $('#search').select2({
-            placeholder: "Pilih Rekam Medik"
-        });
-    });
-</script> -->
-
 <script>
     $(document).ready(function() {
         $('#searchid').select2({
