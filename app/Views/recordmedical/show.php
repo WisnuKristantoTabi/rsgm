@@ -18,6 +18,10 @@
             <h2 class="blockquote-footer"> <?= $profile->fullname ?></h2>
         </blockquote>
         <blockquote class="blockquote mb-0">
+            <p>NIK</p>
+            <h2 class="blockquote-footer"> <?= $profile->identity_number ?></h2>
+        </blockquote>
+        <blockquote class="blockquote mb-0">
             <p>Alamat</p>
             <h2 class="blockquote-footer"> <?= $profile->address ?></h2>
         </blockquote>
@@ -28,6 +32,10 @@
         <blockquote class="blockquote mb-0">
             <p>Tanggal Lahir</p>
             <h2 class="blockquote-footer"> <?= $profile->birth_date ?></h2>
+        </blockquote>
+        <blockquote class="blockquote mb-0">
+            <p>Tempat Lahir</p>
+            <h2 class="blockquote-footer"> <?= $profile->birth_place ?></h2>
         </blockquote>
 
     </div>

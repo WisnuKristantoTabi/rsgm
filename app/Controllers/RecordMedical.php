@@ -34,7 +34,7 @@ class RecordMedical extends BaseController
         $generator = new BarcodeGeneratorHTML();
         $recordmedicalModel = new RecordMedicalModel();
         $data['role'] = session()->get('role');
-        $data['profile'] = $recordmedicalModel->select('fullname,address,gender,birth_date,rm_id  ')
+        $data['profile'] = $recordmedicalModel->select('fullname,identity_number,address,gender,birth_date,rm_id,birth_place  ')
             ->getWhere(['medical_records.rm_id' => $id])->getRow();
         $data['title'] = 'Detail Rekam Medis';
         $data['pagesidebar'] = 2;
@@ -53,7 +53,6 @@ class RecordMedical extends BaseController
         $data['username'] = session()->get('username');
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 1;
-        $data['serviceunits'] = $serviceunitmodel->findAll();
 
         return view('recordmedical/add', $data);
     }
@@ -66,20 +65,23 @@ class RecordMedical extends BaseController
             'rmid'               => 'required|min_length[2]|max_length[50]|is_unique[medical_records.rm_id]',
             'fullname'           => 'required|min_length[2]|max_length[50]',
             'address'            => 'required|min_length[2]|max_length[100]',
+            'identitynumber'     => 'required',
             'gender'             => 'required',
             'birthday'           => 'required',
-            'serviceunit'        => 'required',
+            'birthplace'         => 'required',
+
         ];
 
         if ($this->validate($rules)) {
             $recordmedicalModel = new RecordMedicalModel();
             $data = [
-                'rm_id'          => $this->request->getVar('rmid'),
-                'fullname'      => $this->request->getVar('fullname'),
-                'address'       => $this->request->getVar('address'),
-                'gender'        => $this->request->getVar('gender'),
-                'birth_date'      => $this->request->getVar('birthday'),
-                'service_unit'   => $this->request->getVar('serviceunit'),
+                'rm_id'             => $this->request->getVar('rmid'),
+                'fullname'          => $this->request->getVar('fullname'),
+                'identity_number'   => $this->request->getVar('identitynumber'),
+                'address'           => $this->request->getVar('address'),
+                'gender'            => $this->request->getVar('gender'),
+                'birth_date'        => $this->request->getVar('birthday'),
+                'birth_place'       => $this->request->getVar('birthplace'),
             ];
             $recordmedicalModel->save($data);
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
@@ -98,13 +100,10 @@ class RecordMedical extends BaseController
         $data['subsidebar'] = 1;
         $data['role'] = session()->get('role');
         $recordmedicalModel = new RecordMedicalModel();
-        $serviceunitmodel = new ServiceUnitModel();
         $recordmedicals = $recordmedicalModel->getWhere(['id' => $id])->getRow();
         if (isset($recordmedicals)) {
             $data['recordmedicals'] = $recordmedicals;
             $data['title']  = 'Edit Rekam Medis No. ' . $recordmedicals->rm_id;
-            $data['serviceunits'] = $serviceunitmodel->findAll();
-
             return view('recordmedical/edit', $data);
         } else {
             session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
@@ -117,12 +116,14 @@ class RecordMedical extends BaseController
         $recordmedicalModel = new RecordMedicalModel();
         $id = $this->request->getPost('recordId');
         $data = array(
-            'rm_id'         => $this->request->getPost('rmid'),
-            'fullname'      => $this->request->getPost('fullname'),
-            'address'       => $this->request->getPost('address'),
-            'gender'        => $this->request->getPost('gender'),
-            'birth_date'    => $this->request->getPost('birthdate'),
-            'service_unit'  => $this->request->getPost('serviceunit'),
+            'rm_id'             => $this->request->getPost('rmid'),
+            'fullname'          => $this->request->getPost('fullname'),
+            'identity_number'   => $this->request->getPost('identitynumber'),
+            'address'           => $this->request->getPost('address'),
+            'gender'            => $this->request->getPost('gender'),
+            'birth_date'        => $this->request->getPost('birthday'),
+            'birth_place'       => $this->request->getPost('birthplace'),
+
         );
         if ($recordmedicalModel->find($id)) {
             $recordmedicalModel->update($id, $data);
