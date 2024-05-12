@@ -15,7 +15,7 @@
 </div>
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <a class="btn btn-outline-info btn-sm me-md-2" href="<?php echo base_url('/returndoc/add') ?>" role="button">Tambah</a>
+    <a class="btn btn-outline-info btn-sm me-md-2" href="<?php echo base_url('/returndoccoass/add') ?>" role="button">Tambah</a>
 </div>
 
 <table class="table">

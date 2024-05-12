@@ -106,17 +106,6 @@ class LoanCoass extends BaseController
             $session->setFlashdata('error', $msg);
             return redirect()->to('loancoass/add');
         }
-        // $data = [
-        //     'rm_id'          => $this->request->getPost('rmid'),
-        //     'coass_name'      => $this->request->getPost('fullname'),
-        //     'clinic_name'       => $this->request->getPost('clinic'),
-        //     'coass_number'        => $this->request->getPost('coassnumber'),
-        //     'coass_date'      => $this->request->getPost('onsitedate'),
-        //     'coass_phone'   => $this->request->getPost('phone'),
-        //     'loan_desc'        => $this->request->getPost('loandesc[]'),
-        //     'loan_date'      => $this->request->getPost('loandate'),
-        // ];
-        // print_r($data);
     }
 
     public function edit($id)

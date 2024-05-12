@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 // use App\Models\RecordMedicalModel;
 use App\Models\PublicModel;
+use App\Models\TransactionPublicModel;
 use App\Models\TransactionModel;
 use App\Models\ServiceUnitModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
@@ -20,30 +21,24 @@ class LoanPublic extends BaseController
     public function index()
     {
         // $recordmedicalModel = new RecordMedicalModel();
-        $coassmodels = new PublicModel();
+        $tpmodels = new TransactionPublicModel();
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
-        $data['coassmodels'] = $coassmodels->paginate(20, 'publiccoass');
-        $data['pager'] = $coassmodels->pager;
-        $data['nomor'] = nomor($this->request->getVar('page_loancoass'), 20);
+        $data['publicdata'] = $tpmodels
+            ->select('transaction.id,public_doc.fullname,public_doc.identity_number')
+            ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
+            // ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
+            ->orderBy('loan_date', 'desc')
+            ->paginate(20, 'loancoass');
+        $data['pager'] = $tpmodels->pager;
+        $data['nomor'] = nomor($this->request->getVar('page_loanpublic'), 20);
         $data['title'] = 'Peminjaman Umum';
         $data['type'] = 1;
         $data['username'] = session()->get('username');
         return view('publicloan/index', $data);
     }
-
-    // public function show($id)
-    // {
-    //     $generator = new BarcodeGeneratorHTML();
-    //     $recordmedicalModel = new RecordMedicalModel();
-    //     $data['profile'] = $recordmedicalModel->join('service_unit', 'service_unit.id = medical_records.service_unit')->getWhere(['medical_records.rm_id' => $id])->getRow();
-    //     $data['title'] = 'Detail Rekam Medis';
-    //     $data['username'] = session()->get('username');
-    //     $data['barcode'] = $generator->getBarcode($id, $generator::TYPE_CODE_128, 1);
-    //     return view('recordmedical/show', $data);
-    //     // print_r($data);
-    // }
 
     public function add()
     {
@@ -65,15 +60,12 @@ class LoanPublic extends BaseController
 
         $rules = [
             'rmid'                  => 'required|min_length[2]|max_length[50]|',
-            'fullname'              => 'required|min_length[2]|max_length[200]',
-            'identitynumber'        => 'required|min_length[2]|max_length[100]',
-            'phone'                 => 'required|min_length[2]',
-            'address'               => 'required',
             'loandate'              => 'required',
             'deadline'              => 'required',
             'service'               => 'required',
+            'publicid'              => 'required',
         ];
-        $publicmodels = new PublicModel();
+        $tpmodels = new TransactionPublicModel();
         $transactionmodels = new TransactionModel();
 
         if ($this->validate($rules)) {
@@ -90,15 +82,10 @@ class LoanPublic extends BaseController
 
             $transactionmodels->insert($transactiondata);
 
-            $publicdata = [
-                'rm_id'                 => $this->request->getPost('rmid'),
-                'fullname'              => $this->request->getPost('fullname'),
-                'identity_number'       => $this->request->getPost('identitynumber'),
-                'address'               => $this->request->getPost('address'),
-                'phone'                 => $this->request->getPost('phone'),
-                'transaction_id'        => $transactionmodels->getInsertId(),
-            ];
-            $publicmodels->save($publicdata);
+            $tpmodels->save([
+                'transaction_id'    => $transactionmodels->getInsertId(),
+                'public_id'          =>  $this->request->getPost('publicid')
+            ]);
 
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
             return redirect()->to('f?id=' . $transactionmodels->getInsertId());
@@ -107,38 +94,28 @@ class LoanPublic extends BaseController
             $session->setFlashdata('error', $msg);
             return redirect()->to('/loanpublic/add');
         }
-        // $data = [
-        //     'rm_id'          => $this->request->getPost('rmid'),
-        //     'coass_name'      => $this->request->getPost('fullname'),
-        //     'clinic_name'       => $this->request->getPost('clinic'),
-        //     'coass_number'        => $this->request->getPost('coassnumber'),
-        //     'coass_date'      => $this->request->getPost('onsitedate'),
-        //     'coass_phone'   => $this->request->getPost('phone'),
-        //     'loan_desc'        => $this->request->getPost('loandesc[]'),
-        //     'loan_date'      => $this->request->getPost('loandate'),
-        // ];
-        // print_r($data);
     }
 
     public function edit($id)
     {
         $data['username'] = session()->get('username');
         $data['role'] = session()->get('role');
-        $transactionmodels = new TransactionModel();
-        $transactions = $transactionmodels->select('transaction.rm_id, public_doc.fullname as patientname, transaction.deadline,
+        $tpmodels = new TransactionPublicModel();
+        $transactions = $tpmodels->select('transaction.rm_id, public_doc.fullname as patientname, transaction.deadline,
         public_doc.phone, public_doc.identity_number, public_doc.address, transaction.loan_date,
-        medical_records.fullname, transaction.id as tid, service_id ')
+        medical_records.fullname, transaction.id as tid, service_id , public_doc.id as pid ')
+            ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->join('public_doc', 'public_doc.transaction_id = transaction.id')
             ->getWhere(['transaction.id' => $id, 'loan_type' => 1])
             ->getRow();
 
         $serviceUnitModels = new ServiceUnitModel();
         $data['serviceunits'] = $serviceUnitModels->findAll();
 
-        if ($transactionmodels->find(['transaction.id' => $id, 'loan_type' => 1])) {
+        if ($tpmodels->where(['transaction_id' => $id])->first()) {
             $data['transaction'] = $transactions;
-            $data['title']  = 'Edit Rekam Medis No. ' . $transactions->rm_id;
+            $data['title']  = 'Edit Data Peminjaman ';
             $data['pagesidebar'] = 3;
             $data['subsidebar'] = 4;
             // dd($data);
@@ -153,17 +130,15 @@ class LoanPublic extends BaseController
     {
         $id = $this->request->getPost('tid');
         $rules = [
-            'rmid'                  => 'required|min_length[2]|max_length[50]|',
-            'fullname'              => 'required|min_length[2]|max_length[200]',
-            'identitynumber'        => 'required|min_length[2]|max_length[100]',
-            'phone'                 => 'required|min_length[2]',
-            'address'               => 'required',
+            'rmid'                  => 'required',
+            'publicid'              => 'required',
             'loandate'              => 'required',
             'deadline'              => 'required',
+            'service'               => 'required',
         ];
 
-        $publicmodels = new PublicModel();
         $transactionmodels = new TransactionModel();
+        $tpmodels = new TransactionPublicModel();
 
         if ($this->validate($rules)) {
 
@@ -176,20 +151,16 @@ class LoanPublic extends BaseController
 
             ];
 
-            $publicdata = [
-                'rm_id'           => $this->request->getPost('rmid'),
-                'fullname'        => $this->request->getPost('fullname'),
-                'identity_number' => $this->request->getPost('identitynumber'),
-                'address'         => $this->request->getPost('address'),
-                'phone'          => $this->request->getPost('phone'),
-            ];
-
             if ($transactionmodels->find(['id' => $id])) {
                 $transactionmodels->update($id, $transactiondata);
-                $publicmodels->where('transaction_id', $id)->set($publicdata)->update();
+
+                $tpmodels->where('transaction_id', $id)
+                    ->set([
+                        'public_id'          =>  $this->request->getPost('publicid')
+                    ])->update();
 
                 session()->setFlashdata('success', 'Data Berhasil Di edit');
-                return redirect()->to('loanpublic/edit/' . $id);
+                return redirect()->to('f?id=' . $id);
             } else {
                 session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
                 return redirect()->to('loanpublic/edit/' . $id);
@@ -197,24 +168,80 @@ class LoanPublic extends BaseController
         } else {
             $msg = $this->validator->listErrors();
             session()->setFlashdata('error', $msg);
-            return redirect()->to('/loanpublic/add');
+            return redirect()->to('loanpublic/edit/' . $id);
         }
     }
 
     public function delete($id)
     {
-        $publicmodels = new PublicModel();
+        $tcModels = new TransactionPublicModel();
         $transactionmodels = new TransactionModel();
 
         $check = $transactionmodels->find($id);
         if ($check) {
             $transactionmodels->delete(['id' => $id]);
-            $publicmodels->where('transaction_id', $id)->delete();
+            $tcModels->where('transaction_id', $id)->delete();
             session()->setFlashdata('success', 'Data Berhasil Di Hapus');
             return redirect()->to('loanpublic/');
         } else {
             session()->setFlashdata('error', 'Data Tidak Ditemukan');
             return redirect()->to('loanpublic/');
         }
+    }
+
+    public function searchCoass()
+    {
+        $postData = $this->request->getVar('searchTerm');
+
+        $response = array();
+        $publicModel = new PublicModel();
+
+        if (!isset($postData)) {
+            // Fetch record
+            $publicData = $publicModel->select('id,fullname,identity_number')
+                ->orderBy('id')
+                ->findAll(5);
+        } else {
+            $publicData = $publicModel->select('id,fullname,identity_number')
+                ->like('fullname', $postData)
+                ->orLike('identity_number')
+                ->orderBy('id')
+                ->findAll(5);
+        }
+
+        $data = array();
+        foreach ($publicData as $public) {
+            $data[] = array(
+                "id" => $public['id'],
+                "text" => $public['fullname'] . ' - ' . $public['identity_number'],
+            );
+        }
+
+        $response['data'] = $data;
+
+        return $this->response->setJSON($response);
+    }
+
+    public function showCoass()
+    {
+        $postData = $this->request->getVar('id');
+        $publicModel = new PublicModel();
+        $publicData = $publicModel->select('id,fullname,address,phone,identity_number')
+            ->where('id', $postData)
+            ->orderBy('id')
+            ->get();
+
+        $data = array();
+        foreach ($publicData->getResult() as $coass) {
+            $data[] = array(
+                "id"                => $coass->id,
+                "fullname"          => $coass->fullname,
+                "address"           => $coass->address,
+                "phone"             => $coass->phone,
+                "identitynumber"    => $coass->identity_number,
+            );
+            break;
+        }
+        return $this->response->setJSON($data);
     }
 }

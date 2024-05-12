@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\TransactionModel;
+use App\Models\TransactionCoassModel;
+use App\Models\TransactionPublicModel;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -38,15 +40,16 @@ class Report extends BaseController
 
     function savepublic($y, $m)
     {
-        $transactionModel = new TransactionModel();
-        $transactions = $transactionModel->select('transaction.loan_date,
+        $tpModel = new TransactionPublicModel();
+        $transactions = $tpModel->select('transaction.loan_date,
         public_doc.fullname,
         public_doc.address,
         transaction.deadline,
         medical_records.rm_id as rm_number,
         medical_records.fullname as patient_name, 
         transaction.return_date')
-            ->join('public_doc', 'transaction.id = public_doc.transaction_id')
+            ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->where('YEAR(loan_date)', $y)
             ->where('MONTH(loan_date)', $m)
@@ -101,14 +104,21 @@ class Report extends BaseController
 
     function savecoass($y, $m)
     {
-        $transactionModel = new TransactionModel();
-        $transactions = $transactionModel->select('transaction.loan_date,coass_name, transaction.deadline, clinic_name,medical_records.rm_id as rm_number ,medical_records.fullname as patient_name, return_date')
-            ->join('coass_doc', 'transaction.id = coass_doc.transaction_id')
+        $tcModel = new TransactionCoassModel();
+        $transactions = $tcModel->select('transaction.loan_date,
+        coass_doc.coass_name, 
+        transaction.deadline,
+        coass_doc.clinic_name,
+        medical_records.rm_id as rm_number ,
+        medical_records.fullname as patient_name, 
+        transaction.return_date')
+            ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
+            ->join('coass_doc', 'transaction_coass.coass_id = coass_doc.id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
-            ->where('YEAR(loan_date)', $y)
-            ->where('MONTH(loan_date)', $m)
-            ->orWhere('MONTH(return _date)', $m)
-            ->orderBy('loan_date', 'desc')
+            ->where('YEAR(transaction.loan_date)', $y)
+            ->where('MONTH(transaction.loan_date)', $m)
+            // ->orWhere('MONTH(transaction.return _date)', $m)
+            ->orderBy('transaction.loan_date', 'desc')
             ->findAll();
         $spreadsheet = new Spreadsheet();
         $activeWorksheet = $spreadsheet->getActiveSheet();

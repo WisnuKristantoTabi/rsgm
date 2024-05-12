@@ -37,7 +37,7 @@
     </div>
     <!-- <input type="hidden" name="tid" id="tid"> -->
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="returndate" id="returndate" placeholder="Tanggal Pengembalian" class="inputdate form-control">
+        <input type="date" name="returndate" id="returndate" value="<?= date('Y-m-d'); ?>" placeholder="Tanggal Pengembalian" class="inputdate form-control">
         <label for="returndate">Tanggal Pengembalian</label>
     </div>
     <div class="form-floating mb-3">

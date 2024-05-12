@@ -19,28 +19,27 @@
             <option value=""></option>
         </select>
     </div>
+    <div class="mb-5">
+        <label class="mb-3" for="searchtid">Cari Data Peminjam</label>
+        <select id="publicid" name="publicid" class="form-select">
+            <option value=""></option>
+        </select>
+        <a class="mb-3" href="<?php echo base_url('public/add') ?>"> Tambahkan Data Peminjam</a>
+    </div>
     <div class="form-floating mb-3">
-        <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap " value="" class="form-control">
+        <input type="text" id="fullname" placeholder="Nama Lengkap " value="" class="form-control" readonly>
         <label for="fullname">Nama Lengkap</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="text" name="identitynumber" id="identitynumber" placeholder="Masukkan Nomor NIP/KTP" value="" class="form-control">
+        <input type="text" id="identitynumber" placeholder="Masukkan Nomor NIP/KTP" value="" class="form-control" readonly>
         <label for="identitynumber">Nomor Identitas</label>
     </div>
     <div class="form-floating mb-3">
-        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon" value="" class="form-control">
+        <input type="tel" id="phone" placeholder="Nomor Telpon" value="" class="form-control" readonly>
         <label for="phone">Nomor Telpon</label>
     </div>
-    <!-- <div class="form-group mb-5">
-        <label for="inputPassword5" class="form-label">Jenis Kelamin</label>
-        <input type="radio" class="btn-check" value="1" name="gender" id="option1" autocomplete="off" checked>
-        <label class="btn btn-outline-primary btn-sm" for="option1">Laki-Laki</label>
-
-        <input type="radio" class="btn-check" value="0" name="gender" id="option2" autocomplete="off">
-        <label class="btn btn-outline-primary btn-sm" for="option2">Perempuan</label>
-    </div> -->
     <div class="form-floating mb-3">
-        <input type="text" name="address" id="address" placeholder="Alamat" value="" class="form-control">
+        <input type="text" id="address" placeholder="Alamat" value="" class="form-control" readonly>
         <label for="address">Alamat</label>
     </div>
     <div class="form-floating mb-3 dateformat">
@@ -60,33 +59,6 @@
 
         </select>
     </div>
-    <!-- <div class="mb-3">
-        <label>Keperluan</label>
-        <div class="form-check">
-            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Kerja," id="loandesc[]">
-            <label class="form-check-label" for="loandesc[]">
-                Kerja
-            </label>
-        </div>
-        <div class="form-check">
-            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Nilai," id="loandesc[]">
-            <label class="form-check-label" for="loandesc[]">
-                Nilai
-            </label>
-        </div>
-        <div class="form-check">
-            <input name="loandesc[]" class="form-check-input" type="checkbox" value="Diskusi/Up," id="loandesc[]">
-            <label class="form-check-label" for="loandesc[]">
-                Diskusi/Up
-            </label>
-        </div>
-        <div class="form-check mb-5">
-            <label class="form-check-label" for="loandesc[]">
-                Lainnya
-            </label>
-            <input name="loandesc[]" class="form-control" type="text" value="" id="loandesc[]">
-        </div>
-    </div> -->
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="submit" class="btn btn-primary">Tambah</button>
@@ -132,6 +104,50 @@
                 },
                 cache: true
             }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#publicid').select2({
+            placeholder: "Cari Coass",
+            ajax: {
+                url: "<?php echo base_url('/loanpublic/searchcoass') ?>",
+                dataType: 'json',
+                type: 'POST',
+                delay: 250,
+                data: function(params) {
+                    return {
+                        searchTerm: params.term
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data.data
+                    };
+                },
+                cache: true
+            }
+        }).on('select2:select', function(e) {
+            var selectedID = e.params.data.id;
+            $.ajax({
+                url: "<?php echo base_url('/loanpublic/showcoass/') ?>", // Ganti dengan URL yang sesuai
+                dataType: 'json',
+                type: 'POST',
+                data: {
+                    id: selectedID
+                },
+                success: function(response) {
+                    $('#fullname').val(response[0].fullname);
+                    $('#address').val(response[0].address);
+                    $('#phone').val(response[0].phone);
+                    $('#identitynumber').val(response[0].identitynumber);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
         });
     });
 </script>

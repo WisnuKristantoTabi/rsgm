@@ -1,0 +1,860 @@
+INFO - 2024-05-10 02:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 02:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 02:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 02:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 05:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-10 05:53:56 --> mysqli_sql_exception: Unknown column 'medical_records.service_unit' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(317): CodeIgniter\Model->__call('get', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-10 05:53:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:
+ORDER BY `id`', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ReturnDocument.php(317): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 05:53:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'5\'
+ORDER BY `id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'5\'
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:
+ORDER BY `id`', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\ReturnDocument.php(317): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 05:53:56 --> [Caused by] mysqli_sql_exception: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'5\'
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'5\'
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'5\'
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:
+ORDER BY `id`', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\ReturnDocument.php(317): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-10 06:02:54 --> mysqli_sql_exception: Unknown column 'medical_records.service_unit' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(317): CodeIgniter\Model->__call('get', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-10 06:02:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` IS NULL
+ORDER BY `id`', [], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ReturnDocument.php(317): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 06:02:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` IS NULL
+ORDER BY `id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` IS NULL
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` IS NULL
+ORDER BY `id`', [], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\ReturnDocument.php(317): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 06:02:54 --> [Caused by] mysqli_sql_exception: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` IS NULL
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` IS NULL
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` IS NULL
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` IS NULL
+ORDER BY `id`', [], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\ReturnDocument.php(317): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->showData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-10 06:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 06:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-10 08:49:56 --> mysqli_sql_exception: Unknown column 'medical_records.service_unit' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\ReturnDocument.php(56): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocument->show('1')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-10 08:49:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`return_desc`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\ReturnDocument.php(56): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->show('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 08:49:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`return_desc`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`return_desc`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`return_desc`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\ReturnDocument.php(56): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 08:49:56 --> [Caused by] mysqli_sql_exception: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`return_desc`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`return_desc`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`return_desc`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `medical_records`.`fullname`, `service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`return_desc`
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `transaction`.`id` = :transaction.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\ReturnDocument.php(56): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocument->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocument))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-10 08:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-10 08:50:45 --> mysqli_sql_exception: Unknown column 'coass_doc.transaction_id' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 E:\RSGM\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 E:\RSGM\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 E:\RSGM\app\Controllers\ReturnDocumentCoass.php(27): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-10 08:50:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = :is_return:', [...], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\ReturnDocumentCoass.php(27): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 08:50:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = :is_return:', [...], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\ReturnDocumentCoass.php(27): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 08:50:45 --> [Caused by] mysqli_sql_exception: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = :is_return:', [...], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\ReturnDocumentCoass.php(27): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-10 08:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 08:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-10 09:24:02 --> mysqli_sql_exception: Unknown column 'coass_doc.transaction_id' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 E:\RSGM\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 E:\RSGM\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 E:\RSGM\app\Controllers\ReturnDocumentCoass.php(27): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-10 09:24:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = :is_return:', [...], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\ReturnDocumentCoass.php(27): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 09:24:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = :is_return:', [...], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\ReturnDocumentCoass.php(27): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 09:24:02 --> [Caused by] mysqli_sql_exception: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `is_return` = :is_return:', [...], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\ReturnDocumentCoass.php(27): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-10 09:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-10 09:28:15 --> mysqli_sql_exception: Unknown column 'medical_records.service_id' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 E:\RSGM\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 E:\RSGM\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 E:\RSGM\app\Controllers\ReturnDocumentCoass.php(29): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-10 09:28:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_id`
+WHERE `is_return` = :is_return:', [...], false)
+ 2 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\ReturnDocumentCoass.php(29): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 09:28:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_id`
+WHERE `is_return` = 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_id`
+WHERE `is_return` = 2')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_id`
+WHERE `is_return` = :is_return:', [...], false)
+ 4 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\ReturnDocumentCoass.php(29): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 09:28:15 --> [Caused by] mysqli_sql_exception: Unknown column 'medical_records.service_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_id`
+WHERE `is_return` = 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_id`
+WHERE `is_return` = 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_id`
+WHERE `is_return` = 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_id`
+WHERE `is_return` = :is_return:', [...], false)
+ 5 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\ReturnDocumentCoass.php(29): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-10 09:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-10 09:30:04 --> mysqli_sql_exception: Unknown column 'transaction.phone' in 'field list' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(20, 0)
+#6 E:\RSGM\system\BaseModel.php(1243): CodeIgniter\BaseModel->findAll(20, 0)
+#7 E:\RSGM\app\Controllers\ReturnDocumentCoass.php(30): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-10 09:30:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaction.phone' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id` as `idrm`, `transaction`.`phone`, `coass_doc`.`coass_name`, `service_unit`.`service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`deadline`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `is_return` = :is_return:
+ORDER BY `loan_date` ASC
+ LIMIT 20', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(20, 0)
+ 4 SYSTEMPATH\BaseModel.php(1243): CodeIgniter\BaseModel->findAll(20, 0)
+ 5 APPPATH\Controllers\ReturnDocumentCoass.php(30): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 09:30:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaction.phone' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id` as `idrm`, `transaction`.`phone`, `coass_doc`.`coass_name`, `service_unit`.`service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`deadline`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `is_return` = 2
+ORDER BY `loan_date` ASC
+ LIMIT 20')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id` as `idrm`, `transaction`.`phone`, `coass_doc`.`coass_name`, `service_unit`.`service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`deadline`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `is_return` = 2
+ORDER BY `loan_date` ASC
+ LIMIT 20')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id` as `idrm`, `transaction`.`phone`, `coass_doc`.`coass_name`, `service_unit`.`service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`deadline`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `is_return` = :is_return:
+ORDER BY `loan_date` ASC
+ LIMIT 20', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(20, 0)
+ 6 SYSTEMPATH\BaseModel.php(1243): CodeIgniter\BaseModel->findAll(20, 0)
+ 7 APPPATH\Controllers\ReturnDocumentCoass.php(30): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 09:30:04 --> [Caused by] mysqli_sql_exception: Unknown column 'transaction.phone' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id` as `idrm`, `transaction`.`phone`, `coass_doc`.`coass_name`, `service_unit`.`service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`deadline`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `is_return` = 2
+ORDER BY `loan_date` ASC
+ LIMIT 20', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id` as `idrm`, `transaction`.`phone`, `coass_doc`.`coass_name`, `service_unit`.`service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`deadline`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `is_return` = 2
+ORDER BY `loan_date` ASC
+ LIMIT 20')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id` as `idrm`, `transaction`.`phone`, `coass_doc`.`coass_name`, `service_unit`.`service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`deadline`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `is_return` = 2
+ORDER BY `loan_date` ASC
+ LIMIT 20')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id` as `tid`, `transaction`.`rm_id` as `idrm`, `transaction`.`phone`, `coass_doc`.`coass_name`, `service_unit`.`service_name`, `transaction`.`loan_date`, `transaction`.`return_date`, `transaction`.`deadline`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `is_return` = :is_return:
+ORDER BY `loan_date` ASC
+ LIMIT 20', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(20, 0)
+ 7 SYSTEMPATH\BaseModel.php(1243): CodeIgniter\BaseModel->findAll(20, 0)
+ 8 APPPATH\Controllers\ReturnDocumentCoass.php(30): CodeIgniter\BaseModel->paginate(20, 'returndoc')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-10 09:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-10 09:34:55 --> ErrorException: Attempt to read property "tid" on null
+in APPPATH\Views\recordmedical\find.php on line 6.
+ 1 APPPATH\Views\recordmedical\find.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "tid" on null', 'E:\\RSGM\\app\\Views\\recordmedical\\find.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\recordmedical\\find.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('recordmedical/find', [], true)
+ 5 APPPATH\Controllers\Tracer.php(50): view('recordmedical/find', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Tracer->findloan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tracer))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-10 09:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 09:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-10 10:01:38 --> mysqli_sql_exception: Unknown column 'coass_doc.transaction_id' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transac...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transac...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transac...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transac...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\ReturnDocumentCoass.php(56): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->find()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-10 10:01:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `coass_doc`.`coass_name`
+FROM `transaction`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+WHERE `loan_type` = :loan_type:
+ORDER BY `transaction`.`rm_id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\ReturnDocumentCoass.php(56): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->find()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 10:01:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `coass_doc`.`coass_name`
+FROM `transaction`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+WHERE `loan_type` = 2
+ORDER BY `transaction`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `coass_doc`.`coass_name`
+FROM `transaction`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+WHERE `loan_type` = 2
+ORDER BY `transaction`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `coass_doc`.`coass_name`
+FROM `transaction`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+WHERE `loan_type` = :loan_type:
+ORDER BY `transaction`.`rm_id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\ReturnDocumentCoass.php(56): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->find()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-10 10:01:38 --> [Caused by] mysqli_sql_exception: Unknown column 'coass_doc.transaction_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `coass_doc`.`coass_name`
+FROM `transaction`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+WHERE `loan_type` = 2
+ORDER BY `transaction`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaction`.`id`, `transaction`.`rm_id`, `coass_doc`.`coass_name`
+FROM `transaction`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+WHERE `loan_type` = 2
+ORDER BY `transaction`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaction`.`id`, `transaction`.`rm_id`, `coass_doc`.`coass_name`
+FROM `transaction`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+WHERE `loan_type` = 2
+ORDER BY `transaction`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `transaction`.`id`, `transaction`.`rm_id`, `coass_doc`.`coass_name`
+FROM `transaction`
+JOIN `coass_doc` ON `coass_doc`.`transaction_id` = `transaction`.`id`
+WHERE `loan_type` = :loan_type:
+ORDER BY `transaction`.`rm_id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\ReturnDocumentCoass.php(56): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\ReturnDocumentCoass->find()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnDocumentCoass))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-10 10:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-10 10:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

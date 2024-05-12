@@ -95,6 +95,7 @@
             ajax: {
                 url: "<?php echo base_url('/recordmedical/searchdata') ?>",
                 dataType: 'json',
+                type: 'POST',
                 delay: 250,
                 data: function(params) {
                     return {

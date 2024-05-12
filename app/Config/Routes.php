@@ -11,8 +11,7 @@ $routes->get('/logout', 'Login::logout');
 
 $routes->get('/t/(:any)', 'Tracer::find/$1');
 $routes->post('/recordmedical/searchdata', 'RecordMedical::searchData');
-$routes->post('/returndoc/searchdata', 'ReturnDocument::searchData');
-$routes->post('/returndoc/showdata', 'ReturnDocument::showData');
+
 
 
 $routes->group('', ['filter' => 'auth'], static function ($routes) {
@@ -53,6 +52,14 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/f', 'Tracer::findloan');
     $routes->get('/print/tracer/(:any)', 'PrintPDF::printTracer/$1');
 
+    $routes->get('/public', 'PublicDoc::index');
+    $routes->get('/public/add', 'PublicDoc::add');
+    $routes->post('/public/store', 'PublicDoc::store');
+    $routes->get('/public/show/(:any)', 'PublicDoc::show/$1');
+    $routes->get('/public/edit/(:any)', 'PublicDoc::edit/$1');
+    $routes->post('/public/update', 'PublicDoc::update');
+    $routes->get('/public/delete/(:any)', 'PublicDoc::delete/$1');
+
     $routes->get('/coass', 'Coass::index');
     $routes->get('/coass/add', 'Coass::add');
     $routes->post('/coass/store', 'Coass::store');
@@ -76,6 +83,8 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/loanpublic/edit/(:any)', 'LoanPublic::edit/$1');
     $routes->post('/loanpublic/update', 'LoanPublic::update');
     $routes->get('/loanpublic/delete/(:any)', 'LoanPublic::delete/$1');
+    $routes->post('/loanpublic/searchcoass/', 'LoanPublic::searchCoass');
+    $routes->post('/loanpublic/showcoass/', 'LoanPublic::showCoass');
 
     $routes->get('/returndoc', 'ReturnDocument::index');
     $routes->get('/returndoc/add', 'ReturnDocument::add');
@@ -85,9 +94,15 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/returndoc/delete/(:any)', 'ReturnDocument::delete/$1');
     $routes->post('/returndoc/find/', 'ReturnDocument::find');
     $routes->get('/returndoc/sendmessage', 'ReturnDocument::sendmessage');
+    $routes->post('/returndoc/searchdata', 'ReturnDocument::searchData');
+    $routes->post('/returndoc/showdata', 'ReturnDocument::showData');
 
     $routes->get('/returndocoass', 'ReturnDocumentCoass::index');
+    $routes->get('/returndoccoass/add', 'ReturnDocumentCoass::add');
+    $routes->post('/returndoccoass/update', 'ReturnDocumentCoass::update');
     $routes->post('/returndocoass/find/', 'ReturnDocumentCoass::find');
+    $routes->post('/returndoccoass/searchdata', 'ReturnDocumentCoass::searchData');
+    $routes->post('/returndoccoass/showdata', 'ReturnDocumentCoass::showData');
 
 
     $routes->get('report', 'Report::index');

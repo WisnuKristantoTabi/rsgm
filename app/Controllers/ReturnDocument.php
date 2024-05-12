@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\TransactionModel;
 use App\Models\RecordMedicalModel;
+use App\Models\TransactionPublicModel;
 
 class ReturnDocument extends BaseController
 {
@@ -19,11 +20,11 @@ class ReturnDocument extends BaseController
         $trasactionModels = new TransactionModel();
         $data['trasactions'] = $trasactionModels
             ->select('transaction.id as tid,transaction.rm_id as idrm, public_doc.fullname, 
-            service_unit.service_name, transaction.loan_date, transaction.phone,
+            service_unit.service_name, transaction.loan_date, public_doc.phone,
             transaction.return_date, transaction.deadline ')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->join('public_doc', 'public_doc.transaction_id = transaction.id')
-            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->join('service_unit', 'service_unit.id = transaction.service_id')
             ->where('is_return', 2)
             ->orderBy('return_date', 'asc')
             ->paginate(20, 'returndoc');
@@ -52,7 +53,7 @@ class ReturnDocument extends BaseController
             ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_name, 
             transaction.loan_date, transaction.return_date, transaction.return_desc ')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->join('service_unit', 'service_unit.id = transaction.service_id')
             ->getWhere(['transaction.id' => $id])->getRow();
         if (isset($transaction)) {
             $data['title'] = 'Edit Pengembalian';
@@ -270,24 +271,24 @@ class ReturnDocument extends BaseController
         $postData = $this->request->getVar('searchTerm');
 
         $response = array();
+        $tpModel = new TransactionPublicModel();
 
         if (!isset($postData)) {
             // Fetch record
-            $transactionModel = new TransactionModel();
-
-            $transactions = $transactionModel->select('id,rm_id')
+            $transactions = $tpModel->select('transaction.id,transaction.rm_id')
+                ->join('transaction', 'transaction.id = transaction_public.transaction_id')
                 ->where('is_return', 1)
-                ->orderBy('rm_id')
+                ->where('loan_type', 1)
+                ->orderBy('transaction.loan_date')
                 ->findAll(5);
         } else {
-            $searchTerm = $postData;
 
-            // Fetch record
-            $transactionModel = new TransactionModel();
-            $transactions = $transactionModel->select('id , rm_id ')
-                ->like('id', $searchTerm)
+            $transactions = $tpModel->select('transaction.id,transaction.rm_id')
+                ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+                ->like('id', $postData)
                 ->where('is_return', 1)
-                ->orderBy('id')
+                ->where('loan_type', 1)
+                ->orderBy('transaction.loan_date')
                 ->findAll(5);
         }
 
@@ -309,10 +310,11 @@ class ReturnDocument extends BaseController
         $postData = $this->request->getVar('id');
         $transactionModel = new TransactionModel();
         $transactions = $transactionModel
-            ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_name, transaction.loan_date ')
+            ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_unit.service_name, transaction.loan_date ')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->join('service_unit', 'service_unit.id = medical_records.service_unit')
+            ->join('service_unit', 'service_unit.id = transaction.service_id')
             ->where('transaction.id', $postData)
+            ->where('loan_type', 1)
             ->orderBy('id')
             ->get();
 
