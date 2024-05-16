@@ -25,8 +25,10 @@ class Coass extends BaseController
         $data['subsidebar'] = 6;
         $data['role'] = session()->get('role');
         $data['coassmodels'] = $coassModels
-            ->select('coass_name,clinic_name,coass_number,coass_date,phone,id')
-            ->orderBy('coass_date', 'desc')
+            ->select('coass_doc.coass_name,coass_doc.coass_number,coass_doc.phone,coass_doc.id, 
+            service_unit.service_name as clinic_name')
+            ->join('service_unit', 'service_unit.id = coass_doc.service_id')
+            ->orderBy('id', 'desc')
             ->paginate(20, 'coass');
         $data['pager'] = $coassModels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_coass'), 20);
@@ -37,11 +39,13 @@ class Coass extends BaseController
 
     public function add()
     {
+        $serviceUnitModels = new ServiceUnitModel();
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 6;
         $data['role'] = session()->get('role');
         $data['title'] = 'Tambah Data COASS';
         $data['username'] = session()->get('username');
+        $data['serviceunits'] = $serviceUnitModels->findAll();
         return view('coass/add', $data);
     }
 
@@ -52,8 +56,7 @@ class Coass extends BaseController
             'fullname'              => 'required|min_length[2]|max_length[50]',
             'coassnumber'           => 'required|min_length[2]|max_length[100]',
             'phone'                 => 'required|min_length[2]',
-            'onsitedate'            => 'required',
-            'clinic'                => 'required',
+            'service'               => 'required',
         ];
         $coassmodels = new CoassModel();
 
@@ -61,10 +64,9 @@ class Coass extends BaseController
 
             $coassdata = [
                 'coass_name'    => $this->request->getPost('fullname'),
-                'clinic_name'   => $this->request->getPost('clinic'),
                 'coass_number'  => $this->request->getPost('coassnumber'),
-                'coass_date'    => $this->request->getPost('onsitedate'),
                 'phone'         => $this->request->getPost('phone'),
+                'service_id'    => $this->request->getPost('service'),
             ];
 
             $coassmodels->save($coassdata);
@@ -88,8 +90,8 @@ class Coass extends BaseController
         $coassModels = new CoassModel();
 
         if ($coassModels->find($id)) {
-            $coass = $coassModels->select('coass_name,coass_number, coass_date, clinic_name,phone,id')
-                // ->where('id', $id)
+            $coass = $coassModels->select('coass_doc.coass_name,coass_doc.coass_number, service_unit.service_name ,coass_doc.phone,coass_doc.id')
+                ->join('service_unit', 'service_unit.id = coass_doc.service_id')
                 ->find($id);
             $data['coass'] = $coass;
             $data['title']  = 'Tampil Coass ';
@@ -109,13 +111,15 @@ class Coass extends BaseController
         $data['subsidebar'] = 6;
 
         $coassModels = new CoassModel();
+        $serviceUnitModels = new ServiceUnitModel();
 
         if ($coassModels->find($id)) {
-            $coass = $coassModels->select('coass_name,coass_number, coass_date, clinic_name,phone,id')
+            $coass = $coassModels->select('coass_name,coass_number, service_id,phone,id')
                 // ->where('id', $id)
                 ->find($id);
             $data['coass'] = $coass;
             $data['title']  = 'Edit Coass ';
+            $data['serviceunits'] = $serviceUnitModels->findAll();
             return view('coass/edit', $data);
             // print_r($coass);
         } else {
@@ -132,8 +136,7 @@ class Coass extends BaseController
             'fullname'              => 'required|min_length[2]|max_length[50]',
             'coassnumber'           => 'required|min_length[2]|max_length[100]',
             'phone'                 => 'required|min_length[2]',
-            'onsitedate'            => 'required',
-            'clinic'                => 'required',
+            'service'               => 'required',
         ];
         $coassmodels = new CoassModel();
 
@@ -141,9 +144,8 @@ class Coass extends BaseController
 
             $coassdata = [
                 'coass_name'    => $this->request->getPost('fullname'),
-                'clinic_name'   => $this->request->getPost('clinic'),
+                'service_id'   => $this->request->getPost('service'),
                 'coass_number'  => $this->request->getPost('coassnumber'),
-                'coass_date'    => $this->request->getPost('onsitedate'),
                 'phone'         => $this->request->getPost('phone'),
             ];
 
@@ -151,7 +153,7 @@ class Coass extends BaseController
                 $coassmodels->update($id, $coassdata);
 
                 session()->setFlashdata('success', 'Data Berhasil Di edit');
-                return redirect()->to('coass/edit/' . $id);
+                return redirect()->to('coass');
             } else {
                 session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
                 return redirect()->to('coass/edit/' . $id);

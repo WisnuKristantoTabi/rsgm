@@ -49,7 +49,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->post('/serviceunit/update', 'ServiceUnit::update');
     $routes->get('/serviceunit/delete/(:any)', 'ServiceUnit::delete/$1');
 
-    $routes->get('/f', 'Tracer::findloan');
+    $routes->get('/f/public/', 'Tracer::findloanpublic');
     $routes->get('/print/tracer/(:any)', 'PrintPDF::printTracer/$1');
 
     $routes->get('/public', 'PublicDoc::index');

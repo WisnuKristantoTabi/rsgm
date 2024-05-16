@@ -17,10 +17,6 @@
             <h2 class="blockquote-footer"> <?= $data->fullname ?></h2>
         </blockquote>
         <blockquote class="blockquote mb-0">
-            <p>Poli Pelayanan</p>
-            <h2 class="blockquote-footer"> <?= $data->service_name ?></h2>
-        </blockquote>
-        <blockquote class="blockquote mb-0">
             <p>Tanggal Peminjaman</p>
             <h2 class="blockquote-footer"> <?= $data->loan_date ?></h2>
         </blockquote>

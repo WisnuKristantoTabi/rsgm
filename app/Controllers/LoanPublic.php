@@ -49,7 +49,6 @@ class LoanPublic extends BaseController
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
         $data['username'] = session()->get('username');
-        $data['serviceunits'] = $serviceUnitModels->findAll();
 
         return view('publicloan//add', $data);
     }
@@ -62,7 +61,6 @@ class LoanPublic extends BaseController
             'rmid'                  => 'required|min_length[2]|max_length[50]|',
             'loandate'              => 'required',
             'deadline'              => 'required',
-            'service'               => 'required',
             'publicid'              => 'required',
         ];
         $tpmodels = new TransactionPublicModel();
@@ -77,7 +75,6 @@ class LoanPublic extends BaseController
                 'loan_desc'      => '-',
                 'deadline'       => $this->request->getPost('deadline'),
                 'is_return'      => 1,
-                'service_id'     => $this->request->getPost('service'),
             ];
 
             $transactionmodels->insert($transactiondata);
@@ -88,7 +85,7 @@ class LoanPublic extends BaseController
             ]);
 
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
-            return redirect()->to('f?id=' . $transactionmodels->getInsertId());
+            return redirect()->to('f/public?id=' . $transactionmodels->getInsertId());
         } else {
             $msg = $this->validator->listErrors();
             $session->setFlashdata('error', $msg);
@@ -109,9 +106,6 @@ class LoanPublic extends BaseController
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
             ->getWhere(['transaction.id' => $id, 'loan_type' => 1])
             ->getRow();
-
-        $serviceUnitModels = new ServiceUnitModel();
-        $data['serviceunits'] = $serviceUnitModels->findAll();
 
         if ($tpmodels->where(['transaction_id' => $id])->first()) {
             $data['transaction'] = $transactions;
@@ -160,7 +154,7 @@ class LoanPublic extends BaseController
                     ])->update();
 
                 session()->setFlashdata('success', 'Data Berhasil Di edit');
-                return redirect()->to('f?id=' . $id);
+                return redirect()->to('f/public/?id=' . $id);
             } else {
                 session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
                 return redirect()->to('loanpublic/edit/' . $id);
@@ -226,19 +220,23 @@ class LoanPublic extends BaseController
     {
         $postData = $this->request->getVar('id');
         $publicModel = new PublicModel();
-        $publicData = $publicModel->select('id,fullname,address,phone,identity_number')
-            ->where('id', $postData)
-            ->orderBy('id')
+        $publicData = $publicModel->select('public_doc.id,
+        public_doc.fullname,public_doc.address,public_doc.phone,public_doc.identity_number,
+        service_unit.service_name')
+            ->join('service_unit', 'public_doc.service_id = service_unit.id ')
+            ->where('public_doc.id', $postData)
+            ->orderBy('public_doc.id')
             ->get();
 
         $data = array();
-        foreach ($publicData->getResult() as $coass) {
+        foreach ($publicData->getResult() as $pb) {
             $data[] = array(
-                "id"                => $coass->id,
-                "fullname"          => $coass->fullname,
-                "address"           => $coass->address,
-                "phone"             => $coass->phone,
-                "identitynumber"    => $coass->identity_number,
+                "id"                => $pb->id,
+                "fullname"          => $pb->fullname,
+                "address"           => $pb->address,
+                "phone"             => $pb->phone,
+                "identitynumber"    => $pb->identity_number,
+                "servicename"       => $pb->service_name,
             );
             break;
         }

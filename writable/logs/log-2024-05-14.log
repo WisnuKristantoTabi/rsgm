@@ -1,0 +1,210 @@
+INFO - 2024-05-14 06:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-14 06:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-14 06:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-14 06:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-14 06:09:31 --> mysqli_sql_exception: Unknown column 'service_id' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT MONTH(lo...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(lo...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(lo...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(lo...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-14 06:09:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'service_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-14 06:09:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'service_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-14 06:09:31 --> [Caused by] mysqli_sql_exception: Unknown column 'service_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-14 12:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-14 12:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-14 12:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-14 12:08:35 --> mysqli_sql_exception: Unknown column 'service_id' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT MONTH(lo...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(lo...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(lo...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(lo...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-14 12:08:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'service_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-14 12:08:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'service_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-14 12:08:35 --> [Caused by] mysqli_sql_exception: Unknown column 'service_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = \'2024\'
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn
+FROM `transaction`
+JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE YEAR(loan_date) = :YEAR(loan_date):
+AND `service_id` IS NULL
+GROUP BY MONTH(loan_date)
+ORDER BY `loan_date`', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Dashboard.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-14 12:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

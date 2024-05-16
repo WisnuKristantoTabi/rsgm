@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\PublicModel;
+use App\Models\ServiceUnitModel;
 use PhpOffice\PhpSpreadsheet\Calculation\Web\Service;
 
 
@@ -27,7 +28,7 @@ class PublicDoc extends BaseController
             ->orderBy('id', 'desc')
             ->paginate(20, 'publicdoc');
         $data['pager'] = $publicModels->pager;
-        $data['title'] = 'Data Public';
+        $data['title'] = 'Data Peminjam';
         $data['nomor'] = nomor($this->request->getVar('page_publicdoc'), 20);
         $data['username'] = session()->get('username');
         return view('publicdoc/index', $data);
@@ -35,11 +36,13 @@ class PublicDoc extends BaseController
 
     public function add()
     {
+        $serviceUnitModels = new ServiceUnitModel();
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 7;
         $data['role'] = session()->get('role');
-        $data['title'] = 'Tambah Data Publik';
+        $data['title'] = 'Tambah Data Peminjam';
         $data['username'] = session()->get('username');
+        $data['serviceunits'] = $serviceUnitModels->findAll();
         return view('publicdoc/add', $data);
     }
 
@@ -51,6 +54,7 @@ class PublicDoc extends BaseController
             'identitynumber'        => 'required|min_length[2]|max_length[50]',
             'phone'                 => 'required|min_length[2]|max_length[30]',
             'address'               => 'required',
+            'service'               => 'required',
         ];
         $publicModels = new PublicModel();
 
@@ -61,6 +65,7 @@ class PublicDoc extends BaseController
                 'identity_number'   => $this->request->getPost('identitynumber'),
                 'address'           => $this->request->getPost('address'),
                 'phone'             => $this->request->getPost('phone'),
+                'service_id'        => $this->request->getPost('service'),
             ];
 
             $publicModels->save($publicdata);
@@ -84,11 +89,15 @@ class PublicDoc extends BaseController
         $publicModels = new PublicModel();
 
         if ($publicModels->find($id)) {
-            $publicdata = $publicModels->select('fullname,identity_number,address,phone')
-                // ->where('id', $id)
+            $publicdata = $publicModels->select('public_doc.fullname,
+            public_doc.identity_number,
+            public_doc.address,
+            public_doc.phone, 
+            service_unit.service_name')
+                ->join('service_unit', 'service_unit.id = public_doc.service_id')
                 ->find($id);
             $data['publicdata'] = $publicdata;
-            $data['title'] = 'Data Public';
+            $data['title'] = 'Data Peminjam';
             return view('publicdoc/show', $data);
             // print_r($coass);
         } else {
@@ -105,13 +114,15 @@ class PublicDoc extends BaseController
         $data['subsidebar'] = 6;
 
         $publicModels = new PublicModel();
+        $serviceUnitModels = new ServiceUnitModel();
 
         if ($publicModels->find($id)) {
-            $publicdata = $publicModels->select('id,fullname,identity_number,address,phone')
+            $publicdata = $publicModels->select('id,fullname,identity_number,address,phone,service_id')
                 // ->where('id', $id)
                 ->find($id);
+            $data['serviceunits'] = $serviceUnitModels->findAll();
             $data['publicdata'] = $publicdata;
-            $data['title'] = 'Data Public';
+            $data['title'] = 'Edit Data Peminjam';
             return view('publicdoc/edit', $data);
             // print_r($coass);
         } else {
@@ -129,6 +140,7 @@ class PublicDoc extends BaseController
             'identitynumber'        => 'required|min_length[2]|max_length[50]',
             'phone'                 => 'required|min_length[2]|max_length[30]',
             'address'               => 'required',
+            'service'               => 'required',
         ];
         $publicModels = new PublicModel();
 
@@ -139,6 +151,7 @@ class PublicDoc extends BaseController
                 'identity_number'   => $this->request->getPost('identitynumber'),
                 'address'           => $this->request->getPost('address'),
                 'phone'             => $this->request->getPost('phone'),
+                'service_id'        => $this->request->getPost('service'),
             ];
 
             if ($publicModels->find(['id' => $id])) {

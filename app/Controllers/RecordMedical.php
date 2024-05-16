@@ -166,22 +166,25 @@ class RecordMedical extends BaseController
 
         // Read new token and assign in $response['token']
         // $response['token'] = csrf_hash();
-
+        $recordmedicalModel = new RecordMedicalModel();
         if (!isset($postData)) {
             // Fetch record
-            $recordmedicalModel = new RecordMedicalModel();
-
-            $recordmedicals = $recordmedicalModel->select('rm_id,fullname')
-                ->orderBy('rm_id')
+            $recordmedicals = $recordmedicalModel->select('medical_records.rm_id,fullname')
+                ->join('transaction', 'medical_records.rm_id = transaction.rm_id', 'left')
+                ->orderBy('medical_records.rm_id')
+                ->where('transaction.is_return IS NULL OR transaction.is_return != 1')
+                // ->where('transaction.is_return !=', 1)
                 ->findAll(5);
         } else {
             $searchTerm = $postData;
 
             // Fetch record
             $recordmedicalModel = new RecordMedicalModel();
-            $recordmedicals = $recordmedicalModel->select('rm_id ,fullname')
-                ->like('rm_id', $searchTerm)
+            $recordmedicals = $recordmedicalModel->select('medical_records.rm_id ,fullname')
+                ->join('transaction', 'medical_records.rm_id = transaction.rm_id', 'left')
+                ->like('medical_records.rm_id', $searchTerm)
                 ->orderBy('rm_id')
+                ->where('transaction.is_return IS NULL OR transaction.is_return != 1')
                 ->findAll(5);
         }
 

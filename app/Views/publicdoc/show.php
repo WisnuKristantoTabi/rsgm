@@ -24,7 +24,10 @@
     <input type="tel" value="<?= $publicdata['phone'] ?>" class="form-control" readonly>
     <label for="phone">Nomor HP</label>
 </div>
-
+<div class="form-floating mb-3">
+    <input type="text" id="clinic" placeholder="Nama Klinik" value="<?= $publicdata['service_name'] ?>" class="form-control" readonly>
+    <label for="clinic">Klinik</label>
+</div>
 
 
 <script src="<?php echo base_url('/select2/dist/js/select2.min.js') ?>" type='text/javascript' defer></script>

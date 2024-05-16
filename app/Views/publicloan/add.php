@@ -42,6 +42,10 @@
         <input type="text" id="address" placeholder="Alamat" value="" class="form-control" readonly>
         <label for="address">Alamat</label>
     </div>
+    <div class="form-floating mb-3">
+        <input type="text" id="servicename" value="" class="form-control" readonly>
+        <label for="servicename">Nama Poli</label>
+    </div>
     <div class="form-floating mb-3 dateformat">
         <input type="date" name="loandate" id="loandate" value="<?= date('Y-m-d'); ?>" class="inputdate form-control">
         <label for="loandate">Tanggal Peminjaman</label>
@@ -50,16 +54,6 @@
         <input type="date" name="deadline" id="deadline" value="<?= date('Y-m-d', strtotime('+1 day')); ?>" class="inputdate form-control">
         <label for="deadline">Tanggal Batas Pengembalian</label>
     </div>
-    <div class="mb-3">
-        <label for="searchrm">Pilih Poli</label>
-        <select name="service" id="serivce" class="form-select">
-            <?php foreach ($serviceunits as $serviceunit) : ?>
-                <option value="<?= $serviceunit['id'] ?>"><?= $serviceunit['service_name'] ?></option>
-            <?php endforeach ?>
-
-        </select>
-    </div>
-
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="submit" class="btn btn-primary">Tambah</button>
     </div>
@@ -143,6 +137,8 @@
                     $('#address').val(response[0].address);
                     $('#phone').val(response[0].phone);
                     $('#identitynumber').val(response[0].identitynumber);
+                    $('#servicename').val(response[0].servicename);
+
                 },
                 error: function(xhr, status, error) {
                     console.error(xhr.responseText);

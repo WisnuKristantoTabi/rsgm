@@ -29,15 +29,18 @@ class Tracer extends BaseController
         return view('recordmedical/find', $data);
     }
 
-    public function findloan()
+    public function findloanpublic()
     {
         $recordmedicalModel = new RecordMedicalModel();
         $generator = new BarcodeGeneratorHTML();
         $id = $this->request->getVar('id');
         $data['data'] = $recordmedicalModel
-            ->select('transaction.id as tid , medical_records.rm_id as id_rekam_medik, fullname,loan_date,loan_desc,service_name')
+            ->select('transaction.id as tid , medical_records.rm_id as id_rekam_medik, medical_records.fullname,
+            transaction.loan_date,transaction.loan_desc,service_unit.service_name')
             ->join('transaction', 'medical_records.rm_id = transaction.rm_id')
-            ->join('service_unit', 'service_unit.id = transaction.service_id')
+            ->join('transaction_public', 'transaction.id = transaction_public.transaction_id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
+            ->join('service_unit', 'service_unit.id = public_doc.service_id')
             ->getwhere(['transaction.id' => $id])
             ->getRow();
         $data['title'] = 'Tracer Rekam Medis';

@@ -87,26 +87,25 @@ class ReturnDocumentCoass extends BaseController
         $postData = $this->request->getVar('searchTerm');
 
         $response = array();
+        $tcModel = new TransactionCoassModel();
 
         if (!isset($postData)) {
             // Fetch record
-            $transactionModel = new TransactionModel();
 
-            $transactions = $transactionModel->select('transaction.id,transaction.rm_id,coass_doc.coass_name')
-                ->join('coass_doc', 'coass_doc.transaction_id = transaction.id')
-                ->where('loan_type', 2)
+            $transactions = $tcModel->select('transaction.id,transaction.rm_id,coass_doc.coass_name')
+                ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
+                ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
+                ->where(['loan_type' => 2, 'is_return' => 2])
                 ->orderBy('transaction.rm_id')
                 ->findAll(5);
         } else {
             $searchTerm = $postData;
-
-            // Fetch record
-            $transactionModel = new TransactionModel();
-            $transactions = $transactionModel->select('transaction.id,transaction.rm_id,coass_doc.coass_name')
-                ->join('coass_doc', 'coass_doc.transaction_id = transaction.id')
+            $transactions = $tcModel->select('transaction.id,transaction.rm_id,coass_doc.coass_name')
+                ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
+                ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
                 ->like('coass_doc.coass_name', $searchTerm)
                 ->orLike('transaction.rm_id', $searchTerm)
-                ->where('loan_type', 2)
+                ->where(['loan_type' => 2, 'is_return' => 2])
                 ->orderBy('transaction.id')
                 ->findAll(5);
         }

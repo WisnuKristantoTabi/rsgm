@@ -17,19 +17,20 @@ class ReturnDocument extends BaseController
 
     public function index()
     {
-        $trasactionModels = new TransactionModel();
-        $data['trasactions'] = $trasactionModels
+        $tpModels = new TransactionPublicModel();
+        $data['trasactions'] = $tpModels
             ->select('transaction.id as tid,transaction.rm_id as idrm, public_doc.fullname, 
             service_unit.service_name, transaction.loan_date, public_doc.phone,
             transaction.return_date, transaction.deadline ')
-            ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
-            ->join('public_doc', 'public_doc.transaction_id = transaction.id')
+            ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
             ->join('service_unit', 'service_unit.id = transaction.service_id')
+            ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->where('is_return', 2)
-            ->orderBy('return_date', 'asc')
+            ->orderBy('return_date', 'desc')
             ->paginate(20, 'returndoc');
         $data['title'] = 'Pengembalian Rekam Medis';
-        $data['pager'] = $trasactionModels->pager;
+        $data['pager'] = $tpModels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_returndoc'), 20);
         $data['role'] = session()->get('role');
         $data['type'] = 1;
@@ -228,27 +229,27 @@ class ReturnDocument extends BaseController
         $postData = $this->request->getVar('searchTerm');
 
         $response = array();
+        $tpModel = new TransactionPublicModel();
 
         if (!isset($postData)) {
             // Fetch record
-            $transactionModel = new TransactionModel();
-
-            $transactions = $transactionModel->select('transaction.id,transaction.rm_id,public_doc.fullname')
-                ->join('public_doc', 'public_doc.transaction_id = transaction.id')
-                ->where('loan_type', 1)
+            $transactions = $tpModel->select('transaction.id,transaction.rm_id,public_doc.fullname')
+                ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+                ->join('public_doc', 'public_doc.id = transaction_public.public_id')
                 ->orderBy('transaction.rm_id')
+                ->where(['loan_type' => 1, 'is_return' => 2])
                 ->findAll(5);
         } else {
             $searchTerm = $postData;
 
             // Fetch record
-            $transactionModel = new TransactionModel();
-            $transactions = $transactionModel->select('transaction.id,transaction.rm_id,public_doc.fullname')
-                ->join('public_doc', 'public_doc.transaction_id = transaction.id')
+            $transactions = $tpModel->select('transaction.id,transaction.rm_id,public_doc.fullname')
+                ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+                ->join('public_doc', 'public_doc.id = transaction_public.public_id')
                 ->like('fullname', $searchTerm)
                 ->orLike('transaction.rm_id', $searchTerm)
-                ->where('loan_type', 1)
                 ->orderBy('transaction.id')
+                ->where(['loan_type' => 1, 'is_return' => 2])
                 ->findAll(5);
         }
 

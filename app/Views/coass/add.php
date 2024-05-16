@@ -21,13 +21,13 @@
         <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="" class="form-control">
         <label for="phone">Nomor Telpon Coass</label>
     </div>
-    <div class="form-floating mb-3 dateformat">
-        <input type="date" name="onsitedate" id="onsitedate" value="<?= date('Y-m-d'); ?>" class="inputdate form-control">
-        <label for="onsitedate">Tanggal Onsite</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="text" name="clinic" id="clinic" placeholder="Nama Klinik" value="" class="form-control">
-        <label for="clinic">Klinik</label>
+    <div class="mb-3">
+        <label for="searchrm">Pilih Klinik</label>
+        <select name="service" id="serivce" class="form-select">
+            <?php foreach ($serviceunits as $serviceunit) : ?>
+                <option value="<?= $serviceunit['id'] ?>"><?= $serviceunit['service_name'] ?></option>
+            <?php endforeach ?>
+        </select>
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="submit" class="btn btn-primary">Tambah</button>

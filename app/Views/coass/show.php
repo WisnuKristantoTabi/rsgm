@@ -10,23 +10,19 @@
 
 <input type="hidden" name="tid" value="<?= $coass['id'] ?>">
 <div class="form-floating mb-3">
-    <input type="text" name="fullname" id="fullname" placeholder="Nama Lengkap Koass" value="<?= $coass['coass_name'] ?>" class="form-control" readonly>
+    <input type="text" id="fullname" placeholder="Nama Lengkap Koass" value="<?= $coass['coass_name'] ?>" class="form-control" readonly>
     <label for="fullname">Nama Koass</label>
 </div>
 <div class="form-floating mb-3">
-    <input type="text" name="coassnumber" id="coassnumber" placeholder="NIM" value="<?= $coass['coass_number'] ?>" class="form-control" readonly>
+    <input type="text" id="coassnumber" placeholder="NIM" value="<?= $coass['coass_number'] ?>" class="form-control" readonly>
     <label for="coassnumber">NIM</label>
 </div>
 <div class="form-floating mb-3">
-    <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="<?= $coass['phone'] ?>" class="form-control" readonly>
+    <input type="tel" id="phone" placeholder="Nomor Telpon Coass" value="<?= $coass['phone'] ?>" class="form-control" readonly>
     <label for="phone">Nomor Telpon Coass</label>
 </div>
-<div class="form-floating mb-3 dateformat">
-    <input type="date" name="onsitedate" id="onsitedate" value="<?= $coass['coass_date'] ?>" placeholder="Tanggal Onsite" class="inputdate form-control" readonly>
-    <label for="onsitedate">Tanggal Onsite</label>
-</div>
 <div class="form-floating mb-3">
-    <input type="text" name="clinic" id="clinic" placeholder="Nama Klinik" value="<?= $coass['clinic_name'] ?>" class="form-control" readonly>
+    <input type="text" id="clinic" placeholder="Nama Klinik" value="<?= $coass['service_name'] ?>" class="form-control" readonly>
     <label for="clinic">Klinik</label>
 </div>
 

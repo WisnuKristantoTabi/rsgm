@@ -15,7 +15,6 @@
             <th scope="col">Nama Coass</th>
             <th scope="col">Klinik</th>
             <th scope="col">NIM</th>
-            <th scope="col">Tanggal Onsite</th>
             <th scope="col">Nomor HP</th>
             <th scope="col">Aksi</th>
         </tr>
@@ -27,7 +26,6 @@
                 <td><?= $coassmodel['coass_name'] ?></td>
                 <td><?= $coassmodel['clinic_name'] ?></td>
                 <td><?= $coassmodel['coass_number'] ?></td>
-                <td><?= $coassmodel['coass_date'] ?></td>
                 <td><?= $coassmodel['phone'] ?></td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">

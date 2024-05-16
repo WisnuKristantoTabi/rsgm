@@ -27,7 +27,7 @@ class LoanCoass extends BaseController
         $data['role'] = session()->get('role');
         $data['coassmodels'] = $tcmodels
             ->select('coass_doc.coass_name,coass_doc.clinic_name,coass_doc.coass_number,
-            coass_doc.coass_date,coass_doc.phone, transaction_coass.transaction_id, medical_records.fullname as patient')
+           coass_doc.phone, transaction_coass.transaction_id, medical_records.fullname as patient')
             ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
             ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')

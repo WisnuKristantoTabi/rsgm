@@ -11,6 +11,6 @@ class CoassModel extends Model
 
     protected $useAutoIncrement = true;
     protected $allowedFields = [
-        'id', 'coass_name', 'clinic_name', 'coass_number', 'coass_date', 'phone'
+        'id', 'coass_name', 'coass_number', 'phone', 'service_id'
     ];
 }

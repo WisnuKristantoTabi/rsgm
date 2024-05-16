@@ -1,0 +1,541 @@
+INFO - 2024-05-16 01:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:20:48 --> CodeIgniter\Exceptions\ModelException: You cannot use "getCompiledSelect()" in "App\Models\TransactionModel". This is a method of the Query Builder Class.
+in SYSTEMPATH\Model.php on line 890.
+ 1 SYSTEMPATH\Model.php(890): CodeIgniter\Exceptions\ModelException::forMethodNotAvailable('App\\Models\\TransactionModel', 'getCompiledSelect()')
+ 2 SYSTEMPATH\Model.php(870): CodeIgniter\Model->checkBuilderMethod('getCompiledSelect')
+ 3 APPPATH\Controllers\Dashboard.php(35): CodeIgniter\Model->__call('getCompiledSelect', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:53:17 --> ErrorException: Undefined array key "month"
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "month"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:54:15 --> ErrorException: Undefined array key "month"
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "month"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:54:20 --> ErrorException: Undefined array key "month"
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "month"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:54:22 --> ErrorException: Undefined array key "month"
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "month"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:56:13 --> BadMethodCallException: Call to undefined method App\Models\TransactionModel::getFirstRow
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Dashboard.php(35): CodeIgniter\Model->__call('getFirstRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:58:07 --> ErrorException: Undefined array key "totalloan"
+in APPPATH\Controllers\Dashboard.php on line 51.
+ 1 APPPATH\Controllers\Dashboard.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "totalloan"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:58:11 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:58:13 --> ErrorException: Undefined array key "totalloan"
+in APPPATH\Controllers\Dashboard.php on line 51.
+ 1 APPPATH\Controllers\Dashboard.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "totalloan"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 01:59:10 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Dashboard.php on line 51.
+ 1 APPPATH\Controllers\Dashboard.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 01:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 01:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:00:22 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Dashboard.php on line 47.
+ 1 APPPATH\Controllers\Dashboard.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:00:59 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Dashboard.php on line 46.
+ 1 APPPATH\Controllers\Dashboard.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:05:47 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Dashboard.php on line 47.
+ 1 APPPATH\Controllers\Dashboard.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:08:51 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:13:10 --> ErrorException: Undefined array key "totalloan"
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "totalloan"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:13:27 --> ErrorException: Undefined array key 0
+in APPPATH\Controllers\Dashboard.php on line 50.
+ 1 APPPATH\Controllers\Dashboard.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:22:52 --> ErrorException: Undefined array key "month"
+in APPPATH\Controllers\Dashboard.php on line 52.
+ 1 APPPATH\Controllers\Dashboard.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "month"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-16 02:36:20 --> mysqli_sql_exception: Unknown column 'transaction.service_id' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\PrintPDF.php(73): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\PrintPDF->printTracer('1')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrintPDF))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-16 02:36:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaction.service_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`, `service_name`, `loan_date`, `loan_desc`
+FROM `medical_records`
+JOIN `transaction` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `transaction`.`id` = :transaction.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\PrintPDF.php(73): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PrintPDF->printTracer('1')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrintPDF))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-16 02:36:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaction.service_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`, `service_name`, `loan_date`, `loan_desc`
+FROM `medical_records`
+JOIN `transaction` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `transaction`.`id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`, `service_name`, `loan_date`, `loan_desc`
+FROM `medical_records`
+JOIN `transaction` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `transaction`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`, `service_name`, `loan_date`, `loan_desc`
+FROM `medical_records`
+JOIN `transaction` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `transaction`.`id` = :transaction.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\PrintPDF.php(73): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PrintPDF->printTracer('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrintPDF))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-16 02:36:20 --> [Caused by] mysqli_sql_exception: Unknown column 'transaction.service_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`, `service_name`, `loan_date`, `loan_desc`
+FROM `medical_records`
+JOIN `transaction` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `transaction`.`id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`, `service_name`, `loan_date`, `loan_desc`
+FROM `medical_records`
+JOIN `transaction` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `transaction`.`id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`, `service_name`, `loan_date`, `loan_desc`
+FROM `medical_records`
+JOIN `transaction` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `transaction`.`id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`, `service_name`, `loan_date`, `loan_desc`
+FROM `medical_records`
+JOIN `transaction` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+JOIN `service_unit` ON `service_unit`.`id` = `transaction`.`service_id`
+WHERE `transaction`.`id` = :transaction.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\PrintPDF.php(73): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PrintPDF->printTracer('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrintPDF))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:42:04 --> ErrorException: Undefined array key "month"
+in APPPATH\Controllers\Dashboard.php on line 53.
+ 1 APPPATH\Controllers\Dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "month"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:45:43 --> ErrorException: Undefined variable $coass
+in APPPATH\Views\publicdoc\show.php on line 28.
+ 1 APPPATH\Views\publicdoc\show.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $coass', 'E:\\RSGM\\app\\Views\\publicdoc\\show.php', 28)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\RSGM\\app\\Views\\publicdoc\\show.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('publicdoc/show', [], true)
+ 5 APPPATH\Controllers\PublicDoc.php(101): view('publicdoc/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicDoc->show('7')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicDoc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:52:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-16 02:54:37 --> ErrorException: Undefined array key "month"
+in APPPATH\Controllers\Dashboard.php on line 53.
+ 1 APPPATH\Controllers\Dashboard.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "month"', 'E:\\RSGM\\app\\Controllers\\Dashboard.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-16 02:56:06 --> mysqli_sql_exception: Unknown column 'coass_date' in 'field list' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `c...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `c...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `c...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `c...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\app\Controllers\LoanCoass.php(240): CodeIgniter\Model->__call('get', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanCoass->showCoass()
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanCoass))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-16 02:56:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_date' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `coass_name`, `coass_number`, `phone`, `coass_date`, `clinic_name`
+FROM `coass_doc`
+WHERE `id` = :id:
+ORDER BY `id`', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoanCoass.php(240): CodeIgniter\Model->__call('get', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanCoass->showCoass()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanCoass))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-16 02:56:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `coass_name`, `coass_number`, `phone`, `coass_date`, `clinic_name`
+FROM `coass_doc`
+WHERE `id` = \'8\'
+ORDER BY `id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `coass_name`, `coass_number`, `phone`, `coass_date`, `clinic_name`
+FROM `coass_doc`
+WHERE `id` = \'8\'
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `coass_name`, `coass_number`, `phone`, `coass_date`, `clinic_name`
+FROM `coass_doc`
+WHERE `id` = :id:
+ORDER BY `id`', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\LoanCoass.php(240): CodeIgniter\Model->__call('get', [])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanCoass->showCoass()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanCoass))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-16 02:56:06 --> [Caused by] mysqli_sql_exception: Unknown column 'coass_date' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `coass_name`, `coass_number`, `phone`, `coass_date`, `clinic_name`
+FROM `coass_doc`
+WHERE `id` = \'8\'
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `coass_name`, `coass_number`, `phone`, `coass_date`, `clinic_name`
+FROM `coass_doc`
+WHERE `id` = \'8\'
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `coass_name`, `coass_number`, `phone`, `coass_date`, `clinic_name`
+FROM `coass_doc`
+WHERE `id` = \'8\'
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `coass_name`, `coass_number`, `phone`, `coass_date`, `clinic_name`
+FROM `coass_doc`
+WHERE `id` = :id:
+ORDER BY `id`', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\LoanCoass.php(240): CodeIgniter\Model->__call('get', [])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanCoass->showCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanCoass))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-16 02:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-16 02:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-16 02:57:01 --> mysqli_sql_exception: Unknown column 'coass_doc.clinic_name' in 'field list' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `coass_d...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `coass_d...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `coass_d...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `coass_d...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(20, 0)
+#6 E:\RSGM\system\BaseModel.php(1243): CodeIgniter\BaseModel->findAll(20, 0)
+#7 E:\RSGM\app\Controllers\LoanCoass.php(35): CodeIgniter\BaseModel->paginate(20, 'loancoass')
+#8 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanCoass->index()
+#9 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanCoass))
+#10 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#13 {main}
+CRITICAL - 2024-05-16 02:57:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_doc.clinic_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `coass_doc`.`coass_name`, `coass_doc`.`clinic_name`, `coass_doc`.`coass_number`, `coass_doc`.`phone`, `transaction_coass`.`transaction_id`, `medical_records`.`fullname` as `patient`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+ORDER BY `coass_date` DESC
+ LIMIT 20', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(20, 0)
+ 4 SYSTEMPATH\BaseModel.php(1243): CodeIgniter\BaseModel->findAll(20, 0)
+ 5 APPPATH\Controllers\LoanCoass.php(35): CodeIgniter\BaseModel->paginate(20, 'loancoass')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanCoass->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanCoass))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-16 02:57:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'coass_doc.clinic_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `coass_doc`.`coass_name`, `coass_doc`.`clinic_name`, `coass_doc`.`coass_number`, `coass_doc`.`phone`, `transaction_coass`.`transaction_id`, `medical_records`.`fullname` as `patient`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+ORDER BY `coass_date` DESC
+ LIMIT 20')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `coass_doc`.`coass_name`, `coass_doc`.`clinic_name`, `coass_doc`.`coass_number`, `coass_doc`.`phone`, `transaction_coass`.`transaction_id`, `medical_records`.`fullname` as `patient`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+ORDER BY `coass_date` DESC
+ LIMIT 20')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `coass_doc`.`coass_name`, `coass_doc`.`clinic_name`, `coass_doc`.`coass_number`, `coass_doc`.`phone`, `transaction_coass`.`transaction_id`, `medical_records`.`fullname` as `patient`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+ORDER BY `coass_date` DESC
+ LIMIT 20', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(20, 0)
+ 6 SYSTEMPATH\BaseModel.php(1243): CodeIgniter\BaseModel->findAll(20, 0)
+ 7 APPPATH\Controllers\LoanCoass.php(35): CodeIgniter\BaseModel->paginate(20, 'loancoass')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanCoass->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanCoass))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-16 02:57:01 --> [Caused by] mysqli_sql_exception: Unknown column 'coass_doc.clinic_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `coass_doc`.`coass_name`, `coass_doc`.`clinic_name`, `coass_doc`.`coass_number`, `coass_doc`.`phone`, `transaction_coass`.`transaction_id`, `medical_records`.`fullname` as `patient`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+ORDER BY `coass_date` DESC
+ LIMIT 20', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `coass_doc`.`coass_name`, `coass_doc`.`clinic_name`, `coass_doc`.`coass_number`, `coass_doc`.`phone`, `transaction_coass`.`transaction_id`, `medical_records`.`fullname` as `patient`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+ORDER BY `coass_date` DESC
+ LIMIT 20')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `coass_doc`.`coass_name`, `coass_doc`.`clinic_name`, `coass_doc`.`coass_number`, `coass_doc`.`phone`, `transaction_coass`.`transaction_id`, `medical_records`.`fullname` as `patient`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+ORDER BY `coass_date` DESC
+ LIMIT 20')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `coass_doc`.`coass_name`, `coass_doc`.`clinic_name`, `coass_doc`.`coass_number`, `coass_doc`.`phone`, `transaction_coass`.`transaction_id`, `medical_records`.`fullname` as `patient`
+FROM `transaction_coass`
+JOIN `transaction` ON `transaction`.`id` = `transaction_coass`.`transaction_id`
+JOIN `coass_doc` ON `coass_doc`.`id` = `transaction_coass`.`coass_id`
+JOIN `medical_records` ON `transaction`.`rm_id` = `medical_records`.`rm_id`
+ORDER BY `coass_date` DESC
+ LIMIT 20', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(20, 0)
+ 7 SYSTEMPATH\BaseModel.php(1243): CodeIgniter\BaseModel->findAll(20, 0)
+ 8 APPPATH\Controllers\LoanCoass.php(35): CodeIgniter\BaseModel->paginate(20, 'loancoass')
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanCoass->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanCoass))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')

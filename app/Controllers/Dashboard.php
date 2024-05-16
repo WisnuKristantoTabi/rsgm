@@ -14,7 +14,6 @@ class Dashboard extends BaseController
     public function index()
     {
         $poli = $this->request->getVar('poli');
-
         $transactionModels = new TransactionModel();
         $serviceUnitModels = new ServiceUnitModel();
         $data['title'] = "Dashboard";
@@ -25,29 +24,51 @@ class Dashboard extends BaseController
         $data['serviceunits'] = $serviceUnitModels->findAll();
         $data['poli'] = $poli;
 
-        $transactions = $transactionModels->select("MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn")
-            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->orderBy('loan_date')
-            ->where('YEAR(loan_date)', '2024')
-            ->where('service_id', $poli)
-            ->groupBy('MONTH(loan_date)')
-            ->findAll();
 
-        $data['transactions'] = $transactions;
+        $tlp = $transactionModels->select("
+        MONTH(loan_date) as month,
+        SUM(CASE WHEN loan_date IS NOT NULL THEN 1 ELSE 0 END) as totalloan,
+        SUM(CASE WHEN return_date IS NOT NULL THEN 1 ELSE 0 END) as totalreturn
+        
+        ")
+            ->join('transaction_public', 'transaction_public.transaction_id = transaction.id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
+            ->orderBy('transaction.loan_date')
+            ->where('YEAR(transaction.loan_date)', '2024')
+            ->where('public_doc.service_id', $poli)
+            ->groupBy('MONTH(transaction.loan_date)')
+            ->find();
 
-        $count = $transactionModels
-            ->select('COUNT(*) as count_late')
-            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->where('return_date > deadline')
-            ->where('service_id', $poli)
+        $tlc = $transactionModels->select("COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn")
+            ->join('transaction_coass', 'transaction_coass.transaction_id = transaction.id')
+            ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
+            ->orderBy('transaction.loan_date')
+            ->where('YEAR(transaction.loan_date)', '2024')
+            ->where('coass_doc.service_id', $poli)
+            ->groupBy('MONTH(transaction.loan_date)')
             ->first();
 
-        $data['count'] = $count;
+
+        $data['transactions'] = array([
+            'month' => $tlp['month'],
+            'totalloan' => $tlp['totalloan'] + $tlc['totalloan'],
+            'totalreturn' => $tlp['totalreturn'] + $tlc['totalreturn'],
+        ]);
+
+        // print_r($data);
+
+        //     $count = $transactionModels
+        //         ->select('COUNT(*) as count_late')
+
+        //         ->where('return_date > deadline')
+        //         ->where('service_id', $poli)
+        //         ->first();
+
+        //     $data['count'] = $count;
 
 
 
-        return view('dashboard', $data);
-        // return $poli;
+        //     return view('dashboard', $data);
     }
 
 

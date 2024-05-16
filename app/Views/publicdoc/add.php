@@ -25,6 +25,14 @@
         <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" class="form-control">
         <label for="phone">Nomor HP</label>
     </div>
+    <div class="mb-3">
+        <label for="searchrm">Pilih Klinik</label>
+        <select name="service" id="serivce" class="form-select">
+            <?php foreach ($serviceunits as $serviceunit) : ?>
+                <option value="<?= $serviceunit['id'] ?>"><?= $serviceunit['service_name'] ?></option>
+            <?php endforeach ?>
+        </select>
+    </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="submit" class="btn btn-primary">Tambah</button>
     </div>

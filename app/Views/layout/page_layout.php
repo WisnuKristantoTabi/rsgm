@@ -79,7 +79,7 @@
                             </li>
                             <li class="sidebar-item <?= ($subsidebar == 7) ? 'active' : '' ?>">
                                 <a href="<?php echo base_url('public') ?>" class="sidebar-link">
-                                    Public
+                                    Peminjam
                                 </a>
                             </li>
                         </ul>
