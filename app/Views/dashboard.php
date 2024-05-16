@@ -3,12 +3,20 @@
 <?= $this->section('content') ?>
 
 
-
-
 <div class="row">
 	<div class="col-md-12 my-2 card">
 		<div>
 			<form class="input-group p-3" action="" method="GET">
+				<div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="type" id="type1" value="1" <?= ($type == 1) ? "checked" : "" ?>>
+						<label class="form-check-label" for="type1">Umum</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="type" id="type2" value="2" <?= ($type == 2) ? "checked" : "" ?>>
+						<label class="form-check-label" for="type2">Coass</label>
+					</div>
+				</div>
 				<span class="input-group-text">Pilih Poli Pelayanan</span>
 				<select name="poli" class="form-select form-select-sm ">
 					<option>Daftar Poli</option>

@@ -19,8 +19,8 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/signup', 'Register::index');
     $routes->post('/register', 'Register::store');
 
-
-    $routes->get('/dashboard', 'Dashboard::index');
+    $routes->get('dashboard/', 'Dashboard::index');
+    // $routes->get('/dashboard/(:num)/(:num)', 'Dashboard::index/$1/$2');
     $routes->get('/dashboard/getdataloan', 'Dashboard::getDataLoan');
     $routes->get('/dashboard/getdatareturn', 'Dashboard::getDataReturn');
 
