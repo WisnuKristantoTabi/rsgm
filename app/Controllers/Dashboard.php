@@ -4,9 +4,7 @@ namespace App\Controllers;
 
 use App\Models\TransactionModel;
 use App\Models\ServiceUnitModel;
-use App\Models\TransactionPublicModel;
-use App\Models\TransactionCoassModel;
-use PhpOffice\PhpSpreadsheet\Calculation\Web\Service;
+
 
 class Dashboard extends BaseController
 {
@@ -24,7 +22,6 @@ class Dashboard extends BaseController
         if (is_null($type)) {
             $type = 1;
         }
-        // // $transactionModels = new TransactionModel();
         $serviceUnitModels = new ServiceUnitModel();
         $data['title'] = "Dashboard";
         $data['username'] = session()->get('username');
@@ -37,7 +34,6 @@ class Dashboard extends BaseController
         $db = \Config\Database::connect();
 
         if ($type == 1) {
-            $tpModels = new TransactionPublicModel;
             $data["transactions"] = $db->table('transaction_public')
                 ->select("MONTH(loan_date) as month ,COUNT(loan_date)  as totalloan, COUNT(return_date)  as totalreturn")
                 ->join('transaction', 'transaction.id = transaction_public.transaction_id')
@@ -59,7 +55,6 @@ class Dashboard extends BaseController
                 ->getRow();
             $data['count'] = $count;
         } elseif ($type == 2) {
-            $tcModels = new TransactionCoassModel;
             $data["transactions"] = $db->table('transaction_coass')
                 ->select("MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn")
                 ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
@@ -83,8 +78,6 @@ class Dashboard extends BaseController
             $data['count'] = $count;
         }
 
-        // dd($data);
-        // echo $type . "   " . $poli;
         return view('dashboard', $data);
     }
 

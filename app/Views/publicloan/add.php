@@ -105,7 +105,7 @@
 <script>
     $(document).ready(function() {
         $('#publicid').select2({
-            placeholder: "Cari Coass",
+            placeholder: "Cari Peminjam",
             ajax: {
                 url: "<?php echo base_url('/loanpublic/searchcoass') ?>",
                 dataType: 'json',
