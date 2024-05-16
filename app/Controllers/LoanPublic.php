@@ -128,7 +128,6 @@ class LoanPublic extends BaseController
             'publicid'              => 'required',
             'loandate'              => 'required',
             'deadline'              => 'required',
-            'service'               => 'required',
         ];
 
         $transactionmodels = new TransactionModel();
@@ -141,7 +140,6 @@ class LoanPublic extends BaseController
                 'loan_date'      => $this->request->getPost('loandate'),
                 'loan_desc'      => '-',
                 'deadline'       => $this->request->getPost('deadline'),
-                'service_id'     => $this->request->getPost('service'),
 
             ];
 

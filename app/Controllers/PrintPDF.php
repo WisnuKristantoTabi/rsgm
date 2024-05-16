@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use TCPDF;
 use App\Models\RecordMedicalModel;
+use App\Models\TransactionPublicModel;
+use App\Models\TransactionCoassModel;
 use App\Models\ServiceUnitModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
 
@@ -61,16 +63,67 @@ class PrintPDF extends BaseController
         $pdf->Output('RekamMedik.pdf', 'I');
     }
 
-    public function printTracer($id)
+    public function printTracerPublic($id)
     {
-        $generator = new BarcodeGeneratorHTML();
-        $recordmedicalModel = new RecordMedicalModel();
+        $tpModel = new TransactionPublicModel();
         $data['role'] = session()->get('role');
-        $data['tracer'] = $recordmedicalModel
-            ->select('medical_records.rm_id,fullname,service_name,loan_date,loan_desc')
-            ->join('transaction', 'transaction.rm_id = medical_records.rm_id')
-            ->join('service_unit', 'service_unit.id = transaction.service_id')
-            ->getWhere(['transaction.id' => $id])
+        $data['tracer'] = $tpModel
+            ->select('transaction.id as tid , medical_records.rm_id, medical_records.fullname,
+        transaction.loan_date,transaction.loan_desc,service_unit.service_name')
+            ->join('transaction', 'transaction_public.transaction_id = transaction.id')
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
+            ->join('service_unit', 'service_unit.id = public_doc.service_id')
+            ->getwhere(['transaction.id' => $id])
+            ->getRow();
+
+        $style = array(
+            'position' => '',
+            'align' => 'C',
+            'stretch' => false,
+            'fitwidth' => true,
+            'cellfitalign' => '',
+            'border' => true,
+            'hpadding' => 'auto',
+            'vpadding' => 'auto',
+            'fgcolor' => array(0, 0, 0),
+            'bgcolor' => false, //array(255,255,255),
+            'text' => true,
+            'font' => 'helvetica',
+            'fontsize' => 8,
+            'stretchtext' => 6
+        );
+
+        $pdf = new TCPDF('P', PDF_UNIT, 'A6', true, 'UTF-8', false);
+
+        $pdf->SetCreator(PDF_CREATOR);
+        // $pdf->SetHeaderData("E:/RSGM/public/img/logo.jpg", PDF_HEADER_LOGO_WIDTH, "Rekam Medik ", "RSGM - Universitas Negeri Jember");
+        $pdf->setPrintHeader(false);
+        $pdf->setPrintFooter(false);
+
+        $pdf->addPage();
+        $html = view('print_tracer', $data);
+        $pdf->writeHTML($html, true, false, true, false, '');
+        $pdf->write1DBarcode($id, 'C39', '', '', '', 15, 0.4, $style, 'N');
+
+        //line ini penting
+        $this->response->setContentType('application/pdf');
+        //Close and output PDF document
+        $pdf->Output('Tracer.pdf', 'I');
+    }
+
+    public function printTracerCoass($id)
+    {
+        $tcModel = new TransactionCoassModel();
+        $data['role'] = session()->get('role');
+        $data['tracer'] = $tcModel
+            ->select('transaction.id as tid , medical_records.rm_id, medical_records.fullname,
+        transaction.loan_date,transaction.loan_desc,service_unit.service_name')
+            ->join('transaction', 'transaction_coass.transaction_id = transaction.id')
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
+            ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
+            ->join('service_unit', 'service_unit.id = coass_doc.service_id')
+            ->getwhere(['transaction.id' => $id])
             ->getRow();
 
         $style = array(

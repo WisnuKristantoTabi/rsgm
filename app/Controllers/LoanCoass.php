@@ -26,12 +26,12 @@ class LoanCoass extends BaseController
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
         $data['coassmodels'] = $tcmodels
-            ->select('coass_doc.coass_name,coass_doc.clinic_name,coass_doc.coass_number,
+            ->select('coass_doc.coass_name,coass_doc.coass_number,
            coass_doc.phone, transaction_coass.transaction_id, medical_records.fullname as patient')
             ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
             ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
-            ->orderBy('coass_date', 'desc')
+            ->orderBy('transaction.loan_date', 'desc')
             ->paginate(20, 'loancoass');
         $data['pager'] = $tcmodels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_loancoass'), 20);
@@ -76,7 +76,6 @@ class LoanCoass extends BaseController
             'coassid'              => 'required',
             'loandate'             => 'required',
             'deadline'             => 'required',
-            'service'              => 'required',
         ];
         $transactionmodels = new TransactionModel();
         $tcmodels = new TransactionCoassModel();
@@ -90,7 +89,6 @@ class LoanCoass extends BaseController
                 'loan_desc'      => implode(" ", $this->request->getPost('loandesc')),
                 'deadline'       => $this->request->getPost('deadline'),
                 'is_return'      => 1,
-                'service_id'     => $this->request->getPost('service')
             ];
 
             $transactionmodels->insert($transactiondata);
@@ -100,7 +98,7 @@ class LoanCoass extends BaseController
             ]);
 
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
-            return redirect()->to('f?id=' . $transactionmodels->getInsertId());
+            return redirect()->to('f/coass/?id=' . $transactionmodels->getInsertId());
         } else {
             $msg = $this->validator->listErrors();
             $session->setFlashdata('error', $msg);
@@ -115,10 +113,9 @@ class LoanCoass extends BaseController
 
 
         $tcModels = new TransactionCoassModel();
-        $serviceUnitModels = new ServiceUnitModel();
         $tcData = $tcModels->select('transaction.rm_id, coass_doc.coass_name, transaction.deadline,  
-        coass_doc.coass_number, coass_doc.coass_date, coass_doc.clinic_name, transaction.loan_date, coass_doc.phone,
-        medical_records.fullname, transaction.id as tid, coass_doc.id as coassid, transaction.service_id')
+        coass_doc.coass_number, transaction.loan_date, coass_doc.phone,
+        medical_records.fullname, transaction.id as tid, coass_doc.id as coassid')
             ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
             ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
@@ -127,7 +124,6 @@ class LoanCoass extends BaseController
 
         if ($tcModels->where(['transaction_id' => $id])->first()) {
             $data['transactions'] = $tcData;
-            $data['serviceunits'] = $serviceUnitModels->findAll();
             $data['title']  = 'Edit Data Pinjaman Coass';
             $data['pagesidebar'] = 3;
             $data['subsidebar'] = 4;
@@ -146,7 +142,6 @@ class LoanCoass extends BaseController
             'coassid'              => 'required',
             'loandate'             => 'required',
             'deadline'             => 'required',
-            'service'              => 'required',
         ];
 
         $transactionmodels = new TransactionModel();
@@ -161,14 +156,13 @@ class LoanCoass extends BaseController
                 // 'loan_desc'      => implode(" ", $this->request->getPost('loandesc')),
                 'deadline'       => $this->request->getPost('deadline'),
                 'is_return'      => 1,
-                'service_id'     => $this->request->getPost('service')
             ];
 
             if ($transactionmodels->find(['id' => $id])) {
                 $transactionmodels->update($id, $transactiondata);
                 $tcModels->set(['coass_id' => $this->request->getPost('coassid')])->where('transaction_id', $id)->update();
                 session()->setFlashdata('success', 'Data Berhasil Di edit');
-                return redirect()->to('f?id=' . $id);
+                return redirect()->to('f/coass/?id=' . $id);
             } else {
                 session()->setFlashdata('error', 'Data Tidak Berhasil Di edit');
                 return redirect()->to('loancoass/edit/' . $id);
@@ -234,7 +228,7 @@ class LoanCoass extends BaseController
     {
         $postData = $this->request->getVar('id');
         $coassModels = new CoassModel();
-        $coassData = $coassModels->select('id,coass_name,coass_number,phone,coass_date,clinic_name')
+        $coassData = $coassModels->select('id,coass_name,coass_number,phone')
             ->where('id', $postData)
             ->orderBy('id')
             ->get();
@@ -246,8 +240,6 @@ class LoanCoass extends BaseController
                 "coassname"    => $coass->coass_name,
                 "coassnumber"  => $coass->coass_number,
                 "phone"         => $coass->phone,
-                "coassdate"    => $coass->coass_date,
-                "clinicname"   => $coass->clinic_name,
             );
             break;
         }

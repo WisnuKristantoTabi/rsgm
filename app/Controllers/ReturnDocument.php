@@ -24,7 +24,7 @@ class ReturnDocument extends BaseController
             transaction.return_date, transaction.deadline ')
             ->join('transaction', 'transaction.id = transaction_public.transaction_id')
             ->join('public_doc', 'public_doc.id = transaction_public.public_id')
-            ->join('service_unit', 'service_unit.id = transaction.service_id')
+            ->join('service_unit', 'service_unit.id = public_doc.service_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->where('is_return', 2)
             ->orderBy('return_date', 'desc')
@@ -49,15 +49,19 @@ class ReturnDocument extends BaseController
 
     public function show($id)
     {
-        $transactionModels = new TransactionModel();
-        $transaction = $transactionModels
-            ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_name, 
-            transaction.loan_date, transaction.return_date, transaction.return_desc ')
+        $tpModel = new TransactionPublicModel();
+        $transaction = $tpModel
+            ->select('transaction.id,transaction.rm_id, medical_records.fullname,
+             service_unit.service_name, transaction.loan_date, 
+             transaction.return_date, transaction.return_desc')
+            ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->join('service_unit', 'service_unit.id = transaction.service_id')
-            ->getWhere(['transaction.id' => $id])->getRow();
+            ->join('service_unit', 'service_unit.id = public_doc.service_id')
+            ->getWhere(['transaction.id' => $id])
+            ->getRow();
         if (isset($transaction)) {
-            $data['title'] = 'Edit Pengembalian';
+            $data['title'] = 'Tampilkan Pengembalian';
             $data['username'] = session()->get('username');
             $data['role'] = session()->get('role');
             $data['pagesidebar'] = 3;
@@ -309,11 +313,13 @@ class ReturnDocument extends BaseController
     public function showData()
     {
         $postData = $this->request->getVar('id');
-        $transactionModel = new TransactionModel();
-        $transactions = $transactionModel
+        $tpModel = new TransactionPublicModel();
+        $transactions = $tpModel
             ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_unit.service_name, transaction.loan_date ')
-            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->join('service_unit', 'service_unit.id = transaction.service_id')
+            ->join('transaction', 'transaction.id = transaction_public.transaction_id')
+            ->join('public_doc', 'public_doc.id = transaction_public.public_id')
+            ->join('service_unit', 'service_unit.id = public_doc.service_id')
+            ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->where('transaction.id', $postData)
             ->where('loan_type', 1)
             ->orderBy('id')

@@ -10,7 +10,7 @@
 </div>
 
 <div class=" mb-5">
-    <form class="input-group" method="get" action="<?php echo base_url('/f') ?>">
+    <form class="input-group" method="get" action="<?php echo base_url('/f/public/') ?>">
         <span class="input-group-text">Cari Data</span>
         <input type="text" name="id" class="form-control" placeholder="Masukkan ID Transaksi" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="lni lni-search"></i>Cari</button>
@@ -39,7 +39,7 @@
                 <td><?= $data['identity_number'] ?></td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a role="button" href="<?php echo base_url("f?id") . $data['id'] ?>" class="btn btn-outline-primary btn-sm"><i class="lni lni-eye"></i>Lihat</a>
+                        <a role="button" href="<?php echo base_url("/f/public/?id") . $data['id'] ?>" class="btn btn-outline-primary btn-sm"><i class="lni lni-eye"></i>Lihat</a>
                         <a role="button" href="<?php echo base_url("loanpublic/edit/") . $data['id'] ?>" class="btn btn-outline-warning btn-sm"><i class="lni lni-pencil-alt"></i>Edit</a>
                         <a class="btn btn-outline-danger btn-sm" href="<?= base_url('loanpublic/delete/' . $data['id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             <i class="lni lni-trash-can"></i>Hapus</a>

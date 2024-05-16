@@ -50,15 +50,6 @@
         <input type="date" name="deadline" id="deadline" placeholder="Tanggal Batas Pengembalian" value="<?= $transaction->deadline ?>" class="inputdate form-control">
         <label for="deadline">Tanggal Batas Pengembalian</label>
     </div>
-    <div class="mb-3">
-        <label for="searchrm">Pilih Poli</label>
-        <select name="service" id="serivce" class="form-select">
-            <?php foreach ($serviceunits as $serviceunit) : ?>
-                <option value="<?= $serviceunit['id'] ?>" <?= ($transaction->service_id == $serviceunit['id']) ? 'selected' : '' ?>><?= $serviceunit['service_name'] ?></option>
-            <?php endforeach ?>
-
-        </select>
-    </div>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="submit" class="btn btn-primary">Edit</button>

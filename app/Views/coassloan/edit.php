@@ -38,29 +38,12 @@
         <label for="phone">Nomor Telpon Coass</label>
     </div>
     <div class="form-floating mb-3 dateformat">
-        <input type="date" name="onsitedate" id="onsitedate" value="<?= $transactions->coass_date ?>" placeholder="Tanggal Onsite" class="inputdate form-control" readonly>
-        <label for="onsitedate">Tanggal Onsite</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="text" name="clinic" id="clinic" placeholder="Nama Klinik" value="<?= $transactions->clinic_name ?>" class="form-control" readonly>
-        <label for="clinic">Klinik</label>
-    </div>
-    <div class="form-floating mb-3 dateformat">
         <input type="date" name="loandate" id="loandate" placeholder="Tanggal Peminjaman" value="<?= $transactions->loan_date ?>" class="inputdate form-control">
         <label for="loandate">Tanggal Peminjaman</label>
     </div>
     <div class="form-floating mb-3 dateformat">
         <input type="date" name="deadline" id="deadline" placeholder="Tanggal Batas Pengembalian" value="<?= $transactions->deadline ?>" class="inputdate form-control">
         <label for="deadline">Tanggal Batas Pengembalian</label>
-    </div>
-    <div class="mb-3">
-        <label for="searchrm">Pilih Poli</label>
-        <select name="service" id="serivce" class="form-select">
-            <?php foreach ($serviceunits as $serviceunit) : ?>
-                <option value="<?= $serviceunit['id'] ?>" <?= ($transactions->service_id == $serviceunit['id']) ? 'selected' : '' ?>><?= $serviceunit['service_name'] ?></option>
-            <?php endforeach ?>
-
-        </select>
     </div>
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">

@@ -37,15 +37,6 @@
         <input type="tel" id="phone" placeholder="Nomor Telpon Coass" value="" class="form-control" readonly>
         <label for="phone">Nomor Telpon Coass</label>
     </div>
-
-    <div class="form-floating mb-3 dateformat">
-        <input type="date" id="onsitedate" placeholder="Tanggal Onsite" class="inputdate form-control" readonly>
-        <label for="onsitedate">Tanggal Onsite</label>
-    </div>
-    <div class="form-floating mb-3">
-        <input type="text" id="clinic" placeholder="Nama Klinik" value="" class="form-control" readonly>
-        <label for="clinic">Klinik</label>
-    </div>
     <div class="form-floating mb-3 dateformat">
         <input type="date" name="loandate" id="loandate" value="<?= date('Y-m-d'); ?>" class="inputdate form-control">
         <label for="loandate">Tanggal Peminjaman</label>
@@ -53,15 +44,6 @@
     <div class="form-floating mb-3 dateformat">
         <input type="date" name="deadline" id="deadline" value="<?= date('Y-m-d', strtotime('+1 day')); ?>" class="inputdate form-control">
         <label for="deadline">Tanggal Batas Pengembalian</label>
-    </div>
-    <div class="mb-3">
-        <label for="searchrm">Pilih Poli</label>
-        <select name="service" id="serivce" class="form-select">
-            <?php foreach ($serviceunits as $serviceunit) : ?>
-                <option value="<?= $serviceunit['id'] ?>"><?= $serviceunit['service_name'] ?></option>
-            <?php endforeach ?>
-
-        </select>
     </div>
     <div class="mb-3">
         <label>Keperluan</label>

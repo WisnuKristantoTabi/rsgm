@@ -50,7 +50,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/serviceunit/delete/(:any)', 'ServiceUnit::delete/$1');
 
     $routes->get('/f/public/', 'Tracer::findloanpublic');
-    $routes->get('/print/tracer/(:any)', 'PrintPDF::printTracer/$1');
+    $routes->get('/f/coass/', 'Tracer::findloancoass');
 
     $routes->get('/public', 'PublicDoc::index');
     $routes->get('/public/add', 'PublicDoc::add');
@@ -76,6 +76,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/loancoass/delete/(:any)', 'LoanCoass::delete/$1');
     $routes->post('/loancoass/searchcoass/', 'LoanCoass::searchCoass');
     $routes->post('/loancoass/showcoass/', 'LoanCoass::showCoass');
+    $routes->get('/loancoass/print/tracer/(:any)', 'PrintPDF::printTracerCoass/$1');
 
     $routes->get('/loanpublic', 'LoanPublic::index');
     $routes->get('/loanpublic/add', 'LoanPublic::add');
@@ -85,6 +86,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/loanpublic/delete/(:any)', 'LoanPublic::delete/$1');
     $routes->post('/loanpublic/searchcoass/', 'LoanPublic::searchCoass');
     $routes->post('/loanpublic/showcoass/', 'LoanPublic::showCoass');
+    $routes->get('loanpublic/print/tracer/(:any)', 'PrintPDF::printTracerPublic/$1');
 
     $routes->get('/returndoc', 'ReturnDocument::index');
     $routes->get('/returndoc/add', 'ReturnDocument::add');
@@ -100,6 +102,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/returndocoass', 'ReturnDocumentCoass::index');
     $routes->get('/returndoccoass/add', 'ReturnDocumentCoass::add');
     $routes->post('/returndoccoass/update', 'ReturnDocumentCoass::update');
+    $routes->get('/returndoccoass/show/(:any)', 'ReturnDocumentCoass::show/$1');
     $routes->post('/returndocoass/find/', 'ReturnDocumentCoass::find');
     $routes->post('/returndoccoass/searchdata', 'ReturnDocumentCoass::searchData');
     $routes->post('/returndoccoass/showdata', 'ReturnDocumentCoass::showData');

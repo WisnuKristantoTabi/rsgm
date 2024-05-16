@@ -17,26 +17,53 @@ class ReturnDocumentCoass extends BaseController
 
     public function index()
     {
-        $trasactionModels = new TransactionCoassModel();
-        $data['trasactions'] = $trasactionModels
+        $tcModels = new TransactionCoassModel();
+        $data['trasactions'] = $tcModels
             ->select('transaction.id as tid,transaction.rm_id as idrm,coass_doc.phone, 
             coass_doc.coass_name, service_unit.service_name, transaction.loan_date, transaction.return_date, transaction.deadline ')
             ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
-            ->join('service_unit', 'service_unit.id = transaction.service_id')
+            ->join('service_unit', 'service_unit.id = coass_doc.service_id')
             ->where('is_return', 2)
             ->orderBy('loan_date', 'asc')
             ->paginate(20, 'returndoc');
         $data['title'] = 'Pengembalian Dokumen Coass';
-        $data['pager'] = $trasactionModels->pager;
-        $data['nomor'] = nomor($this->request->getVar('page_returndoc'), 20);
+        $data['pager'] = $tcModels->pager;
+        $data['nomor'] = nomor($this->request->getVar('page_returndoccoass'), 20);
         $data['role'] = session()->get('role');
         $data['type'] = 2;
         $data['pagesidebar'] = 3;
         $data['subsidebar'] = 5;
         $data['username'] = session()->get('username');
         return view('returndocument/index_coass', $data);
+    }
+
+    public function show($id)
+    {
+        $tcModel = new TransactionCoassModel();
+        $transaction = $tcModel
+            ->select('transaction.id,transaction.rm_id, medical_records.fullname,
+             service_unit.service_name, transaction.loan_date, 
+             transaction.return_date, transaction.return_desc')
+            ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
+            ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
+            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
+            ->join('service_unit', 'service_unit.id = coass_doc.service_id')
+            ->getWhere(['transaction.id' => $id])
+            ->getRow();
+        if (isset($transaction)) {
+            $data['title'] = 'Tampilkan Pengembalian Coass';
+            $data['username'] = session()->get('username');
+            $data['role'] = session()->get('role');
+            $data['pagesidebar'] = 3;
+            $data['subsidebar'] = 5;
+            $data['transaction'] = $transaction;
+            return view('returndocument/show', $data);
+        } else {
+            session()->setFlashdata('error', 'Data Tidak Berhasil Di Tampilkan');
+            return redirect()->to('returndoc');
+        }
     }
 
     public function add()
@@ -168,11 +195,13 @@ class ReturnDocumentCoass extends BaseController
     public function showData()
     {
         $postData = $this->request->getVar('id');
-        $transactionModel = new TransactionModel();
-        $transactions = $transactionModel
+        $tcModel = new TransactionCoassModel();
+        $transactions = $tcModel
             ->select('transaction.id,transaction.rm_id, medical_records.fullname,service_unit.service_name, transaction.loan_date ')
-            ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')
-            ->join('service_unit', 'service_unit.id = transaction.service_id')
+            ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
+            ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
+            ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
+            ->join('service_unit', 'service_unit.id = coass_doc.service_id')
             ->where('transaction.id', $postData)
             ->where('loan_type', 2)
             ->orderBy('id')

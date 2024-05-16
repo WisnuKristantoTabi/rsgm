@@ -108,7 +108,6 @@ class Report extends BaseController
         $transactions = $tcModel->select('transaction.loan_date,
         coass_doc.coass_name, 
         transaction.deadline,
-        coass_doc.clinic_name,
         medical_records.rm_id as rm_number ,
         medical_records.fullname as patient_name, 
         transaction.return_date')
@@ -134,7 +133,7 @@ class Report extends BaseController
         $activeWorksheet->setCellValue('A7', 'NO');
         $activeWorksheet->setCellValue('B7', 'TGL PINJAM');
         $activeWorksheet->setCellValue('C7', 'NAMA COASS');
-        $activeWorksheet->setCellValue('D7', 'KLINIK');
+        $activeWorksheet->setCellValue('D7', 'POLI KLINIK');
         $activeWorksheet->setCellValue('E7', 'NO.RM');
         $activeWorksheet->setCellValue('F7', 'PASIEN');
         $activeWorksheet->setCellValue('G7', 'TGL KEMBALI');
@@ -144,7 +143,6 @@ class Report extends BaseController
             $activeWorksheet->setCellValue('A' . $i, $i - 7);
             $activeWorksheet->setCellValue('B' . $i, $value['loan_date']);
             $activeWorksheet->setCellValue('C' . $i, $value['coass_name']);
-            $activeWorksheet->setCellValue('D' . $i, $value['clinic_name']);
             $activeWorksheet->setCellValue('E' . $i, $value['rm_number']);
             $activeWorksheet->setCellValue('F' . $i, $value['patient_name']);
             $activeWorksheet->setCellValue('G' . $i, $value['return_date']);

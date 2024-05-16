@@ -13,7 +13,6 @@
         <tr>
             <th scope="col">No</th>
             <th scope="col">Nama Coass</th>
-            <th scope="col">Klinik</th>
             <th scope="col">NIM</th>
             <th scope="col">Nomor HP</th>
             <th scope="col">Aksi</th>
