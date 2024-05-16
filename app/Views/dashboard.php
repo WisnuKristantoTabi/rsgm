@@ -20,7 +20,11 @@
 				<span class="input-group-text">Pilih Poli Pelayanan</span>
 				<select name="poli" class="form-select form-select-sm ">
 					<option>Daftar Poli</option>
-					<?php foreach ($serviceunits as $serviceunit) : ?>
+					<?php
+
+					use function PHPUnit\Framework\isNull;
+
+					foreach ($serviceunits as $serviceunit) : ?>
 						<option value="<?= $serviceunit['id'] ?>" <?= ($serviceunit['id'] == $poli) ? "Selected" : "" ?>><?= $serviceunit['service_name'] ?></option>
 					<?php endforeach ?>
 				</select>
@@ -39,7 +43,7 @@
 			<span class="input-group-text">
 				Jumlah Keterlambatan Rekam Medis
 			</span>
-			<input type="text" class="form-control" value="<?= $count['count_late'] ?>" readonly>
+			<input type="text" class="form-control" value="<?= $count->count_late ?>" readonly>
 		</div>
 	</div>
 </div>
@@ -52,11 +56,11 @@
 	var data_labels = []
 
 
-	<?php foreach ($transactions as $transaction) : ?>
-		data_total_loans.push(<?= $transaction['totalloan'] ?>);
-		data_total_return.push(<?= $transaction['totalreturn'] ?>)
-		data_labels.push(<?= $transaction['month'] ?>);
-	<?php endforeach ?>
+	<?php if (isset($transactions->month)) : ?>
+		data_total_loans.push(<?= $transactions->totalloan ?>);
+		data_total_return.push(<?= $transactions->totalreturn ?>)
+		data_labels.push(<?= $transactions->month ?>);
+	<?php endif ?>
 
 	const data = {
 		labels: data_labels,

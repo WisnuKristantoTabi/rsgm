@@ -18,11 +18,11 @@ class Dashboard extends BaseController
         $poli = $this->request->getVar('poli');
         $type = $this->request->getVar('type');
         if (is_null($poli)) {
-            $poli = 2;
+            $poli = 1;
         };
 
         if (is_null($type)) {
-            $type = 2;
+            $type = 1;
         }
         // // $transactionModels = new TransactionModel();
         $serviceUnitModels = new ServiceUnitModel();
@@ -34,44 +34,51 @@ class Dashboard extends BaseController
         $data['serviceunits'] = $serviceUnitModels->findAll();
         $data['poli'] = $poli;
         $data['type'] = $type;
+        $db = \Config\Database::connect();
 
         if ($type == 1) {
             $tpModels = new TransactionPublicModel;
-            $data["transactions"] = $tpModels->select("MONTH(loan_date) as month ,COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn")
+            $data["transactions"] = $db->table('transaction_public')
+                ->select("MONTH(loan_date) as month ,COUNT(loan_date)  as totalloan, COUNT(return_date)  as totalreturn")
                 ->join('transaction', 'transaction.id = transaction_public.transaction_id')
                 ->join('public_doc', 'public_doc.id = transaction_public.public_id')
                 ->orderBy('transaction.loan_date')
                 ->where('YEAR(transaction.loan_date)', '2024')
                 ->where('public_doc.service_id', $poli)
                 ->groupBy('MONTH(transaction.loan_date)')
-                ->findAll();
+                ->get()
+                ->getResultArray();
 
-            $count = $tpModels
+            $count = $db->table('transaction_public')
                 ->select('COUNT(transaction.id) as count_late')
                 ->join('transaction', 'transaction.id = transaction_public.transaction_id')
                 ->join('public_doc', 'public_doc.id = transaction_public.public_id')
                 ->where('transaction.return_date > transaction.deadline')
                 ->where('public_doc.service_id', $poli)
-                ->find();
+                ->get()
+                ->getRow();
             $data['count'] = $count;
         } elseif ($type == 2) {
             $tcModels = new TransactionCoassModel;
-            $data["transactions"] = $tcModels->select("MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn")
+            $data["transactions"] = $db->table('transaction_coass')
+                ->select("MONTH(loan_date) as month, COUNT(loan_date) as totalloan, COUNT(return_date) as totalreturn")
                 ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
                 ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
                 ->orderBy('transaction.loan_date')
                 ->where('YEAR(transaction.loan_date)', '2024')
                 ->where('coass_doc.service_id', $poli)
                 ->groupBy('MONTH(transaction.loan_date)')
-                ->findAll();
+                ->get()
+                ->getRow();
 
-            $count = $tcModels
+            $count = $db->table('transaction_coass')
                 ->select('COUNT(transaction.id) as count_late')
                 ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
                 ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
                 ->where('transaction.return_date > transaction.deadline')
                 ->where('coass_doc.service_id', $poli)
-                ->find();
+                ->get()
+                ->getRow();
 
             $data['count'] = $count;
         }
