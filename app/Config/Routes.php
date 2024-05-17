@@ -98,6 +98,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->get('/returndoc/sendmessage', 'ReturnDocument::sendmessage');
     $routes->post('/returndoc/searchdata', 'ReturnDocument::searchData');
     $routes->post('/returndoc/showdata', 'ReturnDocument::showData');
+    $routes->get('/returndoc/verif/(:any)', 'ReturnDocument::verif/$1');
 
     $routes->get('/returndocoass', 'ReturnDocumentCoass::index');
     $routes->get('/returndoccoass/add', 'ReturnDocumentCoass::add');
@@ -106,6 +107,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
     $routes->post('/returndocoass/find/', 'ReturnDocumentCoass::find');
     $routes->post('/returndoccoass/searchdata', 'ReturnDocumentCoass::searchData');
     $routes->post('/returndoccoass/showdata', 'ReturnDocumentCoass::showData');
+    $routes->get('/returndoccoass/verif/(:any)', 'ReturnDocumentCoass::verif/$1');
 
 
     $routes->get('report', 'Report::index');

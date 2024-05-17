@@ -20,13 +20,14 @@ class ReturnDocumentCoass extends BaseController
         $tcModels = new TransactionCoassModel();
         $data['trasactions'] = $tcModels
             ->select('transaction.id as tid,transaction.rm_id as idrm,coass_doc.phone, 
-            coass_doc.coass_name, service_unit.service_name, transaction.loan_date, transaction.return_date, transaction.deadline ')
+            coass_doc.coass_name, service_unit.service_name, transaction.loan_date, 
+            transaction.return_date, transaction.deadline, transaction.is_return')
             ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
             ->join('service_unit', 'service_unit.id = coass_doc.service_id')
-            ->where('is_return', 2)
-            ->orderBy('loan_date', 'asc')
+            // ->where('is_return', 2)
+            ->orderBy('loan_date', 'desc')
             ->paginate(20, 'returndoc');
         $data['title'] = 'Pengembalian Dokumen Coass';
         $data['pager'] = $tcModels->pager;
@@ -106,6 +107,25 @@ class ReturnDocumentCoass extends BaseController
             $msg = $this->validator->listErrors();
             $session->setFlashdata('error', $msg);
             return redirect()->to('returndocoass/add');
+        }
+    }
+
+    public function verif($id)
+    {
+        $session = session();
+        $transactionModel = new TransactionModel();
+
+        if ($transactionModel->find($id)) {
+            $data = [
+                'return_date'      => date('Y-m-d'),
+                'is_return'        => 2,
+            ];
+            $transactionModel->update($id, $data);
+            $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
+            return redirect()->to('/returndocoass');
+        } else {
+            $session->setFlashdata('error', "Data Tidak Ditemukan");
+            return redirect()->to('/returndocoass');
         }
     }
 

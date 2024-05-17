@@ -13,9 +13,9 @@
     </select>
 </div>
 
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+<!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     <a class="btn btn-outline-info btn-sm me-md-2" href="<?php echo base_url('/returndoc/add') ?>" role="button">Tambah</a>
-</div>
+</div> -->
 
 <table class="table">
     <thead>
@@ -27,6 +27,7 @@
             <th scope="col">Tanggal Pinjam</th>
             <th scope="col">Tanggal Kembali</th>
             <th scope="col">Keterangan</th>
+            <th scope="col">Status</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -40,6 +41,7 @@
                 <td><?= $trasaction['loan_date'] ?></td>
                 <td><?= $trasaction['return_date'] ?></td>
                 <td><?= ($trasaction['return_date'] > $trasaction['deadline']) ? "Terlambat" : "-"; ?></td>
+                <td><?= ($trasaction['is_return'] == 2) ? "Sudah Kembali" : "Belum Kembali" ?></td>
                 <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <a role="button" data-phone="<?= $trasaction['phone'] ?>" data-name="<?= $trasaction['fullname'] ?>" data-idrm="<?= $trasaction['idrm'] ?>" data-bs-toggle="modal" data-bs-target="#exampleModal" class="wa btn btn-outline-success btn-sm me-md-2" href="">
@@ -49,6 +51,13 @@
                         <!-- <a role="button" href="<?php echo base_url("returndoc/edit/") . $trasaction['tid'] ?>" class="btn btn-outline-warning btn-sm"> <i class="lni lni-pencil-alt"></i> Edit</a>
                         <a class="btn btn-outline-danger btn-sm" href="<?= base_url('/returndoc/delete/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             <i class="lni lni-trash-can"></i>Hapus</a> -->
+                        <?php if ($trasaction['is_return'] == 2) : ?>
+                            <a class="btn btn-outline-secondary btn-sm" href="#" style="pointer-events: none">
+                                <i class="lni lni-checkmark"></i>Sudah Verivikasi</a>
+                        <?php else : ?>
+                            <a class="btn btn-outline-info btn-sm" href="<?= base_url('/returndoc/verif/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah Ingin Verifikasi Peminjaman ini ?')">
+                                <i class="lni lni-checkmark"></i>Verivikasi</a>
+                        <?php endif ?>
                     </div>
                 </td>
             </tr>

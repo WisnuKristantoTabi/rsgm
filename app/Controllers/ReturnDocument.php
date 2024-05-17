@@ -21,12 +21,12 @@ class ReturnDocument extends BaseController
         $data['trasactions'] = $tpModels
             ->select('transaction.id as tid,transaction.rm_id as idrm, public_doc.fullname, 
             service_unit.service_name, transaction.loan_date, public_doc.phone,
-            transaction.return_date, transaction.deadline ')
+            transaction.return_date, transaction.deadline, transaction.is_return')
             ->join('transaction', 'transaction.id = transaction_public.transaction_id')
             ->join('public_doc', 'public_doc.id = transaction_public.public_id')
             ->join('service_unit', 'service_unit.id = public_doc.service_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
-            ->where('is_return', 2)
+            // ->where('is_return', 2)
             ->orderBy('return_date', 'desc')
             ->paginate(20, 'returndoc');
         $data['title'] = 'Pengembalian Rekam Medis';
@@ -138,6 +138,25 @@ class ReturnDocument extends BaseController
             $msg = $this->validator->listErrors();
             $session->setFlashdata('error', $msg);
             return redirect()->to('returndoc/add');
+        }
+    }
+
+    public function verif($id)
+    {
+        $session = session();
+        $transactionModel = new TransactionModel();
+
+        if ($transactionModel->find($id)) {
+            $data = [
+                'return_date'      => date('Y-m-d'),
+                'is_return'        => 2,
+            ];
+            $transactionModel->update($id, $data);
+            $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
+            return redirect()->to('/returndoc');
+        } else {
+            $session->setFlashdata('error', "Data Tidak Ditemukan");
+            return redirect()->to('returndoc');
         }
     }
 

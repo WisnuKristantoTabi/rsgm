@@ -14,9 +14,9 @@
     </select>
 </div>
 
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+<!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
     <a class="btn btn-outline-info btn-sm me-md-2" href="<?php echo base_url('/returndoccoass/add') ?>" role="button">Tambah</a>
-</div>
+</div> -->
 
 <table class="table">
     <thead>
@@ -47,6 +47,13 @@
                             <i class="lni lni-whatsapp"></i>
                             WA</a>
                         <a role="button" href="<?php echo base_url("/returndoccoass/show/") . $trasaction['tid'] ?>" class="btn btn-outline-primary btn-sm me-md-2"> <i class="lni lni-eye"></i> Lihat</a>
+                        <?php if ($trasaction['is_return'] == 2) : ?>
+                            <a class="btn btn-outline-secondary btn-sm" href="#" style="pointer-events: none">
+                                <i class="lni lni-checkmark"></i>Sudah Verivikasi</a>
+                        <?php else : ?>
+                            <a class="btn btn-outline-info btn-sm" href="<?= base_url('/returndoccoass/verif/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah Ingin Verifikasi Peminjaman ini ?')">
+                                <i class="lni lni-checkmark"></i>Verivikasi</a>
+                        <?php endif ?>
                     </div>
                 </td>
             </tr>
