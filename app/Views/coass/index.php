@@ -23,7 +23,6 @@
             <tr>
                 <th scope="row"><?= $nomor++; ?></th>
                 <td><?= $coassmodel['coass_name'] ?></td>
-                <td><?= $coassmodel['clinic_name'] ?></td>
                 <td><?= $coassmodel['coass_number'] ?></td>
                 <td><?= $coassmodel['phone'] ?></td>
                 <td>
