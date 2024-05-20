@@ -1,0 +1,2427 @@
+INFO - 2024-05-20 02:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 02:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 02:58:39 --> mysqli_sql_exception: Unknown column 'medical_records.service_unit' in 'on clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\RSGM\system\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\RSGM\app\Controllers\PrintPDF.php(21): CodeIgniter\Model->__call('getWhere', Array)
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\PrintPDF->printrm('072059')
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrintPDF))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-20 02:58:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `medical_records`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `medical_records`.`rm_id` = :medical_records.rm_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\PrintPDF.php(21): CodeIgniter\Model->__call('getWhere', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PrintPDF->printrm('072059')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrintPDF))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 02:58:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `medical_records`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `medical_records`.`rm_id` = \'072059\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `medical_records`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `medical_records`.`rm_id` = \'072059\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `medical_records`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `medical_records`.`rm_id` = :medical_records.rm_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\PrintPDF.php(21): CodeIgniter\Model->__call('getWhere', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PrintPDF->printrm('072059')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrintPDF))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 02:58:39 --> [Caused by] mysqli_sql_exception: Unknown column 'medical_records.service_unit' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `medical_records`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `medical_records`.`rm_id` = \'072059\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `medical_records`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `medical_records`.`rm_id` = \'072059\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `medical_records`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `medical_records`.`rm_id` = \'072059\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1749): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `medical_records`
+JOIN `service_unit` ON `service_unit`.`id` = `medical_records`.`service_unit`
+WHERE `medical_records`.`rm_id` = :medical_records.rm_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\PrintPDF.php(21): CodeIgniter\Model->__call('getWhere', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PrintPDF->printrm('072059')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PrintPDF))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 03:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-20 03:17:02 --> ParseError: syntax error, unexpected identifier "m"
+in APPPATH\Controllers\RecordMedical.php on line 174.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(288): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\RSGM\\app\\Controllers\\RecordMedical.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\RecordMedical')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\RecordMedical')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\RecordMedical', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-20 03:17:15 --> mysqli_sql_exception: Unknown column 'medical_records.rm_ids' in 'order clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 03:17:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.rm_ids' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` != 1
+ORDER BY `medical_records`.`rm_ids`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:17:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'medical_records.rm_ids' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` != 1
+ORDER BY `medical_records`.`rm_ids`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` != 1
+ORDER BY `medical_records`.`rm_ids`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` != 1
+ORDER BY `medical_records`.`rm_ids`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:17:15 --> [Caused by] mysqli_sql_exception: Unknown column 'medical_records.rm_ids' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` != 1
+ORDER BY `medical_records`.`rm_ids`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` != 1
+ORDER BY `medical_records`.`rm_ids`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` != 1
+ORDER BY `medical_records`.`rm_ids`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` != 1
+ORDER BY `medical_records`.`rm_ids`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 03:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 03:26:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 03:26:31 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:26:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:26:31 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 03:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 03:27:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 03:27:01 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:27:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:27:01 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 03:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 03:41:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ ...' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 03:41:07 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ ...' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:41:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ ...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:41:07 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ ...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(177): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 03:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:41:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 03:46:39 --> mysqli_sql_exception: Not unique table/alias: 'transaction' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(178): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 03:46:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'transaction'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+RIGHT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(178): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:46:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'transaction'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+RIGHT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+RIGHT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+RIGHT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(178): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 03:46:39 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'transaction'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+RIGHT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+RIGHT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+RIGHT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+RIGHT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(178): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 03:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 03:48:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 04:03:21 --> mysqli_sql_exception: Not unique table/alias: 'transaction' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 04:03:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'transaction'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:03:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'transaction'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:03:21 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'transaction'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `transaction`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` != 1 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 04:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 04:08:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 04:08:58 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:08:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:08:58 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 04:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 04:10:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 04:10:20 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:10:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:10:20 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-20 04:29:12 --> mysqli_sql_exception: Not unique table/alias: 'medical_records' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(190): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 04:29:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medical_records'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+RIGHT JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` LIKE :medical_records.rm_id: ESCAPE \'!\'
+AND `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(190): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:29:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'medical_records'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+RIGHT JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` LIKE \'% %\' ESCAPE \'!\'
+AND `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+RIGHT JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` LIKE \'% %\' ESCAPE \'!\'
+AND `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+RIGHT JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` LIKE :medical_records.rm_id: ESCAPE \'!\'
+AND `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(190): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:29:12 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'medical_records'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+RIGHT JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` LIKE \'% %\' ESCAPE \'!\'
+AND `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+RIGHT JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` LIKE \'% %\' ESCAPE \'!\'
+AND `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+RIGHT JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` LIKE \'% %\' ESCAPE \'!\'
+AND `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+RIGHT JOIN `medical_records` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` LIKE :medical_records.rm_id: ESCAPE \'!\'
+AND `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(190): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-20 04:29:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 04:29:23 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:29:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:29:23 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 04:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 04:53:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 04:53:10 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:53:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:53:10 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 04:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 04:53:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 04:53:50 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:53:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 04:53:50 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+O...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `medical_records`.`rm_id`
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(179): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 04:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 04:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 05:02:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 05:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 05:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 05:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 05:05:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`' at line 3 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`\n...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`\n...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`\n...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`\n...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 05:05:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:05:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:05:18 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2 OR `transaction`.`is_return` IS NULL
+GROUP BY `rm_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 05:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 05:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 05:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 05:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 05:07:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+GROUP BY `rm_id`' at line 3 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`\n...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`\n...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`\n...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`\n...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 05:07:42 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+GROUP BY `rm_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:07:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+GROUP BY `rm_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+GROUP BY `rm_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:07:42 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+GROUP BY `rm_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+GROUP BY `rm_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` IS NULL OR `transaction`.`is_return` = = 2
+GROUP BY `rm_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 05:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 05:08:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+GROUP BY `rm_id`' at line 3 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`\n...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`\n...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`\n...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`\n...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 05:08:11 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2
+GROUP BY `rm_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:08:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2
+GROUP BY `rm_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2
+GROUP BY `rm_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:08:11 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2
+GROUP BY `rm_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2
+GROUP BY `rm_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 2
+GROUP BY `rm_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 05:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 05:08:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1
+GROUP BY `rm_id`' at line 3 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`\n...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`\n...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`\n...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`\n...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 05:08:21 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 1
+GROUP BY `rm_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:08:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 1
+GROUP BY `rm_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 1
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 1
+GROUP BY `rm_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:08:21 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 1
+GROUP BY `rm_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 1
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 1
+GROUP BY `rm_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `transaction`.`is_return` = = 1
+GROUP BY `rm_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 05:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 05:08:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1
+GROUP BY `rm_id`' at line 3 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`\n...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`\n...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`\n...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`\n...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 05:08:41 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `is_return` = = 1
+GROUP BY `rm_id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:08:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `is_return` = = 1
+GROUP BY `rm_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `is_return` = = 1
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `is_return` = = 1
+GROUP BY `rm_id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 05:08:41 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1
+GROUP BY `rm_id`' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `is_return` = = 1
+GROUP BY `rm_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `rm_id`
+FROM `transaction`
+WHERE `is_return` = = 1
+GROUP BY `rm_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `rm_id`
+FROM `transaction`
+WHERE `is_return` = = 1
+GROUP BY `rm_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `rm_id`
+FROM `transaction`
+WHERE `is_return` = = 1
+GROUP BY `rm_id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(159): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->test()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 05:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 08:17:24 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in E:\RSGM\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'rsgmapp', 3306, '', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\RSGM\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\RSGM\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#6 E:\RSGM\app\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Login->auth()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in E:\RSGM\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\RSGM\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\RSGM\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\RSGM\system\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\RSGM\system\BaseModel.php(676): CodeIgniter\Model->doFirst()
+#5 E:\RSGM\app\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+#6 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\Login->auth()
+#7 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#11 {main}
+CRITICAL - 2024-05-20 08:17:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(270): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Login->auth()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 08:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-20 08:19:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical...' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 08:19:26 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical...' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 08:19:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 08:19:26 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2  OR `transaction`.`is_return` IS NULL GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-20 08:20:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 08:20:06 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 08:20:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 08:20:06 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+ERROR - 2024-05-20 08:21:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-20 08:21:10 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 08:21:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 08:21:10 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN (SELECT `rm_id` FROM `transaction` WHERE `transaction`.`is_return` = = 2 GROUP BY `rm_id`)
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `medical_records`.`rm_id`, `fullname`
+FROM `medical_records`
+LEFT JOIN `transaction` ON `medical_records`.`rm_id` = `transaction`.`rm_id`
+WHERE `medical_records`.`rm_id` IN :medical_records.rm_id:
+ORDER BY `medical_records`.`rm_id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\RecordMedical.php(184): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-20 08:28:38 --> InvalidArgumentException: whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 940.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(826): CodeIgniter\Database\BaseBuilder->_whereIn('medical_records.rm_id', 2, false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->whereIn('medical_records.rm_id', 2)
+ 3 APPPATH\Controllers\RecordMedical.php(183): CodeIgniter\Model->__call('whereIn', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RecordMedical->searchData()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RecordMedical))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-20 08:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:31:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 08:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 21:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:02:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:02:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:05:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:05:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-20 22:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

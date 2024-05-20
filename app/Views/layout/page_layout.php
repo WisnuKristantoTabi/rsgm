@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/bootstrap/css/bootstrap.min.css') ?>">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="<?php echo base_url('/lineicons/web-font-files/lineicons.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('/css/style.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/select2/dist/css/select2.min.css') ?>" defer>
     <!-- Font Awesome JS -->

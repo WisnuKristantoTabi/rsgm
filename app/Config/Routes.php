@@ -12,8 +12,6 @@ $routes->get('/logout', 'Login::logout');
 $routes->get('/t/(:any)', 'Tracer::find/$1');
 $routes->post('/recordmedical/searchdata', 'RecordMedical::searchData');
 
-
-
 $routes->group('', ['filter' => 'auth'], static function ($routes) {
     // $routes->group('', ['filter' => ''], static function ($routes) {
     $routes->get('/signup', 'Register::index');

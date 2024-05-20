@@ -39,6 +39,7 @@ class LoanCoass extends BaseController
         $data['type'] = 2;
         $data['username'] = session()->get('username');
         return view('coassloan/index', $data);
+        // dd($data);
     }
 
     // public function show($id)

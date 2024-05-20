@@ -14,6 +14,4 @@
         <p>Tanggal Lahir</p>
         <h2> <?= $profile->birth_date ?></h2>
         </br>
-        <p>Unit Pelayanan</p>
-        <h2> <?= $profile->service_name ?></h2>
     </div>

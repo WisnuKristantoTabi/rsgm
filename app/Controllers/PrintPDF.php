@@ -17,7 +17,7 @@ class PrintPDF extends BaseController
         $generator = new BarcodeGeneratorHTML();
         $recordmedicalModel = new RecordMedicalModel();
         $data['role'] = session()->get('role');
-        $data['profile'] = $recordmedicalModel->join('service_unit', 'service_unit.id = medical_records.service_unit')
+        $data['profile'] = $recordmedicalModel
             ->getWhere(['medical_records.rm_id' => $id])
             ->getRow();
         $data['title'] = 'Detail Rekam Medis';

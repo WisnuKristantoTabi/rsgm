@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\RecordMedicalModel;
 use App\Models\ServiceUnitModel;
+use App\Models\TransactionModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
 
 class RecordMedical extends BaseController
@@ -151,10 +152,13 @@ class RecordMedical extends BaseController
 
     public function test()
     {
-        $recordmedical = new RecordMedicalModel();
-        $rm = $recordmedical->select('rm_id')->orderBy('rm_id', 'RANDOM')->limit(1)->first();
-        // print_r($rm);
-        echo $rm['rm_id'] . "Test";
+        $transactionModel = new TransactionModel();
+        $transaction = $transactionModel->select('rm_id')
+            ->where('is_return == 1')
+            ->groupBy('rm_id');
+        // ->findAll();
+
+        print_r($transaction);
     }
 
     public function searchData()
@@ -163,28 +167,40 @@ class RecordMedical extends BaseController
         $postData = $this->request->getVar('searchTerm');
 
         $response = array();
+        $db = \Config\Database::connect();
 
-        // Read new token and assign in $response['token']
-        // $response['token'] = csrf_hash();
+        // $subQuery = $db->table('transaction')
+        //     ->select('rm_id')
+        //     ->where('transaction.is_return', 1)
+        //     ->orWhere(' transaction.is_return IS NULL')
+        //     ->groupBy('rm_id');
         $recordmedicalModel = new RecordMedicalModel();
         if (!isset($postData)) {
             // Fetch record
             $recordmedicals = $recordmedicalModel->select('medical_records.rm_id,fullname')
                 ->join('transaction', 'medical_records.rm_id = transaction.rm_id', 'left')
+                ->groupStart()
+                ->where('COALESCE(transaction.is_return, 2) = 2')
+                ->orWhere('transaction.rm_id IS NULL')
+                ->groupEnd()
+                ->groupBy('rm_id')
                 ->orderBy('medical_records.rm_id')
-                ->where('transaction.is_return IS NULL OR transaction.is_return != 1')
                 // ->where('transaction.is_return !=', 1)
                 ->findAll(5);
         } else {
             $searchTerm = $postData;
 
             // Fetch record
-            $recordmedicalModel = new RecordMedicalModel();
-            $recordmedicals = $recordmedicalModel->select('medical_records.rm_id ,fullname')
+            $recordmedicals = $recordmedicalModel->select('medical_records.rm_id,fullname')
                 ->join('transaction', 'medical_records.rm_id = transaction.rm_id', 'left')
                 ->like('medical_records.rm_id', $searchTerm)
-                ->orderBy('rm_id')
-                ->where('transaction.is_return IS NULL OR transaction.is_return != 1')
+                ->groupStart()
+                ->where('medical_records.rm_id', 2)
+                ->orWhere('transaction.rm_id IS NULL')
+                ->groupEnd()
+                ->groupBy('rm_id')
+                ->orderBy('medical_records.rm_id')
+                // ->where('transaction.is_return !=', 1)
                 ->findAll(5);
         }
 
