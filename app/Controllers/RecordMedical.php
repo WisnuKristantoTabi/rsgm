@@ -152,13 +152,22 @@ class RecordMedical extends BaseController
 
     public function test()
     {
-        $transactionModel = new TransactionModel();
-        $transaction = $transactionModel->select('rm_id')
-            ->where('is_return == 1')
-            ->groupBy('rm_id');
-        // ->findAll();
+        $db = \Config\Database::connect();
 
-        print_r($transaction);
+        // Buat subquery untuk mendapatkan transaksi terbaru untuk setiap rm_id
+        $recordmedicalModel = new RecordMedicalModel();
+        $subQuery = $db->table('transaction')
+            ->select('rm_id, MAX(id) as latest_transaction_id')
+            ->groupBy('rm_id')
+            ->getCompiledSelect();
+
+        $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
+            ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'inner')
+            ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'inner')
+            ->where('COALESCE(transaction.is_return, 2) = 2')
+            ->orderBy('medical_records.rm_id')
+            ->findAll(5);
+        dd($recordmedicals);
     }
 
     public function searchData()
@@ -169,38 +178,30 @@ class RecordMedical extends BaseController
         $response = array();
         $db = \Config\Database::connect();
 
-        // $subQuery = $db->table('transaction')
-        //     ->select('rm_id')
-        //     ->where('transaction.is_return', 1)
-        //     ->orWhere(' transaction.is_return IS NULL')
-        //     ->groupBy('rm_id');
+        $subQuery = $db->table('transaction')
+            ->select('rm_id, MAX(id) as latest_transaction_id')
+            ->groupBy('rm_id')
+            ->getCompiledSelect();
         $recordmedicalModel = new RecordMedicalModel();
         if (!isset($postData)) {
             // Fetch record
-            $recordmedicals = $recordmedicalModel->select('medical_records.rm_id,fullname')
-                ->join('transaction', 'medical_records.rm_id = transaction.rm_id', 'left')
-                ->groupStart()
+            $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
+                ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'inner')
+                ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'inner')
                 ->where('COALESCE(transaction.is_return, 2) = 2')
-                ->orWhere('transaction.rm_id IS NULL')
-                ->groupEnd()
-                ->groupBy('rm_id')
                 ->orderBy('medical_records.rm_id')
-                // ->where('transaction.is_return !=', 1)
                 ->findAll(5);
         } else {
             $searchTerm = $postData;
 
             // Fetch record
-            $recordmedicals = $recordmedicalModel->select('medical_records.rm_id,fullname')
-                ->join('transaction', 'medical_records.rm_id = transaction.rm_id', 'left')
+            $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
+                ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'inner')
+                ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'inner')
                 ->like('medical_records.rm_id', $searchTerm)
-                ->groupStart()
-                ->where('medical_records.rm_id', 2)
-                ->orWhere('transaction.rm_id IS NULL')
-                ->groupEnd()
-                ->groupBy('rm_id')
+                ->orLike('medical_records.fullname', $searchTerm)
+                ->where('COALESCE(transaction.is_return, 2) = 2')
                 ->orderBy('medical_records.rm_id')
-                // ->where('transaction.is_return !=', 1)
                 ->findAll(5);
         }
 
