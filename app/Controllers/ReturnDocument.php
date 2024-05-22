@@ -53,7 +53,7 @@ class ReturnDocument extends BaseController
         $transaction = $tpModel
             ->select('transaction.id,transaction.rm_id, medical_records.fullname,
              service_unit.service_name, transaction.loan_date, 
-             transaction.return_date, transaction.return_desc')
+             transaction.return_date')
             ->join('transaction', 'transaction.id = transaction_public.transaction_id')
             ->join('public_doc', 'public_doc.id = transaction_public.public_id')
             ->join('medical_records', 'medical_records.rm_id = transaction.rm_id')

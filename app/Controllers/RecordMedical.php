@@ -207,21 +207,26 @@ class RecordMedical extends BaseController
         if (!isset($postData)) {
             // Fetch record
             $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
-                ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'inner')
-                ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'inner')
-                ->where('COALESCE(transaction.is_return, 2) = 2')
+                ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'left')
+                ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'left')
+                ->groupStart()  // Mulai grup kondisi
+                ->where('transaction.is_return', 2)
+                ->orWhere('transaction.is_return IS NULL')
+                ->groupEnd()
                 ->orderBy('medical_records.rm_id')
                 ->findAll(5);
         } else {
             $searchTerm = $postData;
 
-            // Fetch record
             $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
-                ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'inner')
-                ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'inner')
+                ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'left')
+                ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'left')
                 ->like('medical_records.rm_id', $searchTerm)
                 ->orLike('medical_records.fullname', $searchTerm)
-                ->where('COALESCE(transaction.is_return, 2) = 2')
+                ->groupStart()  // Mulai grup kondisi
+                ->where('transaction.is_return', 2)
+                ->orWhere('transaction.is_return IS NULL')
+                ->groupEnd()
                 ->orderBy('medical_records.rm_id')
                 ->findAll(5);
         }

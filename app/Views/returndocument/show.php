@@ -36,10 +36,6 @@
     <input type="text" value="<?= $transaction->return_date ?>" class="inputdate form-control" readonly>
     <label for="returndate">Tanggal Pengembalian</label>
 </div>
-<div class="form-floating mb-3">
-    <input type="text" value="<?= $transaction->return_desc ?>" class="form-control" readonly>
-    <label for="returndesc">Keterangan</label>
-</div>
 
 
 
