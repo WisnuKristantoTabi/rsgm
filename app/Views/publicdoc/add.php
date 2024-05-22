@@ -21,9 +21,10 @@
         <input type="text" name="address" id="address" placeholder="Alamat" class="form-control">
         <label for="phone">Alamat</label>
     </div>
-    <div class="form-floating mb-3">
-        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" class="form-control">
-        <label for="phone">Nomor HP</label>
+    <label for="phone" class="form-label">Nomor Telpon Peminjam</label>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">+62</span>
+        <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Peminjam" value="" class="form-control">
     </div>
     <div class="mb-3">
         <label for="searchrm">Pilih Klinik</label>

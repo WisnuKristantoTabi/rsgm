@@ -29,6 +29,7 @@ class LoanPublic extends BaseController
             ->select('transaction.id,public_doc.fullname,public_doc.identity_number')
             ->join('transaction', 'transaction.id = transaction_public.transaction_id')
             ->join('public_doc', 'public_doc.id = transaction_public.public_id')
+            ->where('transaction.is_return', 1)
             // ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
             ->orderBy('loan_date', 'desc')
             ->paginate(20, 'loancoass');

@@ -42,7 +42,7 @@
                 <td><?= $coassmodel['coass_number'] ?></td>
                 <td><?= $coassmodel['phone'] ?></td>
                 <td>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <div class="btn-group-vertical">
                         <a role="button" href="<?php echo base_url("/f/coass/?id=") . $coassmodel['transaction_id'] ?>" class="btn btn-outline-primary btn-sm"><i class="lni lni-eye"></i>Lihat</a>
                         <a role="button" href="<?php echo base_url("/loancoass/edit/") . $coassmodel['transaction_id'] ?>" class="btn btn-outline-warning btn-sm"><i class="lni lni-pencil-alt"></i>Edit</a>
                         <a class="btn btn-outline-danger btn-sm" href="<?= base_url('/loancoass/delete/' . $coassmodel['transaction_id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">

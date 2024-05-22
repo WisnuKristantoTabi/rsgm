@@ -26,7 +26,7 @@
                 <td><?= $coassmodel['coass_number'] ?></td>
                 <td><?= $coassmodel['phone'] ?></td>
                 <td>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <div class="btn-group-vertical">
                         <a role="button" href="<?php echo base_url("/coass/show/") . $coassmodel['id'] ?>" class="btn btn-outline-primary btn-sm"><i class="lni lni-eye"></i>Lihat</a>
                         <a role="button" href="<?php echo base_url("/coass/edit/") . $coassmodel['id'] ?>" class="btn btn-outline-warning btn-sm"><i class="lni lni-pencil-alt"></i>Edit</a>
                         <a class="btn btn-outline-danger btn-sm" href="<?= base_url('/coass/delete/' . $coassmodel['id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">

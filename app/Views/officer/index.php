@@ -30,7 +30,7 @@
                         echo "Perawat";
                     } ?></td>
                 <td>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <div class="btn-group-vertical">
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a class="btn btn-outline-warning btn-sm" href="<?= base_url('officer/edit/' . $officer['id']); ?>">
                                 <i class="lni lni-pencil-alt"></i>Edit</a>

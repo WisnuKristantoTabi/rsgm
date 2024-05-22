@@ -13,3 +13,4 @@
 <p> <?= $tracer->loan_date ?> </p>
 <p>Keterangan</p>
 <p> <?= $tracer->loan_desc ?> </p>
+</br>

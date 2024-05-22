@@ -44,7 +44,7 @@ class ReturnDocument extends BaseController
     {
         $message = $this->request->getVar('message');
         $phone = $this->request->getVar('phone');
-        return redirect()->to('https://wa.me/' . $phone . "?text=" . $message);
+        return redirect()->to('https://wa.me/' . '62' . $phone . "?text=" . $message);
     }
 
     public function show($id)

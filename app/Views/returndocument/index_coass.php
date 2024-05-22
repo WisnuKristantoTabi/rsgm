@@ -42,7 +42,7 @@
                 <td><?= $trasaction['return_date'] ?></td>
                 <td><?= ($trasaction['return_date'] > $trasaction['deadline']) ? "Terlambat" : "-"; ?></td>
                 <td>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <div class="btn-group-vertical">
                         <a role="button" data-phone="<?= $trasaction['phone'] ?>" data-name="<?= $trasaction['coass_name'] ?>" data-idrm="<?= $trasaction['idrm'] ?>" data-bs-toggle="modal" data-bs-target="#exampleModal" class="wa btn btn-outline-success btn-sm me-md-2" href="">
                             <i class="lni lni-whatsapp"></i>
                             WA</a>

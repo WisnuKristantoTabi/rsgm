@@ -17,9 +17,10 @@
         <input type="text" name="coassnumber" id="coassnumber" placeholder="NIM" value="" class="form-control">
         <label for="coassnumber">NIM</label>
     </div>
-    <div class="form-floating mb-3">
+    <label for="phone" class="form-label">Nomor Telpon Coass</label>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">+62</span>
         <input type="tel" name="phone" id="phone" placeholder="Nomor Telpon Coass" value="" class="form-control">
-        <label for="phone">Nomor Telpon Coass</label>
     </div>
     <div class="mb-3">
         <label for="searchrm">Pilih Klinik</label>

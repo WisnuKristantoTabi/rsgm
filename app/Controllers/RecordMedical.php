@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\RecordMedicalModel;
 use App\Models\ServiceUnitModel;
+use App\Libraries\Headerpdf;
 use App\Models\TransactionModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
 
@@ -152,22 +153,42 @@ class RecordMedical extends BaseController
 
     public function test()
     {
-        $db = \Config\Database::connect();
+        $pdf = new Headerpdf(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
-        // Buat subquery untuk mendapatkan transaksi terbaru untuk setiap rm_id
-        $recordmedicalModel = new RecordMedicalModel();
-        $subQuery = $db->table('transaction')
-            ->select('rm_id, MAX(id) as latest_transaction_id')
-            ->groupBy('rm_id')
-            ->getCompiledSelect();
+        // Menentukan informasi dokumen
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetAuthor('Nama Penulis');
+        $pdf->SetTitle('Judul Dokumen');
+        $pdf->SetSubject('Subjek Dokumen');
+        $pdf->SetKeywords('TCPDF, PDF, contoh, panduan');
 
-        $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
-            ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'inner')
-            ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'inner')
-            ->where('COALESCE(transaction.is_return, 2) = 2')
-            ->orderBy('medical_records.rm_id')
-            ->findAll(5);
-        dd($recordmedicals);
+        // Menentukan header data
+        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
+
+        // Menentukan font untuk header dan footer
+        $pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+        $pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+
+        // Menentukan margin untuk header dan footer
+        $pdf->SetMargins(PDF_MARGIN_LEFT, 35, PDF_MARGIN_RIGHT);
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+        // Menentukan auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+        // Menentukan font utama
+        $pdf->SetFont('helvetica', '', 12);
+
+        // Menambah halaman
+        $pdf->AddPage();
+
+        // Menambah konten
+        $html = '<h1>Selamat datang di TCPDF</h1><p>Ini adalah contoh dokumen PDF menggunakan TCPDF.</p>';
+        $pdf->writeHTML($html, true, false, true, false, '');
+
+        // Menutup dan mengeluarkan dokumen PDF
+        $pdf->Output('contoh_dokumen.pdf', 'I');
     }
 
     public function searchData()

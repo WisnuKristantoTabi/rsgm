@@ -20,7 +20,7 @@
                 <th scope="row">-</th>
                 <td><?= $serviceunit['service_name'] ?></td>
                 <td>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <div class="btn-group-vertical">
                         <a role="button" href="<?php echo base_url("serviceunit/edit/") . $serviceunit['id'] ?>" class="btn btn-outline-warning btn-sm">Edit</a>
                         <a class="btn btn-outline-danger btn-sm" href="<?= base_url('serviceunit/delete/' . $serviceunit['id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             Hapus</a>

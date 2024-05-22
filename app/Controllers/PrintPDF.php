@@ -2,11 +2,12 @@
 
 namespace App\Controllers;
 
-use TCPDF;
+// use TCPDF;
 use App\Models\RecordMedicalModel;
 use App\Models\TransactionPublicModel;
 use App\Models\TransactionCoassModel;
 use App\Models\ServiceUnitModel;
+use App\Libraries\Headerpdf;
 use Picqer\Barcode\BarcodeGeneratorHTML;
 
 
@@ -43,15 +44,28 @@ class PrintPDF extends BaseController
             'stretchtext' => 4
         );
 
-        $pdf = new TCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+        // $pdf = new TCPDF('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
+        $pdf = new Headerpdf('P', PDF_UNIT, 'A4', true, 'UTF-8', false);
 
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetTitle('Print Rekam Medik');
-        $pdf->SetHeaderData("E:/RSGM/public/img/logo.jpg", PDF_HEADER_LOGO_WIDTH, "Rekam Medik ", "RSGM - Universitas Negeri Jember");
-        // $pdf->setPrintHeader(true);
-        $pdf->setPrintFooter(false);
+        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
 
-        $pdf->addPage();
+        // Menentukan font untuk header dan footer
+        $pdf->setHeaderFont([PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN]);
+        $pdf->setFooterFont([PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA]);
+
+        // Menentukan margin untuk header dan footer
+        $pdf->SetMargins(PDF_MARGIN_LEFT, 35, PDF_MARGIN_RIGHT); // Adjust top margin to make space for the header
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+        // Menentukan auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+        // Menentukan font utama
+        $pdf->SetFont('helvetica', '', 12);
+
+        // Menambah halaman
+        $pdf->AddPage();
         $html = view('recordmedical/print', $data);
         $pdf->writeHTML($html, true, false, true, false, '');
         $pdf->Cell(0, 0, 'Code Barcode', 0, 1);
@@ -94,14 +108,27 @@ class PrintPDF extends BaseController
             'stretchtext' => 6
         );
 
-        $pdf = new TCPDF('P', PDF_UNIT, 'A6', true, 'UTF-8', false);
+        $pdf = new Headerpdf('P', PDF_UNIT, 'A6', true, 'UTF-8', false);
 
-        $pdf->SetCreator(PDF_CREATOR);
-        // $pdf->SetHeaderData("E:/RSGM/public/img/logo.jpg", PDF_HEADER_LOGO_WIDTH, "Rekam Medik ", "RSGM - Universitas Negeri Jember");
-        $pdf->setPrintHeader(false);
-        $pdf->setPrintFooter(false);
+        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
 
-        $pdf->addPage();
+        // Menentukan font untuk header dan footer
+        $pdf->setHeaderFont([PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN]);
+        $pdf->setFooterFont([PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA]);
+
+        // Menentukan margin untuk header dan footer
+        $pdf->SetMargins(PDF_MARGIN_LEFT, 17, PDF_MARGIN_RIGHT); // Adjust top margin to make space for the header
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+        // Menentukan auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+        // Menentukan font utama
+        $pdf->SetFont('helvetica', '', 9);
+
+        // Menambah halaman
+        $pdf->AddPage();
         $html = view('print_tracer', $data);
         $pdf->writeHTML($html, true, false, true, false, '');
         $pdf->write1DBarcode($id, 'C39', '', '', '', 15, 0.4, $style, 'N');
@@ -143,14 +170,27 @@ class PrintPDF extends BaseController
             'stretchtext' => 6
         );
 
-        $pdf = new TCPDF('P', PDF_UNIT, 'A6', true, 'UTF-8', false);
+        $pdf = new Headerpdf('P', PDF_UNIT, 'A6', true, 'UTF-8', false);
 
-        $pdf->SetCreator(PDF_CREATOR);
-        // $pdf->SetHeaderData("E:/RSGM/public/img/logo.jpg", PDF_HEADER_LOGO_WIDTH, "Rekam Medik ", "RSGM - Universitas Negeri Jember");
-        $pdf->setPrintHeader(false);
-        $pdf->setPrintFooter(false);
+        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
 
-        $pdf->addPage();
+        // Menentukan font untuk header dan footer
+        $pdf->setHeaderFont([PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN]);
+        $pdf->setFooterFont([PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA]);
+
+        // Menentukan margin untuk header dan footer
+        $pdf->SetMargins(PDF_MARGIN_LEFT, 17, PDF_MARGIN_RIGHT); // Adjust top margin to make space for the header
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+        // Menentukan auto page breaks
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+        // Menentukan font utama
+        $pdf->SetFont('helvetica', '', 9);
+
+        // Menambah halaman
+        $pdf->AddPage();
         $html = view('print_tracer', $data);
         $pdf->writeHTML($html, true, false, true, false, '');
         $pdf->write1DBarcode($id, 'C39', '', '', '', 15, 0.4, $style, 'N');
@@ -165,7 +205,7 @@ class PrintPDF extends BaseController
     {
 
         // create new PDF document
-        $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+        $pdf = new Headerpdf(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
         // set document information
         $pdf->SetCreator(PDF_CREATOR);

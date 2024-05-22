@@ -31,6 +31,7 @@ class LoanCoass extends BaseController
             ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
             ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
+            ->where('transaction.is_return', 1)
             ->orderBy('transaction.loan_date', 'desc')
             ->paginate(20, 'loancoass');
         $data['pager'] = $tcmodels->pager;
