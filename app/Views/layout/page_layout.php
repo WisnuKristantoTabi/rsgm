@@ -52,18 +52,20 @@
 
 
                 <!-- Master Data -->
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link <?= ($pagesidebar == 2) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#masterdata" aria-expanded="false" aria-controls="masterdata">
-                        <i class="lni lni-database"></i>
-                        <span>Master Data</span>
-                    </a>
-                    <ul id="masterdata" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item <?= ($subsidebar == 1) ? 'active' : '' ?>">
-                            <a href="<?php echo base_url('recordmedical') ?>" class="sidebar-link">
-                                Rekam Medis
-                            </a>
-                        </li>
-                        <?php if ($role == 1) : ?>
+                <?php if ($role == 1) : ?>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link <?= ($pagesidebar == 2) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#masterdata" aria-expanded="false" aria-controls="masterdata">
+                            <i class="lni lni-database"></i>
+                            <span>Master Data</span>
+                        </a>
+
+                        <ul id="masterdata" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item <?= ($subsidebar == 1) ? 'active' : '' ?>">
+                                <a href="<?php echo base_url('recordmedical') ?>" class="sidebar-link">
+                                    Rekam Medis
+                                </a>
+                            </li>
+
                             <li class="sidebar-item <?= ($subsidebar == 2) ? 'active' : '' ?>">
                                 <a href="<?php echo base_url('officer') ?>" class="sidebar-link">
                                     Petugas
@@ -84,9 +86,10 @@
                                     Peminjam
                                 </a>
                             </li>
-                        <?php endif ?>
-                    </ul>
-                </li>
+
+                        </ul>
+                    </li>
+                <?php endif ?>
                 <!-- End Master Data -->
 
 
