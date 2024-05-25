@@ -7,6 +7,7 @@ use App\Models\PublicModel;
 use App\Models\TransactionPublicModel;
 use App\Models\TransactionModel;
 use App\Models\ServiceUnitModel;
+use App\Models\RecordMedicalModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
 
 class LoanPublic extends BaseController
@@ -26,7 +27,7 @@ class LoanPublic extends BaseController
         $data['subsidebar'] = 4;
         $data['role'] = session()->get('role');
         $data['publicdata'] = $tpmodels
-            ->select('transaction.id,public_doc.fullname,public_doc.identity_number')
+            ->select('transaction.id,public_doc.fullname,public_doc.identity_number,transaction.rm_id')
             ->join('transaction', 'transaction.id = transaction_public.transaction_id')
             ->join('public_doc', 'public_doc.id = transaction_public.public_id')
             ->where('transaction.is_return', 1)
@@ -66,6 +67,7 @@ class LoanPublic extends BaseController
         ];
         $tpmodels = new TransactionPublicModel();
         $transactionmodels = new TransactionModel();
+        $recordmedicalModel = new RecordMedicalModel();
 
         if ($this->validate($rules)) {
 
@@ -84,6 +86,8 @@ class LoanPublic extends BaseController
                 'transaction_id'    => $transactionmodels->getInsertId(),
                 'public_id'          =>  $this->request->getPost('publicid')
             ]);
+
+            $recordmedicalModel->set(['is_return' => 1])->where('rm_id', $this->request->getPost('rmid'))->update();
 
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
             return redirect()->to('f/public?id=' . $transactionmodels->getInsertId());
@@ -133,6 +137,7 @@ class LoanPublic extends BaseController
 
         $transactionmodels = new TransactionModel();
         $tpmodels = new TransactionPublicModel();
+        $recordmedicalModel = new RecordMedicalModel();
 
         if ($this->validate($rules)) {
 
@@ -146,6 +151,8 @@ class LoanPublic extends BaseController
 
             if ($transactionmodels->find(['id' => $id])) {
                 $transactionmodels->update($id, $transactiondata);
+                $recordmedicalModel->set(['is_return' => 1])->where('rm_id', $this->request->getPost('rmid'))->update();
+                $recordmedicalModel->set(['is_return' => 2])->where('rm_id', $this->request->getPost('rmidold'))->update();
 
                 $tpmodels->where('transaction_id', $id)
                     ->set([
@@ -165,15 +172,17 @@ class LoanPublic extends BaseController
         }
     }
 
-    public function delete($id)
+    public function delete($id, $rmid)
     {
         $tcModels = new TransactionPublicModel();
         $transactionmodels = new TransactionModel();
+        $recordmedicalModel = new RecordMedicalModel();
 
         $check = $transactionmodels->find($id);
         if ($check) {
             $transactionmodels->delete(['id' => $id]);
             $tcModels->where('transaction_id', $id)->delete();
+            $recordmedicalModel->set(['is_return' => 2])->where('rm_id', $rmid)->update();
             session()->setFlashdata('success', 'Data Berhasil Di Hapus');
             return redirect()->to('loanpublic/');
         } else {

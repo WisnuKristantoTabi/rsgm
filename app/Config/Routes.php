@@ -27,7 +27,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
         $routes->post('/loancoass/store', 'LoanCoass::store');
         $routes->get('/loancoass/edit/(:any)', 'LoanCoass::edit/$1');
         $routes->post('/loancoass/update', 'LoanCoass::update');
-        $routes->get('/loancoass/delete/(:any)', 'LoanCoass::delete/$1');
+        $routes->get('/loancoass/delete/(:any)/(:any)', 'LoanCoass::delete/$1/$2');
         $routes->post('/loancoass/searchcoass/', 'LoanCoass::searchCoass');
         $routes->post('/loancoass/showcoass/', 'LoanCoass::showCoass');
         $routes->get('/loancoass/print/tracer/(:any)', 'PrintPDF::printTracerCoass/$1');
@@ -37,7 +37,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
         $routes->post('/loanpublic/store', 'LoanPublic::store');
         $routes->get('/loanpublic/edit/(:any)', 'LoanPublic::edit/$1');
         $routes->post('/loanpublic/update', 'LoanPublic::update');
-        $routes->get('/loanpublic/delete/(:any)', 'LoanPublic::delete/$1');
+        $routes->get('/loanpublic/delete/(:any)/(:any)', 'LoanPublic::delete/$1/$2');
         $routes->post('/loanpublic/searchcoass/', 'LoanPublic::searchCoass');
         $routes->post('/loanpublic/showcoass/', 'LoanPublic::showCoass');
         $routes->get('loanpublic/print/tracer/(:any)', 'PrintPDF::printTracerPublic/$1');
@@ -52,7 +52,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
         $routes->get('/returndoc/sendmessage', 'ReturnDocument::sendmessage');
         $routes->post('/returndoc/searchdata', 'ReturnDocument::searchData');
         $routes->post('/returndoc/showdata', 'ReturnDocument::showData');
-        $routes->get('/returndoc/verif/(:any)', 'ReturnDocument::verif/$1');
+        $routes->get('/returndoc/verif/(:any)/(:any)', 'ReturnDocument::verif/$1/$2');
 
         $routes->get('/returndocoass', 'ReturnDocumentCoass::index');
         $routes->get('/returndoccoass/add', 'ReturnDocumentCoass::add');
@@ -61,7 +61,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
         $routes->post('/returndocoass/find/', 'ReturnDocumentCoass::find');
         $routes->post('/returndoccoass/searchdata', 'ReturnDocumentCoass::searchData');
         $routes->post('/returndoccoass/showdata', 'ReturnDocumentCoass::showData');
-        $routes->get('/returndoccoass/verif/(:any)', 'ReturnDocumentCoass::verif/$1');
+        $routes->get('/returndoccoass/verif/(:any)/(:any)', 'ReturnDocumentCoass::verif/$1/$2');
     });
 
     $routes->group('', ['filter' => 'role:1,2,3'], static function ($routes) {

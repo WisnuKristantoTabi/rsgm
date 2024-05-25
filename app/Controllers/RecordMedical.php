@@ -84,6 +84,7 @@ class RecordMedical extends BaseController
                 'gender'            => $this->request->getVar('gender'),
                 'birth_date'        => $this->request->getVar('birthday'),
                 'birth_place'       => $this->request->getVar('birthplace'),
+                'is_return'         => 2,
             ];
             $recordmedicalModel->save($data);
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
@@ -207,26 +208,19 @@ class RecordMedical extends BaseController
         if (!isset($postData)) {
             // Fetch record
             $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
-                ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'left')
-                ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'left')
-                ->groupStart()  // Mulai grup kondisi
-                ->where('transaction.is_return', 2)
-                ->orWhere('transaction.is_return IS NULL')
-                ->groupEnd()
+                // ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'left')
+                // ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'left')
+                // ->groupStart()  // Mulai grup kondisi
+                ->where('medical_records.is_return', 2)
+                // ->orWhere('transaction.is_return IS NULL')
+                // ->groupEnd()
                 ->orderBy('medical_records.rm_id')
                 ->findAll(5);
         } else {
-            $searchTerm = $postData;
-
             $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
-                ->join("($subQuery) as latest_trans", 'medical_records.rm_id = latest_trans.rm_id', 'left')
-                ->join('transaction', 'latest_trans.latest_transaction_id = transaction.id', 'left')
-                ->like('medical_records.rm_id', $searchTerm)
-                ->orLike('medical_records.fullname', $searchTerm)
-                ->groupStart()  // Mulai grup kondisi
-                ->where('transaction.is_return', 2)
-                ->orWhere('transaction.is_return IS NULL')
-                ->groupEnd()
+                ->like('medical_records.rm_id', $postData)
+                ->orLike('medical_records.fullname', $postData)
+                ->where('medical_records.is_return', 2)
                 ->orderBy('medical_records.rm_id')
                 ->findAll(5);
         }

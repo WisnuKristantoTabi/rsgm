@@ -41,7 +41,7 @@
                     <div class="btn-group-vertical">
                         <a role="button" href="<?php echo base_url("/f/public/?id") . $data['id'] ?>" class="btn btn-outline-primary btn-sm"><i class="lni lni-eye"></i>Lihat</a>
                         <a role="button" href="<?php echo base_url("loanpublic/edit/") . $data['id'] ?>" class="btn btn-outline-warning btn-sm"><i class="lni lni-pencil-alt"></i>Edit</a>
-                        <a class="btn btn-outline-danger btn-sm" href="<?= base_url('loanpublic/delete/' . $data['id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
+                        <a class="btn btn-outline-danger btn-sm" href="<?= base_url('loanpublic/delete/' . $data['id'] . '/' . $data['rm_id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             <i class="lni lni-trash-can"></i>Hapus</a>
                     </div>
                 </td>

@@ -55,7 +55,7 @@
                             <a class="btn btn-outline-secondary btn-sm" href="#" style="pointer-events: none">
                                 <i class="lni lni-checkmark"></i>Sudah Verivikasi</a>
                         <?php else : ?>
-                            <a class="btn btn-outline-info btn-sm" href="<?= base_url('/returndoc/verif/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah Ingin Verifikasi Peminjaman ini ?')">
+                            <a class="btn btn-outline-info btn-sm" href="<?= base_url('/returndoc/verif/' . $trasaction['tid'] . '/' . $trasaction['idrm']); ?>" onclick="javascript:return confirm('Apakah Ingin Verifikasi Peminjaman ini ?')">
                                 <i class="lni lni-checkmark"></i>Verivikasi</a>
                         <?php endif ?>
                     </div>

@@ -10,5 +10,5 @@ class RecordMedicalModel extends Model
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['rm_id', 'fullname', 'address', 'gender', 'birth_date', 'identity_number', 'birth_place'];
+    protected $allowedFields = ['rm_id', 'fullname', 'address', 'gender', 'birth_date', 'identity_number', 'birth_place', 'is_return'];
 }

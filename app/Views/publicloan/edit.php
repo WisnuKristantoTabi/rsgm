@@ -13,6 +13,7 @@
     <!-- <div class="form-floating mb-3"> -->
     <!-- <input type="text" name="rmid" id="rmid" placeholder="RM.NO" value="" class="form-control"> -->
     <input type="hidden" name="tid" value="<?= $transaction->tid ?>">
+    <input type="hidden" name="rmidold" value="<?= $transactions->rm_id ?>">
     <div class="mb-5">
         <label class="mb-3" for="searchrm">Cari Nomor Rekam Medik</label>
         <select id="searchrm" name="rmid" class="form-select">

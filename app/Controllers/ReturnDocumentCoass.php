@@ -110,10 +110,11 @@ class ReturnDocumentCoass extends BaseController
         }
     }
 
-    public function verif($id)
+    public function verif($id, $rmid)
     {
         $session = session();
         $transactionModel = new TransactionModel();
+        $recordmedicalModel = new RecordMedicalModel();
 
         if ($transactionModel->find($id)) {
             $data = [
@@ -121,6 +122,7 @@ class ReturnDocumentCoass extends BaseController
                 'is_return'        => 2,
             ];
             $transactionModel->update($id, $data);
+            $recordmedicalModel->set(['is_return' => 2])->where('rm_id', $rmid)->update();
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
             return redirect()->to('/returndocoass');
         } else {

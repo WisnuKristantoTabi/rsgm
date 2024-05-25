@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 // use App\Models\RecordMedicalModel;
 use App\Models\CoassModel;
+use App\Models\RecordMedicalModel;
 use App\Models\TransactionModel;
 use App\Models\TransactionCoassModel;
 use App\Models\ServiceUnitModel;
@@ -27,7 +28,7 @@ class LoanCoass extends BaseController
         $data['role'] = session()->get('role');
         $data['coassmodels'] = $tcmodels
             ->select('coass_doc.coass_name,coass_doc.coass_number,
-           coass_doc.phone, transaction_coass.transaction_id, medical_records.fullname as patient')
+           coass_doc.phone, transaction_coass.transaction_id, medical_records.fullname as patient, medical_records.rm_id')
             ->join('transaction', 'transaction.id = transaction_coass.transaction_id')
             ->join('coass_doc', 'coass_doc.id = transaction_coass.coass_id')
             ->join('medical_records', 'transaction.rm_id = medical_records.rm_id')
@@ -81,6 +82,7 @@ class LoanCoass extends BaseController
         ];
         $transactionmodels = new TransactionModel();
         $tcmodels = new TransactionCoassModel();
+        $recordmedicalModel = new RecordMedicalModel();
 
         if ($this->validate($rules)) {
 
@@ -98,6 +100,8 @@ class LoanCoass extends BaseController
                 'transaction_id'    => $transactionmodels->getInsertId(),
                 'coass_id'          =>  $this->request->getPost('coassid')
             ]);
+
+            $recordmedicalModel->set(['is_return' => 1])->where('rm_id', $this->request->getPost('rmid'))->update();
 
             $session->setFlashdata('success', "Data Berhasil Di Tambahkan");
             return redirect()->to('f/coass/?id=' . $transactionmodels->getInsertId());
@@ -148,6 +152,7 @@ class LoanCoass extends BaseController
 
         $transactionmodels = new TransactionModel();
         $tcModels = new TransactionCoassModel();
+        $recordmedicalModel = new RecordMedicalModel();
 
         if ($this->validate($rules)) {
 
@@ -163,6 +168,9 @@ class LoanCoass extends BaseController
             if ($transactionmodels->find(['id' => $id])) {
                 $transactionmodels->update($id, $transactiondata);
                 $tcModels->set(['coass_id' => $this->request->getPost('coassid')])->where('transaction_id', $id)->update();
+                $recordmedicalModel->set(['is_return' => 1])->where('rm_id', $this->request->getPost('rmid'))->update();
+                $recordmedicalModel->set(['is_return' => 2])->where('rm_id', $this->request->getPost('rmidold'))->update();
+
                 session()->setFlashdata('success', 'Data Berhasil Di edit');
                 return redirect()->to('f/coass/?id=' . $id);
             } else {
@@ -176,15 +184,17 @@ class LoanCoass extends BaseController
         }
     }
 
-    public function delete($id)
+    public function delete($id, $rmid)
     {
         $tcModels = new TransactionCoassModel();
         $transactionmodels = new TransactionModel();
+        $recordmedicalModel = new RecordMedicalModel();
 
         $check = $transactionmodels->find($id);
         if ($check) {
             $transactionmodels->delete(['id' => $id]);
             $tcModels->where('transaction_id', $id)->delete();
+            $recordmedicalModel->set(['is_return' => 2])->where('rm_id', $rmid)->update();
             session()->setFlashdata('success', 'Data Berhasil Di Hapus');
             return redirect()->to('loancoass/');
         } else {
