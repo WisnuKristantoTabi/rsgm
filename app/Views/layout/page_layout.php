@@ -50,19 +50,20 @@
                 </li>
                 <!-- End Dashboard -->
 
-                <?php if ($role == 1) : ?>
-                    <!-- Master Data -->
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link <?= ($pagesidebar == 2) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#masterdata" aria-expanded="false" aria-controls="masterdata">
-                            <i class="lni lni-database"></i>
-                            <span>Master Data</span>
-                        </a>
-                        <ul id="masterdata" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item <?= ($subsidebar == 1) ? 'active' : '' ?>">
-                                <a href="<?php echo base_url('recordmedical') ?>" class="sidebar-link">
-                                    Rekam Medis
-                                </a>
-                            </li>
+
+                <!-- Master Data -->
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link <?= ($pagesidebar == 2) ? 'active' : '' ?> collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#masterdata" aria-expanded="false" aria-controls="masterdata">
+                        <i class="lni lni-database"></i>
+                        <span>Master Data</span>
+                    </a>
+                    <ul id="masterdata" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item <?= ($subsidebar == 1) ? 'active' : '' ?>">
+                            <a href="<?php echo base_url('recordmedical') ?>" class="sidebar-link">
+                                Rekam Medis
+                            </a>
+                        </li>
+                        <?php if ($role == 1) : ?>
                             <li class="sidebar-item <?= ($subsidebar == 2) ? 'active' : '' ?>">
                                 <a href="<?php echo base_url('officer') ?>" class="sidebar-link">
                                     Petugas
@@ -83,10 +84,11 @@
                                     Peminjam
                                 </a>
                             </li>
-                        </ul>
-                    </li>
-                    <!-- End Master Data -->
-                <?php endif ?>
+                        <?php endif ?>
+                    </ul>
+                </li>
+                <!-- End Master Data -->
+
 
                 <!-- Transaksi -->
                 <li class="sidebar-item">
