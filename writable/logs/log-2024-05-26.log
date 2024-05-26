@@ -1,0 +1,1685 @@
+INFO - 2024-05-26 04:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 04:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:19:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:19:23 --> mysqli_sql_exception: Unknown column 'identity_numberwis' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:19:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberwis' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberwis` LIKE :identity_numberwis: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:19:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberwis' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wis%\' ESCAPE \'!\'
+OR  `identity_numberwis` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wis%\' ESCAPE \'!\'
+OR  `identity_numberwis` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberwis` LIKE :identity_numberwis: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:19:23 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberwis' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wis%\' ESCAPE \'!\'
+OR  `identity_numberwis` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wis%\' ESCAPE \'!\'
+OR  `identity_numberwis` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wis%\' ESCAPE \'!\'
+OR  `identity_numberwis` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberwis` LIKE :identity_numberwis: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:19:25 --> mysqli_sql_exception: Unknown column 'identity_numberwi' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:19:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberwi' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberwi` LIKE :identity_numberwi: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:19:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberwi' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wi%\' ESCAPE \'!\'
+OR  `identity_numberwi` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wi%\' ESCAPE \'!\'
+OR  `identity_numberwi` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberwi` LIKE :identity_numberwi: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:19:25 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberwi' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wi%\' ESCAPE \'!\'
+OR  `identity_numberwi` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wi%\' ESCAPE \'!\'
+OR  `identity_numberwi` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%wi%\' ESCAPE \'!\'
+OR  `identity_numberwi` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberwi` LIKE :identity_numberwi: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:19:25 --> mysqli_sql_exception: Unknown column 'identity_numberw' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:19:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberw' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberw` LIKE :identity_numberw: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:19:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberw' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%w%\' ESCAPE \'!\'
+OR  `identity_numberw` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%w%\' ESCAPE \'!\'
+OR  `identity_numberw` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberw` LIKE :identity_numberw: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:19:25 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberw' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%w%\' ESCAPE \'!\'
+OR  `identity_numberw` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%w%\' ESCAPE \'!\'
+OR  `identity_numberw` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%w%\' ESCAPE \'!\'
+OR  `identity_numberw` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberw` LIKE :identity_numberw: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:55:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Ban` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:55:45 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Ban` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Ban` LIKE :identity_number Ban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:55:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Ban` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Ban%\' ESCAPE \'!\'
+OR  `identity_number` `Ban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Ban%\' ESCAPE \'!\'
+OR  `identity_number` `Ban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Ban` LIKE :identity_number Ban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:55:45 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Ban` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Ban%\' ESCAPE \'!\'
+OR  `identity_number` `Ban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Ban%\' ESCAPE \'!\'
+OR  `identity_number` `Ban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Ban%\' ESCAPE \'!\'
+OR  `identity_number` `Ban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Ban` LIKE :identity_number Ban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:55:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Banta` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:55:47 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Banta` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Banta` LIKE :identity_number Banta: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:55:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Banta` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Banta%\' ESCAPE \'!\'
+OR  `identity_number` `Banta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Banta%\' ESCAPE \'!\'
+OR  `identity_number` `Banta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Banta` LIKE :identity_number Banta: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:55:47 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Banta` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Banta%\' ESCAPE \'!\'
+OR  `identity_number` `Banta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Banta%\' ESCAPE \'!\'
+OR  `identity_number` `Banta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Banta%\' ESCAPE \'!\'
+OR  `identity_number` `Banta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Banta` LIKE :identity_number Banta: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:55:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Bantal` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4 in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:55:48 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Bantal` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Bantal` LIKE :identity_number Bantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:55:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Bantal` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Bantal%\' ESCAPE \'!\'
+OR  `identity_number` `Bantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Bantal%\' ESCAPE \'!\'
+OR  `identity_number` `Bantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Bantal` LIKE :identity_number Bantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:55:48 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`Bantal` LIKE '%%' ESCAPE '!'
+ORDER BY `id`
+ LIMIT 5' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Bantal%\' ESCAPE \'!\'
+OR  `identity_number` `Bantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Bantal%\' ESCAPE \'!\'
+OR  `identity_number` `Bantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'% Bantal%\' ESCAPE \'!\'
+OR  `identity_number` `Bantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_number` `Bantal` LIKE :identity_number Bantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:56:57 --> mysqli_sql_exception: Unknown column 'identity_numberban' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:56:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberban' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberban` LIKE :identity_numberban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:56:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberban' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberban` LIKE :identity_numberban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:56:57 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberban' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberban` LIKE :identity_numberban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:02 --> mysqli_sql_exception: Unknown column 'identity_numberban' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberban' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberban` LIKE :identity_numberban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberban' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberban` LIKE :identity_numberban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:02 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberban' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%ban%\' ESCAPE \'!\'
+OR  `identity_numberban` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberban` LIKE :identity_numberban: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:05 --> mysqli_sql_exception: Unknown column 'identity_numberBan' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:05 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:09 --> mysqli_sql_exception: Unknown column 'identity_numberBa' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBa' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBa` LIKE :identity_numberBa: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBa' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ba%\' ESCAPE \'!\'
+OR  `identity_numberBa` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ba%\' ESCAPE \'!\'
+OR  `identity_numberBa` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBa` LIKE :identity_numberBa: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:09 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBa' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ba%\' ESCAPE \'!\'
+OR  `identity_numberBa` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ba%\' ESCAPE \'!\'
+OR  `identity_numberBa` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ba%\' ESCAPE \'!\'
+OR  `identity_numberBa` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBa` LIKE :identity_numberBa: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:10 --> mysqli_sql_exception: Unknown column 'identity_numberBan' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:10 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:50 --> mysqli_sql_exception: Unknown column 'identity_numberBanta' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBanta' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBanta` LIKE :identity_numberBanta: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBanta' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Banta%\' ESCAPE \'!\'
+OR  `identity_numberBanta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Banta%\' ESCAPE \'!\'
+OR  `identity_numberBanta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBanta` LIKE :identity_numberBanta: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:50 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBanta' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Banta%\' ESCAPE \'!\'
+OR  `identity_numberBanta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Banta%\' ESCAPE \'!\'
+OR  `identity_numberBanta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Banta%\' ESCAPE \'!\'
+OR  `identity_numberBanta` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBanta` LIKE :identity_numberBanta: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 05:59:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:53 --> mysqli_sql_exception: Unknown column 'identity_numberBan' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:53 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Ban%\' ESCAPE \'!\'
+OR  `identity_numberBan` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBan` LIKE :identity_numberBan: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:55 --> mysqli_sql_exception: Unknown column 'identity_numberBant' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBant' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBant` LIKE :identity_numberBant: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBant' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bant%\' ESCAPE \'!\'
+OR  `identity_numberBant` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bant%\' ESCAPE \'!\'
+OR  `identity_numberBant` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBant` LIKE :identity_numberBant: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:55 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBant' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bant%\' ESCAPE \'!\'
+OR  `identity_numberBant` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bant%\' ESCAPE \'!\'
+OR  `identity_numberBant` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bant%\' ESCAPE \'!\'
+OR  `identity_numberBant` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBant` LIKE :identity_numberBant: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:55 --> mysqli_sql_exception: Unknown column 'identity_numberBantal' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:55 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:56 --> mysqli_sql_exception: Unknown column 'identity_numberBantal' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal : ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal %\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal %\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal : ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:56 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal %\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal %\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal %\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal : ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-26 05:59:58 --> mysqli_sql_exception: Unknown column 'identity_numberBantal' in 'where clause' in E:\RSGM\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\RSGM\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `f...', 0)
+#1 E:\RSGM\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `f...')
+#2 E:\RSGM\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `f...')
+#3 E:\RSGM\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `f...', Array, false)
+#4 E:\RSGM\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\RSGM\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+#6 E:\RSGM\app\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+#7 E:\RSGM\system\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+#8 E:\RSGM\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+#9 E:\RSGM\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\RSGM\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 E:\RSGM\system\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\...')
+#12 {main}
+CRITICAL - 2024-05-26 05:59:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 4 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 6 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+CRITICAL - 2024-05-26 05:59:58 --> [Caused by] mysqli_sql_exception: Unknown column 'identity_numberBantal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE \'%Bantal%\' ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE \'%%\' ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `fullname`, `identity_number`
+FROM `public_doc`
+WHERE `fullname` LIKE :fullname: ESCAPE \'!\'
+OR  `identity_numberBantal` LIKE :identity_numberBantal: ESCAPE \'!\'
+ORDER BY `id`
+ LIMIT 5', [...], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(5, 0)
+ 7 APPPATH\Controllers\LoanPublic.php(211): CodeIgniter\BaseModel->findAll(5)
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\LoanPublic->searchCoass()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoanPublic))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\RSGM\\public\\index.php')
+INFO - 2024-05-26 05:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 06:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 06:02:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 06:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-26 06:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

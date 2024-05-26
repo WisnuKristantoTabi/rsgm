@@ -206,7 +206,7 @@ class LoanPublic extends BaseController
         } else {
             $publicData = $publicModel->select('id,fullname,identity_number')
                 ->like('fullname', $postData)
-                ->orLike('identity_number')
+                ->orLike('identity_number', $postData)
                 ->orderBy('id')
                 ->findAll(5);
         }

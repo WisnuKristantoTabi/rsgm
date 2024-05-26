@@ -218,7 +218,7 @@ class LoanCoass extends BaseController
         } else {
             $coassData = $coassModels->select('id,coass_name,coass_number')
                 ->like('coass_name', $postData)
-                ->orLike('coass_number')
+                ->orLike('coass_number', $postData)
                 ->orderBy('id')
                 ->findAll(5);
         }
