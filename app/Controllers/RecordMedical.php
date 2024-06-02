@@ -154,42 +154,9 @@ class RecordMedical extends BaseController
 
     public function test()
     {
-        $pdf = new Headerpdf(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-
-        // Menentukan informasi dokumen
-        $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Nama Penulis');
-        $pdf->SetTitle('Judul Dokumen');
-        $pdf->SetSubject('Subjek Dokumen');
-        $pdf->SetKeywords('TCPDF, PDF, contoh, panduan');
-
-        // Menentukan header data
-        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
-
-        // Menentukan font untuk header dan footer
-        $pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-        $pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
-
-        // Menentukan margin untuk header dan footer
-        $pdf->SetMargins(PDF_MARGIN_LEFT, 35, PDF_MARGIN_RIGHT);
-        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
-        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
-
-        // Menentukan auto page breaks
-        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
-
-        // Menentukan font utama
-        $pdf->SetFont('helvetica', '', 12);
-
-        // Menambah halaman
-        $pdf->AddPage();
-
-        // Menambah konten
-        $html = '<h1>Selamat datang di TCPDF</h1><p>Ini adalah contoh dokumen PDF menggunakan TCPDF.</p>';
-        $pdf->writeHTML($html, true, false, true, false, '');
-
-        // Menutup dan mengeluarkan dokumen PDF
-        $pdf->Output('contoh_dokumen.pdf', 'I');
+        // helper(['num_to_month']);
+        // echo nomor(1, 20);
+        echo tanggal();
     }
 
     public function searchData()

@@ -103,46 +103,48 @@
 </script>
 
 <script>
-    $(document).ready(function() {
-        $('#publicid').select2({
-            placeholder: "Cari Peminjam",
-            ajax: {
-                url: "<?php echo base_url('/loanpublic/searchcoass') ?>",
-                dataType: 'json',
-                type: 'POST',
-                delay: 250,
-                data: function(params) {
-                    return {
-                        searchTerm: params.term
-                    };
-                },
-                processResults: function(data) {
-                    return {
-                        results: data.data
-                    };
-                },
-                cache: true
-            }
-        }).on('select2:select', function(e) {
-            var selectedID = e.params.data.id;
-            $.ajax({
-                url: "<?php echo base_url('/loanpublic/showcoass/') ?>", // Ganti dengan URL yang sesuai
-                dataType: 'json',
-                type: 'POST',
-                data: {
-                    id: selectedID
-                },
-                success: function(response) {
-                    $('#fullname').val(response[0].fullname);
-                    $('#address').val(response[0].address);
-                    $('#phone').val(response[0].phone);
-                    $('#identitynumber').val(response[0].identitynumber);
-                    $('#servicename').val(response[0].servicename);
-
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
+    $(function() {
+        $(document).ready(function() {
+            $('#publicid').select2({
+                placeholder: "Cari Peminjam",
+                ajax: {
+                    url: "<?php echo base_url('/loanpublic/searchcoass') ?>",
+                    dataType: 'json',
+                    type: 'POST',
+                    delay: 250,
+                    data: function(params) {
+                        return {
+                            searchTerm: params.term
+                        };
+                    },
+                    processResults: function(data) {
+                        return {
+                            results: data.data
+                        };
+                    },
+                    cache: true
                 }
+            }).on('select2:select', function(e) {
+                var selectedID = e.params.data.id;
+                $.ajax({
+                    url: "<?php echo base_url('/loanpublic/showcoass/') ?>", // Ganti dengan URL yang sesuai
+                    dataType: 'json',
+                    type: 'POST',
+                    data: {
+                        id: selectedID
+                    },
+                    success: function(response) {
+                        $('#fullname').val(response[0].fullname);
+                        $('#address').val(response[0].address);
+                        $('#phone').val(response[0].phone);
+                        $('#identitynumber').val(response[0].identitynumber);
+                        $('#servicename').val(response[0].servicename);
+
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                    }
+                });
             });
         });
     });

@@ -43,9 +43,11 @@
                 <td><?= ($trasaction['return_date'] > $trasaction['deadline']) ? "Terlambat" : "-"; ?></td>
                 <td>
                     <div class="btn-group-vertical">
-                        <a role="button" data-phone="<?= $trasaction['phone'] ?>" data-name="<?= $trasaction['coass_name'] ?>" data-idrm="<?= $trasaction['idrm'] ?>" data-bs-toggle="modal" data-bs-target="#exampleModal" class="wa btn btn-outline-success btn-sm me-md-2" href="">
-                            <i class="lni lni-whatsapp"></i>
-                            WA</a>
+                        <?php if ($role != 3) : ?>
+                            <a role="button" data-phone="<?= $trasaction['phone'] ?>" data-name="<?= $trasaction['coass_name'] ?>" data-idrm="<?= $trasaction['idrm'] ?>" data-bs-toggle="modal" data-bs-target="#exampleModal" class="wa btn btn-outline-success btn-sm me-md-2" href="">
+                                <i class="lni lni-whatsapp"></i>
+                                WA</a>
+                        <?php endif ?>
                         <a role="button" href="<?php echo base_url("/returndoccoass/show/") . $trasaction['tid'] ?>" class="btn btn-outline-primary btn-sm me-md-2"> <i class="lni lni-eye"></i> Lihat</a>
                         <?php if ($trasaction['is_return'] == 2) : ?>
                             <a class="btn btn-outline-secondary btn-sm" href="#" style="pointer-events: none">

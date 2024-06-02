@@ -17,10 +17,11 @@
     </form>
 </div>
 
-<div class="d-grid gap-2 mb-5 justify-content-md-end">
-
-    <a class="btn btn-outline-info btn-sm me-md-2" href="<?php echo base_url('/loanpublic/add') ?>" role="button"><i class="lni lni-circle-plus"></i>Tambah</a>
-</div>
+<?php if ($role != 3) : ?>
+    <div class="d-grid gap-2 mb-5 justify-content-md-end">
+        <a class="btn btn-outline-info btn-sm me-md-2" href="<?php echo base_url('/loanpublic/add') ?>" role="button"><i class="lni lni-circle-plus"></i>Tambah</a>
+    </div>
+<?php endif ?>
 
 <table class="table">
     <thead>

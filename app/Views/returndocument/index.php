@@ -44,9 +44,11 @@
                 <td><?= ($trasaction['is_return'] == 2) ? "Sudah Kembali" : "Belum Kembali" ?></td>
                 <td>
                     <div class="btn-group-vertical">
-                        <a role="button" data-phone="<?= $trasaction['phone'] ?>" data-name="<?= $trasaction['fullname'] ?>" data-idrm="<?= $trasaction['idrm'] ?>" data-bs-toggle="modal" data-bs-target="#exampleModal" class="wa btn btn-outline-success btn-sm me-md-2" href="">
-                            <i class="lni lni-whatsapp"></i>
-                            WA</a>
+                        <?php if ($role != 3) : ?>
+                            <a role="button" data-phone="<?= $trasaction['phone'] ?>" data-name="<?= $trasaction['fullname'] ?>" data-idrm="<?= $trasaction['idrm'] ?>" data-bs-toggle="modal" data-bs-target="#exampleModal" class="wa btn btn-outline-success btn-sm me-md-2" href="">
+                                <i class="lni lni-whatsapp"></i>
+                                WA</a>
+                        <?php endif ?>
                         <a role="button" href="<?php echo base_url("/returndoc/show/") . $trasaction['tid'] ?>" class="btn btn-outline-primary btn-sm me-md-2"> <i class="lni lni-eye"></i> Lihat</a>
                         <!-- <a role="button" href="<?php echo base_url("returndoc/edit/") . $trasaction['tid'] ?>" class="btn btn-outline-warning btn-sm"> <i class="lni lni-pencil-alt"></i> Edit</a>
                         <a class="btn btn-outline-danger btn-sm" href="<?= base_url('/returndoc/delete/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
