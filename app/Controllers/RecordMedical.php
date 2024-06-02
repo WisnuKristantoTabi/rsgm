@@ -156,7 +156,8 @@ class RecordMedical extends BaseController
     {
         // helper(['num_to_month']);
         // echo nomor(1, 20);
-        echo tanggal();
+        echo test(10) . "</br>";
+        // echo nomor($this->request->getVar('page_test'), 20);
     }
 
     public function searchData()

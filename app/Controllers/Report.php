@@ -61,7 +61,7 @@ class Report extends BaseController
         $activeWorksheet->setCellValue('A1', 'LAPORAN ');
         $activeWorksheet->mergeCells('A1:D1');
         $activeWorksheet->setCellValue('A2', 'PERIODE :');
-        $activeWorksheet->setCellValue('B2', 'Tahun: ' . $y . ' - Bulan: ' . $m);
+        $activeWorksheet->setCellValue('B2', 'Tahun: ' . $y . ' - Bulan: ' . bulan($m));
         $activeWorksheet->setCellValue('A3', 'OUTPUT :');
         $activeWorksheet->setCellValue('B3', 'EXCEL');
         $activeWorksheet->setCellValue('A4', 'Kategori :');
@@ -124,7 +124,7 @@ class Report extends BaseController
         $activeWorksheet->setCellValue('A1', 'LAPORAN ');
         $activeWorksheet->mergeCells('A1:D1');
         $activeWorksheet->setCellValue('A2', 'PERIODE :');
-        $activeWorksheet->setCellValue('B2', 'Tahun: ' . $y . ' - Bulan: ' . $m);
+        $activeWorksheet->setCellValue('B2', 'Tahun: ' . $y . ' - Bulan: ' . bulan($m));
         $activeWorksheet->setCellValue('A3', 'OUTPUT :');
         $activeWorksheet->setCellValue('B3', 'EXCEL');
         $activeWorksheet->setCellValue('A4', 'Kategori :');

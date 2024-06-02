@@ -1,9 +1,9 @@
 <?php
 
 if (!function_exists('bulan')) {
-    function bulan()
+    function bulan($bulan)
     {
-        $bulan = Date('m');
+        // $bulan = Date('m');
         switch ($bulan) {
             case 1:
                 $bulan = "Januari";
@@ -50,15 +50,19 @@ if (!function_exists('bulan')) {
     }
 }
 
-/**
- * Fungsi untuk membuat tanggal dalam format bahasa indonesia
- * @param void
- * @return string format tanggal sekarang (contoh: 22 Desember 2016)
- */
-if (!function_exists('tanggal')) {
-    function tanggal()
+if (!function_exists('test')) {
+    function test($input)
     {
-        $tanggal = Date('d') . " " . bulan() . " " . Date('Y');
-        return $tanggal;
+        return $input;
     }
 }
+
+
+
+// if (!function_exists('tanggal')) {
+//     function tanggal()
+//     {
+//         $tanggal = Date('d') . " " . bulan() . " " . Date('Y');
+//         return $tanggal;
+//     }
+// }
