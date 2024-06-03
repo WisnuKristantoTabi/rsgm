@@ -73,26 +73,31 @@
 <!-- Data Rekam Medis -->
 
 <script>
+    $('#searchrm').val("").trigger("change");
     $(document).ready(function() {
-        $('#searchrm').select2({
-            placeholder: "Cari Rekam Medik",
-            ajax: {
-                url: "<?php echo base_url('/recordmedical/searchdata') ?>",
-                dataType: 'json',
-                type: 'POST',
-                delay: 250,
-                data: function(params) {
-                    return {
-                        searchTerm: params.term
-                    };
-                },
-                processResults: function(data) {
-                    return {
-                        results: data.data
-                    };
-                },
-                cache: true
-            }
+        $(document).ready(function() {
+            $('#searchrm').select2({
+                placeholder: "Cari Rekam Medik",
+                allowClear: true,
+                minimumInputLength: 4,
+                ajax: {
+                    url: "<?php echo base_url('/recordmedical/searchdata') ?>",
+                    dataType: 'json',
+                    type: 'POST',
+                    delay: 500,
+                    data: function(params) {
+                        return {
+                            searchTerm: params.term
+                        };
+                    },
+                    processResults: function(data) {
+                        return {
+                            results: data.data
+                        };
+                    },
+                    cache: true
+                }
+            });
         });
     });
 </script>

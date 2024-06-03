@@ -89,7 +89,7 @@
                     url: "<?php echo base_url('/recordmedical/searchdata') ?>",
                     dataType: 'json',
                     type: 'POST',
-                    delay: 10000,
+                    delay: 500,
                     data: function(params) {
                         return {
                             searchTerm: params.term
