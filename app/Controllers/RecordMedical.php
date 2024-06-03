@@ -186,9 +186,9 @@ class RecordMedical extends BaseController
                 ->findAll(5);
         } else {
             $recordmedicals = $recordmedicalModel->select('medical_records.rm_id, fullname')
-                ->like('medical_records.rm_id', $postData)
-                ->orLike('medical_records.fullname', $postData)
                 ->where('medical_records.is_return', 2)
+                ->like('medical_records.rm_id', $postData)
+                ->Like('medical_records.fullname', $postData)
                 ->orderBy('medical_records.rm_id')
                 ->findAll(5);
         }
