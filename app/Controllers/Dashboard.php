@@ -43,7 +43,7 @@ class Dashboard extends BaseController
                 ->where('public_doc.service_id', $poli)
                 ->groupBy('MONTH(transaction.loan_date)')
                 ->get()
-                ->getResultArray();
+                ->getRow();
 
             $count = $db->table('transaction_public')
                 ->select('COUNT(transaction.id) as count_late')
