@@ -83,12 +83,12 @@
         $(document).ready(function() {
             $('#searchrm').select2({
                 placeholder: "Cari Rekam Medik",
-                allowClear: true,
+                // allowClear: true,
                 ajax: {
                     url: "<?php echo base_url('/recordmedical/searchdata') ?>",
                     dataType: 'json',
                     type: 'POST',
-                    delay: 250,
+                    delay: 700,
                     data: function(params) {
                         return {
                             searchTerm: params.term
@@ -103,6 +103,7 @@
                 }
             });
         });
+
     });
 </script>
 
