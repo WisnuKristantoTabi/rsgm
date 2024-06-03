@@ -73,8 +73,8 @@
 <!-- Data Rekam Medis -->
 
 <script>
-    $('#searchrm').val("").trigger("change");
-    $(document).ready(function() {
+    $(function() {
+        $('#searchrm').val("").trigger("change");
         $(document).ready(function() {
             $('#searchrm').select2({
                 placeholder: "Cari Rekam Medik",
