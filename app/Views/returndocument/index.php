@@ -107,28 +107,33 @@
 </script>
 
 <script>
-    $(document).ready(function() {
-        $('#searchdata').select2({
-            placeholder: "Cari Nama/RM ID",
-            ajax: {
-                url: "<?php echo base_url('/returndoc/find/') ?>",
-                dataType: 'json',
-                type: 'POST',
-                delay: 250,
-                data: function(params) {
-                    return {
-                        searchTerm: params.term
-                    };
-                },
-                processResults: function(data) {
-                    return {
-                        results: data
-                    };
-                },
-                cache: true
-            }
-        }).on("select2:select", function(e) {
-            window.location.href = '<?php echo base_url('/returndoc/show/') ?>' + e.params.data.id;
+    $(function() {
+        $('#searchdata').val("").trigger("change");
+        $(document).ready(function() {
+            $('#searchdata').select2({
+                placeholder: "Cari Nama/RM ID",
+                allowClear: true,
+                minimumInputLength: 2,
+                ajax: {
+                    url: "<?php echo base_url('/returndoc/find/') ?>",
+                    dataType: 'json',
+                    type: 'POST',
+                    delay: 500,
+                    data: function(params) {
+                        return {
+                            searchTerm: params.term
+                        };
+                    },
+                    processResults: function(data) {
+                        return {
+                            results: data
+                        };
+                    },
+                    cache: true
+                }
+            }).on("select2:select", function(e) {
+                window.location.href = '<?php echo base_url('/returndoc/show/') ?>' + e.params.data.id;
+            });
         });
     });
 </script>
