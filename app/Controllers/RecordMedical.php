@@ -67,7 +67,7 @@ class RecordMedical extends BaseController
             'rmid'               => 'required|min_length[2]|max_length[50]|is_unique[medical_records.rm_id]',
             'fullname'           => 'required|min_length[2]|max_length[50]',
             'address'            => 'required|min_length[2]|max_length[100]',
-            'identitynumber'     => 'required',
+            'identitynumber'     => 'required|min_length[2]|max_length[16]',
             'gender'             => 'required',
             'birthday'           => 'required',
             'birthplace'         => 'required',
@@ -116,24 +116,42 @@ class RecordMedical extends BaseController
 
     public function update()
     {
-        $recordmedicalModel = new RecordMedicalModel();
-        $id = $this->request->getPost('recordId');
-        $data = array(
-            'rm_id'             => $this->request->getPost('rmid'),
-            'fullname'          => $this->request->getPost('fullname'),
-            'identity_number'   => $this->request->getPost('identitynumber'),
-            'address'           => $this->request->getPost('address'),
-            'gender'            => $this->request->getPost('gender'),
-            'birth_date'        => $this->request->getPost('birthday'),
-            'birth_place'       => $this->request->getPost('birthplace'),
 
-        );
-        if ($recordmedicalModel->find($id)) {
-            $recordmedicalModel->update($id, $data);
-            session()->setFlashdata('success', 'Data Berhasil Di edit');
-            return redirect()->to('recordmedical/edit/' . $id);
+        $id = $this->request->getPost('recordId');
+        $rules = [
+            'rmid'               => 'required|min_length[2]|max_length[50]|is_unique[medical_records.rm_id]',
+            'fullname'           => 'required|min_length[2]|max_length[50]',
+            'address'            => 'required|min_length[2]|max_length[100]',
+            'identitynumber'     => 'required|min_length[2]|max_length[16]',
+            'gender'             => 'required',
+            'birthday'           => 'required',
+            'birthplace'         => 'required',
+
+        ];
+        if ($this->validate($rules)) {
+            $recordmedicalModel = new RecordMedicalModel();
+
+            $data = array(
+                'rm_id'             => $this->request->getPost('rmid'),
+                'fullname'          => $this->request->getPost('fullname'),
+                'identity_number'   => $this->request->getPost('identitynumber'),
+                'address'           => $this->request->getPost('address'),
+                'gender'            => $this->request->getPost('gender'),
+                'birth_date'        => $this->request->getPost('birthday'),
+                'birth_place'       => $this->request->getPost('birthplace'),
+
+            );
+            if ($recordmedicalModel->find($id)) {
+                $recordmedicalModel->update($id, $data);
+                session()->setFlashdata('success', 'Data Berhasil Di edit');
+                return redirect()->to('recordmedical/edit/' . $id);
+            } else {
+                return redirect()->to('recordmedical');
+            }
         } else {
-            echo "Data Tidak Ditemukan";
+            $msg = $this->validator->listErrors();
+            session()->setFlashdata('error', $msg);
+            return redirect()->to('recordmedical/edit/' . $id);
         }
     }
 
