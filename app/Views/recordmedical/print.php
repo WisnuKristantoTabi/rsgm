@@ -1,17 +1,15 @@
-    <div>
-        No. Rekam Medis: <?= $profile->rm_id ?>
-    </div>
-    <div>
-        <p>Nama Lengkap</p>
-        <h2> <?= $profile->fullname ?></h2>
-        </br>
-        <p>Alamat</p>
-        <h2> <?= $profile->address ?></h2>
-        </br>
-        <p>Jenis Kelamin</p>
-        <h2> <?= ($profile->gender == 1) ? "Pria" : "Wanita" ?></h2>
-        </br>
-        <p>Tanggal Lahir</p>
-        <h2> <?= $profile->birth_date ?></h2>
-        </br>
-    </div>
+    <p> <b>No. Rekam Medis:</b> </p>
+    <p><?= $profile->rm_id ?></p>
+    <p></p>
+    <p><b>Nama Lengkap</b></p>
+    <p> <?= $profile->fullname ?></p>
+    <p></p>
+    <p><b>Alamat</b></p>
+    <p> <?= $profile->address ?></p>
+    <p></p>
+    <p><b>Jenis Kelamin</b></p>
+    <p> <?= ($profile->gender == 1) ? "Pria" : "Wanita" ?></p>
+    <p></p>
+    <p><b>Tanggal Lahir</b></p>
+    <p> <?= $profile->birth_date ?></p>
+    <p></p>

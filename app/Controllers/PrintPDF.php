@@ -67,7 +67,23 @@ class PrintPDF extends BaseController
         // Menambah halaman
         $pdf->AddPage();
         $html = view('recordmedical/print', $data);
+        $tagvs = [
+            'div' => [
+                0 => ['h' => 0, 'n' => 0.1],
+                1 => ['h' => 0, 'n' => 0.1]
+            ],
+            'p' => [
+                0 => ['h' => 0, 'n' => 0],
+                1 => ['h' => 0, 'n' => 0]
+            ],
+            'h2' => [
+                0 => ['h' => 0, 'n' => 0.2],
+                1 => ['h' => 0, 'n' => 0.2]
+            ]
+        ];
+        $pdf->setHtmlVSpace($tagvs);
         $pdf->writeHTML($html, true, false, true, false, '');
+
         $pdf->Cell(0, 0, 'Code Barcode', 0, 1);
         $pdf->write1DBarcode($id, 'C39', '', '', '', 18, 0.4, $style, 'N');
 
