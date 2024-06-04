@@ -146,6 +146,21 @@ class PrintPDF extends BaseController
         // Menambah halaman
         $pdf->AddPage();
         $html = view('print_tracer', $data);
+        $tagvs = [
+            'div' => [
+                0 => ['h' => 0, 'n' => 0.1],
+                1 => ['h' => 0, 'n' => 0.1]
+            ],
+            'p' => [
+                0 => ['h' => 0, 'n' => 0],
+                1 => ['h' => 0, 'n' => 0]
+            ],
+            'h2' => [
+                0 => ['h' => 0, 'n' => 0.2],
+                1 => ['h' => 0, 'n' => 0.2]
+            ]
+        ];
+        $pdf->setHtmlVSpace($tagvs);
         $pdf->writeHTML($html, true, false, true, false, '');
         $pdf->write1DBarcode($id, 'C39', '', '', '', 15, 0.4, $style, 'N');
 
@@ -208,6 +223,21 @@ class PrintPDF extends BaseController
         // Menambah halaman
         $pdf->AddPage();
         $html = view('print_tracer', $data);
+        $tagvs = [
+            'div' => [
+                0 => ['h' => 0, 'n' => 0.1],
+                1 => ['h' => 0, 'n' => 0.1]
+            ],
+            'p' => [
+                0 => ['h' => 0, 'n' => 0],
+                1 => ['h' => 0, 'n' => 0]
+            ],
+            'h2' => [
+                0 => ['h' => 0, 'n' => 0.2],
+                1 => ['h' => 0, 'n' => 0.2]
+            ]
+        ];
+        $pdf->setHtmlVSpace($tagvs);
         $pdf->writeHTML($html, true, false, true, false, '');
         $pdf->write1DBarcode($id, 'C39', '', '', '', 15, 0.4, $style, 'N');
 

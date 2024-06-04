@@ -4,15 +4,18 @@
         font-size: 10pt;
     }
 </style>
-</p> No. Rekam Medis: <?= $tracer->rm_id ?> </p>
-<p>Nama Pasien</p>
+</p> <b>No. Rekam Medis: </b></p>
+<p> <?= $tracer->rm_id ?></p>
+<p></p>
+<p><b>Nama Pasien</b></p>
 <p> <?= $tracer->fullname ?> </p>
-<p>Poli Pelayanan</p>
+<p></p>
+<p><b>Poli Pelayanan</b></p>
 <p> <?= $tracer->service_name ?> </p>
-<p>Tanggal Peminjaman</p>
+<p></p>
+<p><b>Tanggal Peminjaman</b></p>
 <p> <?= $tracer->loan_date ?> </p>
-<p>Keterangan</p>
-<b>
-    <p> <?= $tracer->loan_desc ?> </p>
-</b>
-</br>
+<p></p>
+<p><b>Keterangan</b></p>
+<p><b> <?= $tracer->loan_desc ?> </b></p>
+<p></p>
