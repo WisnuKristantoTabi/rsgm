@@ -41,12 +41,12 @@ class Login extends Controller
                 return redirect()->to('/dashboard');
                 // echo "berhasil" ;
             } else {
-                $session->setFlashdata('msg', 'Wrong Password');
+                $session->setFlashdata('msg', 'Password Salah');
                 return redirect()->to('/');
                 // echo "Wrong Password" ;
             }
         } else {
-            $session->setFlashdata('msg', 'Email not Found');
+            $session->setFlashdata('msg', 'Username Tidak Ditemukan');
             return redirect()->to('/');
             // echo "Email not Found" ;
         }

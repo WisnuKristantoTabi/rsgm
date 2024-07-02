@@ -36,7 +36,7 @@ class LoanPublic extends BaseController
             ->paginate(20, 'loancoass');
         $data['pager'] = $tpmodels->pager;
         $data['nomor'] = nomor($this->request->getVar('page_loanpublic'), 20);
-        $data['title'] = 'Peminjaman Umum';
+        $data['title'] = 'Peminjaman Umum/BPJS/JKN';
         $data['type'] = 1;
         $data['username'] = session()->get('username');
         return view('publicloan/index', $data);
@@ -114,7 +114,7 @@ class LoanPublic extends BaseController
 
         if ($tpmodels->where(['transaction_id' => $id])->first()) {
             $data['transaction'] = $transactions;
-            $data['title']  = 'Edit Data Peminjaman ';
+            $data['title']  = 'Edit Data Perawat ';
             $data['pagesidebar'] = 3;
             $data['subsidebar'] = 4;
             // dd($data);

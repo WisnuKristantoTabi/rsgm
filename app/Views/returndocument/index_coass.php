@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 
 <div class="mb-3 btn-group-sm btn-group">
-    <a href="<?php echo base_url('/returndoc') ?>" class="btn btn-outline-primary <?= ($type == 1) ? 'active' : '' ?>">UMUM</a>
+    <a href="<?php echo base_url('/returndoc') ?>" class="btn btn-outline-primary <?= ($type == 1) ? 'active' : '' ?>">UMUM/BPJS/JKN</a>
     <a href="<?php echo base_url('/returndocoass') ?>" class="btn btn-outline-primary <?= ($type == 2) ? 'active' : '' ?> ">CO.ass</a>
 </div>
 
@@ -50,11 +50,15 @@
                         <?php endif ?>
                         <a role="button" href="<?php echo base_url("/returndoccoass/show/") . $trasaction['tid'] ?>" class="btn btn-outline-primary btn-sm me-md-2"> <i class="lni lni-eye"></i> Lihat</a>
                         <?php if ($trasaction['is_return'] == 2) : ?>
+                        <?php if ($role != 3) : ?>
                             <a class="btn btn-outline-secondary btn-sm" href="#" style="pointer-events: none">
                                 <i class="lni lni-checkmark"></i>Sudah Verivikasi</a>
+                        <?php endif ?>
                         <?php else : ?>
+                        <?php if ($role != 3) : ?>
                             <a class="btn btn-outline-info btn-sm" href="<?= base_url('/returndoccoass/verif/' . $trasaction['tid'] . '/' . $trasaction['idrm']); ?>" onclick="javascript:return confirm('Apakah Ingin Verifikasi Peminjaman ini ?')">
                                 <i class="lni lni-checkmark"></i>Verivikasi</a>
+                        <?php endif ?>
                         <?php endif ?>
                     </div>
                 </td>

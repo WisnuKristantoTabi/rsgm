@@ -28,7 +28,7 @@ class PublicDoc extends BaseController
             ->orderBy('id', 'desc')
             ->paginate(20, 'publicdoc');
         $data['pager'] = $publicModels->pager;
-        $data['title'] = 'Data Peminjam';
+        $data['title'] = 'Perawat';
         $data['nomor'] = nomor($this->request->getVar('page_publicdoc'), 20);
         $data['username'] = session()->get('username');
         return view('publicdoc/index', $data);
@@ -40,7 +40,7 @@ class PublicDoc extends BaseController
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 7;
         $data['role'] = session()->get('role');
-        $data['title'] = 'Tambah Data Peminjam';
+        $data['title'] = 'Tambah Data Perawat';
         $data['username'] = session()->get('username');
         $data['serviceunits'] = $serviceUnitModels->findAll();
         return view('publicdoc/add', $data);
@@ -97,7 +97,7 @@ class PublicDoc extends BaseController
                 ->join('service_unit', 'service_unit.id = public_doc.service_id')
                 ->find($id);
             $data['publicdata'] = $publicdata;
-            $data['title'] = 'Data Peminjam';
+            $data['title'] = 'Data perawat';
             return view('publicdoc/show', $data);
             // print_r($coass);
         } else {
@@ -122,7 +122,7 @@ class PublicDoc extends BaseController
                 ->find($id);
             $data['serviceunits'] = $serviceUnitModels->findAll();
             $data['publicdata'] = $publicdata;
-            $data['title'] = 'Edit Data Peminjam';
+            $data['title'] = 'Edit Data Perawat';
             return view('publicdoc/edit', $data);
             // print_r($coass);
         } else {

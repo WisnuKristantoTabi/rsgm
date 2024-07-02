@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 
 <div class="mb-3 btn-group-sm btn-group">
-    <a href="<?php echo base_url('/returndoc') ?>" class="btn btn-outline-primary <?= ($type == 1) ? 'active' : '' ?>">UMUM</a>
+    <a href="<?php echo base_url('/returndoc') ?>" class="btn btn-outline-primary <?= ($type == 1) ? 'active' : '' ?>">UMUM/BPJS/JKN</a>
     <a href="<?php echo base_url('/returndocoass') ?>" class="btn btn-outline-primary <?= ($type == 2) ? 'active' : '' ?> ">CO.ass</a>
 </div>
 <div class="mb-5">
@@ -54,11 +54,15 @@
                         <a class="btn btn-outline-danger btn-sm" href="<?= base_url('/returndoc/delete/' . $trasaction['tid']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             <i class="lni lni-trash-can"></i>Hapus</a> -->
                         <?php if ($trasaction['is_return'] == 2) : ?>
+                        <?php if ($role != 3) : ?>
                             <a class="btn btn-outline-secondary btn-sm" href="#" style="pointer-events: none">
-                                <i class="lni lni-checkmark"></i>Sudah Verivikasi</a>
-                        <?php else : ?>
+                                <i class="lni lni-checkmark"></i>Sudah Verifikasi</a>
+                        <?php endif ?>
+                            <?php else : ?>
+                        <?php if ($role != 3) : ?>
                             <a class="btn btn-outline-info btn-sm" href="<?= base_url('/returndoc/verif/' . $trasaction['tid'] . '/' . $trasaction['idrm']); ?>" onclick="javascript:return confirm('Apakah Ingin Verifikasi Peminjaman ini ?')">
-                                <i class="lni lni-checkmark"></i>Verivikasi</a>
+                                <i class="lni lni-checkmark"></i>Verifikasi</a>
+                        <?php endif ?>
                         <?php endif ?>
                     </div>
                 </td>

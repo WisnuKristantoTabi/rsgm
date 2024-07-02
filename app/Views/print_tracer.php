@@ -15,7 +15,5 @@
 <p></p>
 <p><b>Tanggal Peminjaman</b></p>
 <p> <?= $tracer->loan_date ?> </p>
-<p></p>
-<p><b>Keterangan</b></p>
-<p><b> <?= $tracer->loan_desc ?> </b></p>
+
 <p></p>

@@ -7,6 +7,8 @@ use App\Models\ServiceUnitModel;
 use App\Libraries\Headerpdf;
 use App\Models\TransactionModel;
 use Picqer\Barcode\BarcodeGeneratorHTML;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Reader\Xls;
 
 class RecordMedical extends BaseController
 {
@@ -24,7 +26,7 @@ class RecordMedical extends BaseController
         $data['recordmedicals'] = $recordmedicalModel->orderBy('rm_id', 'desc')->paginate(20, 'recordmedicals');
         $data['pager'] = $recordmedicalModel->pager;
         $data['nomor'] = nomor($this->request->getVar('page_recordmedicals'), 20);
-        $data['title'] = 'Rekam Medis';
+        $data['title'] = 'Data pasien';
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 1;
         $data['username'] = session()->get('username');
@@ -69,7 +71,7 @@ class RecordMedical extends BaseController
             'address'            => 'required|min_length[2]|max_length[100]',
             'identitynumber'     => 'required|min_length[2]|max_length[16]',
             'gender'             => 'required',
-            'birthday'           => 'required',
+            'birthdate'           => 'required',
             'birthplace'         => 'required',
 
         ];
@@ -82,7 +84,7 @@ class RecordMedical extends BaseController
                 'identity_number'   => $this->request->getVar('identitynumber'),
                 'address'           => $this->request->getVar('address'),
                 'gender'            => $this->request->getVar('gender'),
-                'birth_date'        => $this->request->getVar('birthday'),
+                'birth_date'        => $this->request->getVar('birthdate'),
                 'birth_place'       => $this->request->getVar('birthplace'),
                 'is_return'         => 2,
             ];
@@ -124,7 +126,7 @@ class RecordMedical extends BaseController
             'address'            => 'required|min_length[2]|max_length[100]',
             'identitynumber'     => 'required|min_length[2]|max_length[16]',
             'gender'             => 'required',
-            'birthday'           => 'required',
+            'birthdate'           => 'required',
             'birthplace'         => 'required',
 
         ];
@@ -137,7 +139,7 @@ class RecordMedical extends BaseController
                 'identity_number'   => $this->request->getPost('identitynumber'),
                 'address'           => $this->request->getPost('address'),
                 'gender'            => $this->request->getPost('gender'),
-                'birth_date'        => $this->request->getPost('birthday'),
+                'birth_date'        => $this->request->getPost('birthdate'),
                 'birth_place'       => $this->request->getPost('birthplace'),
 
             );
@@ -172,10 +174,6 @@ class RecordMedical extends BaseController
 
     public function test()
     {
-        // helper(['num_to_month']);
-        // echo nomor(1, 20);
-        echo test(10) . "</br>";
-        // echo nomor($this->request->getVar('page_test'), 20);
     }
 
     public function searchData()
@@ -224,5 +222,45 @@ class RecordMedical extends BaseController
         $response['data'] = $data;
 
         return $this->response->setJSON($response);
+    }
+
+    function importExcel()
+    {
+        $file_excel = $this->request->getFile('fileexcel');
+        $spreadsheet = new Spreadsheet();
+        $render = new Xls();
+        $spreadsheet = $render->load($file_excel);
+
+        $data = $spreadsheet->getActiveSheet()->toArray();
+        foreach ($data as $x => $row) {
+            if ($x <= 11) {
+                // echo $row[0] . "  (" . $x . ") </br>";
+                continue;
+            }
+            $db = \Config\Database::connect();
+            $rmidcheck = $db->table('medical_records')->getWhere(['rm_id' => $row[0]])->getResult();
+            if (count($rmidcheck) > 0) {
+                // echo "Data Telah ada, gagal disimpan";
+                session()->setFlashdata('error', 'ID RM ' . $row[0] . ' Gagal di Import, ID RM ada yang sama');
+            } else {
+                $simpandata = [
+                    'rm_id'           => $row[0],
+                    'fullname'        => $row[1],
+                    'address'         => $row[2],
+                    'gender'          => $row[3],
+                    'birth_date'      => $row[4],
+                    'identity_number' => $row[5],
+                    'birth_place'     => $row[6],
+                    'is_return'       => 2
+                ];
+
+                print_r($simpandata);
+                // echo "</br>";
+                $db->table('medical_records')->insert($simpandata);
+                session()->setFlashdata('success', 'Data excel telah diimport.');
+            }
+        }
+
+        return redirect()->to('recordmedical');
     }
 }

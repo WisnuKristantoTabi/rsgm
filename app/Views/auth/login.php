@@ -10,18 +10,20 @@
 </head>
 
 <body style="background-color: #236FB6">
-
+    <div class= "login-logo">
+    <img src="/img/logo.png" alt="" width="auto" height="80">
+    <a class="text-light" style="text-decoration:none"> Rumah Sakit Gigi dan Mulut Universitas Jember </a> 
+	  </div>
     <div class="login-container">
         <?php if (session()->getFlashdata('msg')) : ?>
             <div class="alert alert-danger" role="alert">
                 <?= session()->getFlashdata('msg') ?>
             </div>
         <?php endif; ?>
-        <div class="card-header">
-            <a class="navbar-brand text-dark" href="#">
-                <img src="/img/logo.png" alt="" width="auto" height="43">
-                Login
-            </a>
+        <div class="card-header" style="text-align:center">
+            <a class="navbar-brand text-dark"href="#"><b>  
+            LOGIN
+            </a> </b>
         </div>
         <form action="<?php echo base_url('/auth') ?>" method="post">
             <div class="input-container">

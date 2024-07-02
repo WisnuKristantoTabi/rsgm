@@ -15,7 +15,7 @@
     </div>
     <div class="form-floating mb-3">
         <input type="text" name="identitynumber" id="identitynumber" placeholder="NIK" class="form-control">
-        <label for="coassnumber">NIK</label>
+        <label for="coassnumber">NIP</label>
     </div>
     <div class="form-floating mb-3">
         <input type="text" name="address" id="address" placeholder="Alamat" class="form-control">

@@ -18,7 +18,7 @@ class Officer extends BaseController
         $UserModel = new UserModel();
         $data['role'] = session()->get('role');
         $data['officers'] = $UserModel->findAll();
-        $data['title'] = 'Petugas';
+        $data['title'] = 'Pengguna';
         $data['pagesidebar'] = 2;
         $data['subsidebar'] = 2;
         $data['username'] = session()->get('username');

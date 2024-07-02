@@ -20,11 +20,11 @@
         </select>
     </div>
     <div class="mb-5">
-        <label class="mb-3" for="searchtid">Cari Data Peminjam</label>
+        <label class="mb-3" for="searchtid">Cari Data Perawat</label>
         <select id="publicid" name="publicid" class="form-select">
             <option value=""></option>
         </select>
-        <a class="mb-3" href="<?php echo base_url('public/add') ?>"> Tambahkan Data Peminjam</a>
+        <a class="mb-3" href="<?php echo base_url('public/add') ?>"> Tambahkan Data Perawat</a>
     </div>
     <div class="form-floating mb-3">
         <input type="text" id="fullname" placeholder="Nama Lengkap " value="" class="form-control" readonly>
@@ -112,7 +112,7 @@
     $(function() {
         $(document).ready(function() {
             $('#publicid').select2({
-                placeholder: "Cari Peminjam",
+                placeholder: "Cari Data Perawat",
                 ajax: {
                     url: "<?php echo base_url('/loanpublic/searchcoass') ?>",
                     dataType: 'json',

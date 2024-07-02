@@ -62,13 +62,13 @@
                         <ul id="masterdata" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item <?= ($subsidebar == 1) ? 'active' : '' ?>">
                                 <a href="<?php echo base_url('recordmedical') ?>" class="sidebar-link">
-                                    Rekam Medis
+                                    Data pasien 
                                 </a>
                             </li>
 
                             <li class="sidebar-item <?= ($subsidebar == 2) ? 'active' : '' ?>">
                                 <a href="<?php echo base_url('officer') ?>" class="sidebar-link">
-                                    Petugas
+                                    Pengguna
                                 </a>
                             </li>
                             <li class="sidebar-item <?= ($subsidebar == 3) ? 'active' : '' ?>">
@@ -83,7 +83,7 @@
                             </li>
                             <li class="sidebar-item <?= ($subsidebar == 7) ? 'active' : '' ?>">
                                 <a href="<?php echo base_url('public') ?>" class="sidebar-link">
-                                    Peminjam
+                                    Perawat
                                 </a>
                             </li>
 

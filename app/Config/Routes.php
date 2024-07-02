@@ -68,6 +68,7 @@ $routes->group('', ['filter' => 'auth'], static function ($routes) {
         $routes->get('/recordmedical', 'RecordMedical::index');
         $routes->get('/recordmedical/show/(:any)', 'RecordMedical::show/$1');
         $routes->get('/print/recordmedical/(:any)', 'PrintPDF::printrm/$1');
+        $routes->post('/recordmedical/import', 'RecordMedical::importExcel');
     });
 
     $routes->group('', ['filter' => 'role:1,2'], static function ($routes) {

@@ -5,7 +5,7 @@
 
 
 <div class="mb-3 btn-group-sm btn-group">
-    <a href="<?php echo base_url('/loanpublic?page_loanpublic=1') ?>" class="btn btn-outline-primary <?= ($type == 1) ? 'active' : '' ?>">UMUM</a>
+    <a href="<?php echo base_url('/loanpublic?page_loanpublic=1') ?>" class="btn btn-outline-primary <?= ($type == 1) ? 'active' : '' ?>">UMUM/BPJS/JKN</a>
     <a href="<?php echo base_url('/loancoass?page_loancoass=1') ?>" class="btn btn-outline-primary <?= ($type == 2) ? 'active' : '' ?> ">CO.ass</a>
 </div>
 
@@ -41,9 +41,13 @@
                 <td>
                     <div class="btn-group-vertical">
                         <a role="button" href="<?php echo base_url("/f/public/?id") . $data['id'] ?>" class="btn btn-outline-primary btn-sm"><i class="lni lni-eye"></i>Lihat</a>
+                    <?php if ($role != 3) : ?>
                         <a role="button" href="<?php echo base_url("loanpublic/edit/") . $data['id'] ?>" class="btn btn-outline-warning btn-sm"><i class="lni lni-pencil-alt"></i>Edit</a>
+                    <?php endif ?>
+                    <?php if ($role != 3) : ?>    
                         <a class="btn btn-outline-danger btn-sm" href="<?= base_url('loanpublic/delete/' . $data['id'] . '/' . $data['rm_id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data ini ?')">
                             <i class="lni lni-trash-can"></i>Hapus</a>
+                    <?php endif ?>
                     </div>
                 </td>
             </tr>

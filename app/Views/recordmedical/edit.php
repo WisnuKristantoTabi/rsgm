@@ -25,7 +25,7 @@
         <input type="radio" class="btn-check" value="1" name="gender" id="option1" autocomplete="off" <?php echo ($recordmedicals->gender == 1) ? "checked" : "" ?>>
         <label class="btn btn-outline-primary btn-sm" for="option1">Laki-Laki</label>
 
-        <input type="radio" class="btn-check" value="0" name="gender" id="option2" autocomplete="off" <?php echo ($recordmedicals->gender == 0) ? "checked" : "" ?>>
+        <input type="radio" class="btn-check" value="2" name="gender" id="option2" autocomplete="off" <?php echo ($recordmedicals->gender == 0) ? "checked" : "" ?>>
         <label class="btn btn-outline-primary btn-sm" for="option2">Perempuan</label>
     </div>
     <div class="form-floating mb-3 dateformat">
@@ -34,7 +34,7 @@
     </div>
     <div class="form-floating mb-3 dateformat">
         <input type="text" name="birthplace" id="birthplace" value="<?= $recordmedicals->birth_place ?>" placeholder="Tempat Lahir" class="form-control">
-        <label for="birthday">Tempat Lahir</label>
+        <label for="birthdate">Tempat Lahir</label>
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="submit" class="btn btn-primary">Edit</button>
