@@ -44,7 +44,36 @@ class ReturnDocument extends BaseController
     {
         $message = $this->request->getVar('message');
         $phone = $this->request->getVar('phone');
-        return redirect()->to('https://wa.me/' . '62' . $phone . "?text=" . $message);
+
+        $curl = curl_init();
+        $token = "Le9tIRhfjNLS9msTFMyB3lWUoN3cRjON2eGfq7FETIJ7cRY3f786eexX0k0d2BXb";
+        $data = [
+            'phone' => "62" . $phone,
+            'message' => $message,
+        ];
+        curl_setopt(
+            $curl,
+            CURLOPT_HTTPHEADER,
+            array(
+                "Authorization: $token",
+            )
+        );
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($curl, CURLOPT_URL,  "https://jkt.wablas.com/api/send-message");
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+        $result = curl_exec($curl);
+        curl_close($curl);
+
+        $resultArray = json_decode($result, true);
+        if ($resultArray['status'] === true) {
+            session()->setFlashdata('success', 'Berhasil Terkirim');
+        } else {
+            session()->setFlashdata('error', 'Gagal Terkirim');
+        }
+        return redirect()->to('returndoc');
     }
 
     public function show($id)
